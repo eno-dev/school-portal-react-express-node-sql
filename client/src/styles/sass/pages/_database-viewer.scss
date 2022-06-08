@@ -1,0 +1,27 @@
+.main_body {    
+
+    //************************************
+    //           Database Table
+    //************************************
+
+    .MuiBox-root {
+        padding: 0;
+
+        // Pagenation
+        .MuiTablePagination-displayedRows {
+            margin-bottom: 0;
+        }
+
+        // Select Row
+        .MuiDataGrid-row.Mui-selected {
+            background-color: #B0AEF3;
+            
+        }
+
+        // Table row - Hover Colour
+        .MuiDataGrid-row.Mui-selected:hover, .MuiDataGrid-row.Mui-selected.Mui-hovered {
+            background-color: #E1E1FA;
+        }
+
+    }
+}

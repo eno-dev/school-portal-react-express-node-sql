@@ -1,0 +1,38 @@
+// Abstracts
+@import './sass/abstracts/variables';
+// Components
+@import './sass/components/buttons', './sass/components/carousel', './sass/components/slider';
+// Core
+@import './sass/core/reset';
+// Layout
+@import './sass/layout/footer', './sass/layout/grid', './sass/layout/header', './sass/layout/navigation', './sass/layout/rightcontent', './sass/layout/sidebar';
+//=========================== 
+//          Pages
+//=========================== 
+@import'./sass/pages/analytics',
+'./sass/pages/attendance',
+'./sass/pages/dashboard',
+'./sass/pages/database-viewer',
+'./sass/pages/login',
+'./sass/pages/notifications',
+'./sass/pages/search', 
+'./sass/pages/viewusers';
+
+// Sections
+@import './sass/sections/cta', './sass/sections/hero';
+
+/* Selecting all pages */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    transition: $tran-05;
+}
+
+.css-1xy1myn-MuiDataGrid-root .MuiDataGrid-row.Mui-selected {
+    background-color: $button-color;
+}

@@ -1,0 +1,120 @@
+// Class for right content
+.right {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $right-color;
+    justify-content: center;
+    padding-top: 10px;
+    width: 300px;
+
+
+
+    aside {
+        width: 100%;
+
+        .profile-bar {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            border-bottom: 1px solid #ced4da;
+            padding-bottom: 10px;
+
+            .profile-items {
+                display: flex;
+                flex-direction: row;
+
+                .user-circle {
+                    display: flex;
+                    font-size: 30px;
+                    align-items: center;
+                    justify-self: right;
+                }
+
+                .username {
+                    display: flex;
+                    align-items: center;
+                    margin-left: auto;
+                    list-style-type: none;
+                }
+
+            }
+        }
+
+        .profile {
+            padding: 20px;
+
+            .user-id {
+                display: flex;
+                justify-content: center;
+                font-size: 16px;
+            }
+
+            .profile-picture {
+                display: flex;
+                justify-content: center;
+                font-size: 125px;
+            }
+
+            .profile-info {
+                padding-top: 50px;
+
+                p {
+                    width: 100%;
+                    font-size: 14px;
+                }
+
+                .about {
+
+                    padding-top: 50px;
+
+                    .right-info {
+                        width: 50%;
+                        float: right;
+                    }
+
+                    .left-info {
+                        width: 50%;
+                        float: left;
+                    }
+                }
+
+            }
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+        }
+
+    }
+
+    nav {
+        width: 100%;
+        display: block;
+        font-size: medium;
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li {
+            flex-basis: 100%;
+            float: right;
+        }
+
+        li a {
+            display: block;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            padding: 20px 5px;
+        }
+
+        li a:hover {
+            // background-color: green;
+        }
+    }
+}

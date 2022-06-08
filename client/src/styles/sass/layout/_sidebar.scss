@@ -1,0 +1,219 @@
+// @import '../abstracts/variables';
+
+// Closed Sidebar
+.sidebar.close {
+    width: 88px;
+    
+    .active {
+        box-shadow:inset 6px 0px #EAC671;
+    }
+
+    li a {
+        border-radius: 6px;
+    }
+
+    // School Name
+    header .image-text .schoolname {
+        // font-size: 0;
+        display: none;
+    }
+
+    .toggle {
+        transform: rotate(90deg);
+    }
+
+    .text {
+        opacity: 0;
+        font-size: 0;
+    }
+
+}
+
+// Open Sidebar
+.sidebar {
+    background-color: $sidebar-color;
+    z-index: 1;
+    padding-top: 20px;
+    padding: 14px 14px;
+    transition: $tran-05;
+    width: 230px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-top-right-radius: $border-rad-medium;
+    border-bottom-right-radius: $border-rad-medium;
+
+    .icon {
+        min-width: 60px;
+        border-radius: 6px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+    }
+
+    /* Logo Text Style */
+    .text {
+        font-size: 17px;
+        font-weight: 500;
+        opacity: 1;
+        transition: $tran-03;
+    }
+
+    /* Sidebar items */
+    li {
+        height: 50px;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        padding: 0;
+        
+
+        /* Menu item names only */
+        a {
+        list-style: none;
+        height: 100%;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        border-top-right-radius: $border-rad-menu;
+        border-bottom-right-radius: $border-rad-menu;
+        text-decoration: none;
+        transition: $tran-05;
+        }
+        
+        /* Icon design features */
+        .icon {
+            min-width: 60px;
+            border-radius: 8px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+    }
+
+    // Sidebar Header
+    header {
+        position: relative;
+
+        /* Logo  Text */
+        .image-text {
+            display: flex;
+            height: 60px;
+            min-width: 200px;
+
+            // Container for the school name
+            .header-text {
+                display: flex;
+                text-align: center;
+                align-items: center;
+                padding-left: 10px;
+                padding-right: 10px;
+                // max-width: 12ch;
+            }
+        /* Website name below Logo */
+            .name {
+                margin-top: 2px;
+                font-size: 18px;
+                font-weight: 600;
+            }
+        
+        /* School name */
+            .schoolname {
+            font-size: 18px;
+            font-weight: 575;
+            }
+        }
+
+
+        /* Logo position */
+        .image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+        }
+
+        /* Logo text position */
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Logo Properties */
+        .image img {
+            width: 60px;
+            border-radius: 8px;
+            /* ===== Center Logo w/below code ===== */
+            margin-right: auto;
+            align-items: center;
+            background-color: white;
+        }
+
+        /* Menu Toggle */
+        .menu-toggle {
+            display: flex;
+            position: absolute;
+            top: 50%;
+            right: -25px;
+            transform: translateY(-50%);
+            height: 25px;
+            width: 25px;
+            background-color: $button-color;
+            justify-content: center;
+            border-radius: 50%;
+            color: white;
+            font-size: 20px;
+            align-items: center;
+            border: none;
+        }
+
+    }
+
+    // Menu
+    .menu-bar {
+        margin-top: 12px;
+    }
+
+    // Menu Links
+    .menu-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 0;
+    }
+
+
+    /* Sidebar icon and test design */
+    .text,
+    .icon {
+        color: $text-color;
+    }
+
+
+    /* Hovering over sidebar */
+    a:hover, a:active {
+        background-color: $button-color;
+
+        span,
+        .icon {
+            color: white;
+        }
+    }
+
+    // Active Link
+    .active {
+        background-color: $button-color;
+        box-shadow: 10px 0px #EAC671 inset;
+        span,
+        .icon {
+            color: white;
+        }
+      }
+      
+}
