@@ -1,8 +1,19 @@
-import { useToggleUpdate } from "./toggleContext"
+import { useSelector, useDispatch } from 'react-redux'
+import { toggleOn, toggleOff } from '../../features/toggle/toggleSlice'
+
 
 export default function Toggle() {
-    // const toggleState = useToggle()
-    const toggleSidebar = useToggleUpdate()
+    const toggle = useSelector((state) => state.toggle.active)
+    const dispatch = useDispatch();
+
+    function toggleSidebar() {
+        if (!toggle) {
+            dispatch(toggleOn())
+        }
+        else {
+            dispatch(toggleOff())
+        }
+    }
 
     return (
         <button className="menu-toggle" onClick={toggleSidebar}>
@@ -10,28 +21,3 @@ export default function Toggle() {
         </button >
     )
 }
-
-    // import $ from 'jquery';
-
-    // const body = document.querySelector('body'),
-    //     sidebar = body.querySelector('nav'),
-    //     toggleS = body.querySelector('button'),
-    //     schoolName = body.querySelector('schoolname'),
-    //     menuBar = body.querySelector('nav-link');
-
-    // // To add active class to menu items
-    // $(document).ready(function () {
-    //     $("a[href*='" + location.pathname + "']").addClass("active");
-    // });
-
-    // toggle.addEventListener("click", () => {
-    //     sidebar.classList.toggleS("close");
-    // })
-
-    // menuBar.addEventListener("click", () => {
-    //     sidebar.classList.toggleS("active");
-    // })
-
-    // schoolName.addEventListener("click", () => {
-    //     sidebar.classList.remove("close");
-    // })

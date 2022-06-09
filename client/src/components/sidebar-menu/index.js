@@ -1,21 +1,16 @@
 import SidebarHeader from "./sidebar-header"
 import SidebarItems from "./sidebar-items"
-import { useToggle } from "./toggleContext"
+import { useSelector } from 'react-redux'
 
-const SidebarMenu = (ToggleProvider) => {
-    const toggleState = useToggle()
-    // const toggleSidebar = useToggleUpdate()
-
-    // Style box-shadow: 5px 0px black inset
+const SidebarMenu = () => {
+    const toggleState = useSelector((state) => state.toggle.active)
 
     return (
         <>
-            {/* <ToggleProvider> */}
             <nav className={toggleState ? "sidebar close" : "sidebar"}>
                 <SidebarHeader />
                 <SidebarItems />
             </nav>
-            {/* </ToggleProvider> */}
         </>
     )
 }
