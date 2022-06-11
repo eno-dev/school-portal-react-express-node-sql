@@ -1,4 +1,6 @@
-import { DataGrid } from '@mui/x-data-grid';
+import { DataGrid, GridActionsCellItem } from '@mui/x-data-grid';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
 import { useGetTeachersQuery } from "../../features/users/usersApiSlice"
 
 const Teacher = () => {
@@ -9,6 +11,14 @@ const Teacher = () => {
         isError,
         error
     } = useGetTeachersQuery()
+
+    const deleteUser = () => {
+        console.log('Deleted')
+    }
+
+    const updateUser = () => {
+        console.log('Edited')
+    }
 
     let content;
     if (isLoading) {
@@ -35,7 +45,20 @@ const Teacher = () => {
             { field: 'first_name', headerName: 'First name', width: 130 },
             { field: 'last_name', headerName: 'Last name', width: 130 },
             { field: 'email', headerName: 'Email', width: 240 },
-            { field: 'phone', headerName: 'Phone', width: 130 }
+            { field: 'phone', headerName: 'Phone', width: 130 },
+            {
+                field: 'actions',
+                type: 'actions',
+                headerName: 'Actions',
+                width: 130,
+                getActions: () => [
+                    // Format to follow
+                    // getActions: (params: GridRowParams) => [
+                    // <GridActionsCellItem icon={...} onClick={...} label="Delete" />,
+                    <GridActionsCellItem icon={<EditIcon />} onClick={updateUser} label="Edit" />,
+                    <GridActionsCellItem icon={<DeleteIcon />} onClick={deleteUser} label="Delete" />,
+                ],
+            }
         ];
 
         // Rows of table
