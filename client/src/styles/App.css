@@ -605,6 +605,10 @@ nav-link a {
   background-color: #E1E1FA;
 }
 
+.main_body .MuiBox-root .css-imf0nl-MuiDataGrid-root .MuiDataGrid-columnHeader:focus, .main_body .MuiBox-root .css-imf0nl-MuiDataGrid-root .MuiDataGrid-cell:focus {
+  outline: 0px;
+}
+
 .login {
   display: -webkit-box;
   display: -ms-flexbox;

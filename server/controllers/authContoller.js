@@ -10,7 +10,6 @@ let refreshTokens = [];
 const refreshToken = (req, res) => {
     //take the refresh token from the user
     const refreshToken = req.body.token;
-    console.log(refreshToken)
     //send error if there is no token or it's invalid
     if (!refreshToken) return res.status(401).json("You are not authenticated!");
     if (!refreshTokens.includes(refreshToken)) {

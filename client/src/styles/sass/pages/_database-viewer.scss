@@ -3,7 +3,7 @@
     //************************************
     //           Database Table
     //************************************
-
+    
     .MuiBox-root {
         padding: 0;
 
@@ -21,6 +21,11 @@
         // Table row - Hover Colour
         .MuiDataGrid-row.Mui-selected:hover, .MuiDataGrid-row.Mui-selected.Mui-hovered {
             background-color: #E1E1FA;
+        }
+
+        // Remove the blue outline around each data item
+        .css-imf0nl-MuiDataGrid-root .MuiDataGrid-columnHeader:focus, .css-imf0nl-MuiDataGrid-root .MuiDataGrid-cell:focus {
+            outline: 0px;
         }
 
     }
