@@ -12,6 +12,7 @@ const sidebarItems = () => {
                             <span className="text nav-text">Dashboard</span>
                         </NavLink>
                     </li>
+
                     <li className="nav-link">
                         <NavLink to="/database">
                             <i className='bx bx-data icon' title="Database"></i>

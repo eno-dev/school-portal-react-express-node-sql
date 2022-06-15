@@ -37,20 +37,13 @@ const createUser = (req, res) => {
 // -----------------------------
 const getUser = (req, res) => {
     // Query database
-    let query = `CALL sp_view_students; CALL sp_view_teachers; CALL sp_view_admin; CALL sp_view_users;`
-
+    let query = `CALL sp_view_teachers;`
     // Connection to database with query and information stored in rows
     connection.query(query, (err, rows, fields) => {
-
         // When done with the connection, release it
         if (!err) {
-            let student = JSON.parse(JSON.stringify(rows[0]))
-            let teacher = JSON.parse(JSON.stringify(rows[2]))
-            let admin = JSON.parse(JSON.stringify(rows[4]))
-            let user = JSON.parse(JSON.stringify(rows[6]))
-
+            let user = JSON.parse(JSON.stringify(rows[0]))
             res.send(user)
-            let removedUser = req.query.removed;
         } else {
             console.log(err);
         }
@@ -77,23 +70,36 @@ const getUserById = (req, res) => {
     });
 };
 
+// Get user by Role
+const getUserByRole = (req, res) => {
+    const user = req.body
+    // Query database
+    let query = `CALL sp_View_User_By_Role(?)`
+    // Connection to database with query and information stored in rows
+    connection.query(query, [user.role_id], (err, rows, fields) => {
+        // When done with the connection, release it
+        if (!err) {
+            let rowFix = JSON.parse(JSON.stringify(rows[0]))
+            res.send(rowFix)
+        } else {
+            res.send(err);
+        }
+        // console.log('The data from user table: \n', rows);
+    });
+};
+
 // Get teacher
 const getTeacher = (req, res) => {
     // Query database
-    let query = `CALL sp_view_students; CALL sp_view_teachers; CALL sp_view_admin; CALL sp_view_users;`
+    let query = `CALL sp_view_teachers;`
 
     // Connection to database with query and information stored in rows
     connection.query(query, (err, rows, fields) => {
 
         // When done with the connection, release it
         if (!err) {
-            let student = JSON.parse(JSON.stringify(rows[0]))
-            let teacher = JSON.parse(JSON.stringify(rows[2]))
-            let admin = JSON.parse(JSON.stringify(rows[4]))
-            let user = JSON.parse(JSON.stringify(rows[6]))
+            let teacher = JSON.parse(JSON.stringify(rows[0]))
             res.send(teacher)
-            let removedUser = req.query.removed;
-
         } else {
             console.log(err);
         }
@@ -124,7 +130,6 @@ const updateUser = (req, res) => {
 
             if (!err) {
                 res.send('Updates successfully')
-                console.log(rows)
             } else {
                 res.send(err)
             }
@@ -152,6 +157,7 @@ module.exports = {
     createUser,
     getUser,
     getUserById,
+    getUserByRole,
     getTeacher,
     updateUser,
     deleteUser

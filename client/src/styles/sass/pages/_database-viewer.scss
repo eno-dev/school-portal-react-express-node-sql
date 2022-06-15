@@ -24,7 +24,7 @@
         }
 
         // Remove the blue outline around each data item
-        .css-imf0nl-MuiDataGrid-root .MuiDataGrid-columnHeader:focus, .css-imf0nl-MuiDataGrid-root .MuiDataGrid-cell:focus {
+        .css-imf0nl-MuiDataGrid-root .MuiDataGrid-columnHeader:focus, .css-imf0nl-MuiDataGrid-root .MuiDataGrid-cell:focus, .css-imf0nl-MuiDataGrid-root .MuiDataGrid-columnHeader:focus-within, .css-imf0nl-MuiDataGrid-root .MuiDataGrid-cell:focus-within {
             outline: 0px;
         }
 

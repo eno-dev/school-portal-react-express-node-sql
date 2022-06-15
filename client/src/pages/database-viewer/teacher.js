@@ -1,7 +1,12 @@
 import { DataGrid, GridActionsCellItem } from '@mui/x-data-grid';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { useGetTeachersQuery } from "../../features/users/usersApiSlice"
+import { useGetUserByIdQuery } from "../../features/users/usersApiSlice"
+import { useGetUserByRoleQuery } from "../../features/users/usersApiSlice"
+import { useDeleteUserQuery } from "../../features/users/usersApiSlice"
 
 const Teacher = () => {
     const {
@@ -10,14 +15,17 @@ const Teacher = () => {
         isSuccess,
         isError,
         error
-    } = useGetTeachersQuery()
+    } = useGetUserByRoleQuery(1)
+    const dispatch = useDispatch();
 
-    const deleteUser = () => {
-        console.log('Deleted')
+    const [selectedRows, setSelectedRows] = useState([]);
+
+    const deleteUser = (id) => {
+        console.log(`Deleted user: ${id}`)
     }
 
-    const updateUser = () => {
-        console.log('Edited')
+    const updateUser = (id) => {
+        console.log(`Updated user: ${id}`)
     }
 
     let content;
@@ -51,12 +59,12 @@ const Teacher = () => {
                 type: 'actions',
                 headerName: 'Actions',
                 width: 130,
-                getActions: () => [
+                getActions: ({ id }) => [
                     // Format to follow
                     // getActions: (params: GridRowParams) => [
                     // <GridActionsCellItem icon={...} onClick={...} label="Delete" />,
-                    <GridActionsCellItem icon={<EditIcon />} onClick={updateUser} label="Edit" />,
-                    <GridActionsCellItem icon={<DeleteIcon />} onClick={deleteUser} label="Delete" />,
+                    <GridActionsCellItem icon={<EditIcon />} onClick={() => { updateUser(id) }} label="Edit" />,
+                    <GridActionsCellItem icon={<DeleteIcon />} onClick={() => { deleteUser(id) }} label="Delete" />,
                 ],
             }
         ];
@@ -72,6 +80,23 @@ const Teacher = () => {
                     pageSize={5}
                     rowsPerPageOptions={[5]}
                     checkboxSelection
+                    // Gets the selection of datagrid
+                    onSelectionModelChange={(ids) => {
+                        // sets the selected id
+                        const selectedIDs = new Set(ids);
+                        // iterates over the selected row id and checks if a row is selected
+                        const selectedRows = rows.filter((row) =>
+                            selectedIDs.has(row.id),
+                        );
+                        // sets the result to selected rows
+                        setSelectedRows(selectedRows);
+                        // Loops over the objects in selected rows
+                        for (let key in selectedRows) {
+                            // selects all the user ids of the selected row objects
+                            console.log(selectedRows[key].id);
+                        }
+
+                    }}
                 />
             </div>
         )
