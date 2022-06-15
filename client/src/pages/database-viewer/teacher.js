@@ -2,11 +2,11 @@ import { DataGrid, GridActionsCellItem } from '@mui/x-data-grid';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { useGetTeachersQuery } from "../../features/users/usersApiSlice"
-import { useGetUserByIdQuery } from "../../features/users/usersApiSlice"
-import { useGetUserByRoleQuery } from "../../features/users/usersApiSlice"
-import { useDeleteUserQuery } from "../../features/users/usersApiSlice"
+// import { useDispatch } from 'react-redux'
+// import { useGetTeachersQuery } from "../../features/users/usersApiSlice"
+// import { useGetUserByIdQuery } from "../../features/users/usersApiSlice"
+// import { useDeleteUserQuery } from "../../features/users/usersApiSlice"
+import { useGetUserByRoleQuery, useDeleteUserMutation } from "../../features/users/usersApiSlice"
 
 const Teacher = () => {
     const {
@@ -16,12 +16,16 @@ const Teacher = () => {
         isError,
         error
     } = useGetUserByRoleQuery(1)
-    const dispatch = useDispatch();
+
+    const { refetch } = useGetUserByRoleQuery(1)
+    const [deleteUser] = useDeleteUserMutation()
+    // const dispatch = useDispatch();
 
     const [selectedRows, setSelectedRows] = useState([]);
+    const [selectedRowsUserId, setSelectedRowsUserId] = useState([]);
 
-    const deleteUser = (id) => {
-        console.log(`Deleted user: ${id}`)
+    const deleteUserByID = (id) => {
+        const deletePlease = deleteUser({ id })
     }
 
     const updateUser = (id) => {
@@ -64,7 +68,7 @@ const Teacher = () => {
                     // getActions: (params: GridRowParams) => [
                     // <GridActionsCellItem icon={...} onClick={...} label="Delete" />,
                     <GridActionsCellItem icon={<EditIcon />} onClick={() => { updateUser(id) }} label="Edit" />,
-                    <GridActionsCellItem icon={<DeleteIcon />} onClick={() => { deleteUser(id) }} label="Delete" />,
+                    <GridActionsCellItem icon={<DeleteIcon />} onClick={() => { deleteUserByID(id) }} label="Delete" />,
                 ],
             }
         ];
@@ -90,12 +94,12 @@ const Teacher = () => {
                         );
                         // sets the result to selected rows
                         setSelectedRows(selectedRows);
+                        console.log(selectedRows)
                         // Loops over the objects in selected rows
                         for (let key in selectedRows) {
                             // selects all the user ids of the selected row objects
-                            console.log(selectedRows[key].id);
+                            const rowByUser = selectedRows[key].id
                         }
-
                     }}
                 />
             </div>
