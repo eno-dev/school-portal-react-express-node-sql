@@ -1,10 +1,13 @@
 import { DataGrid, GridActionsCellItem } from '@mui/x-data-grid';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 import Alert from '@mui/material/Alert';
 import { useState } from 'react'
-import { useGetUserByRoleQuery, useDeleteUserMutation } from "../../features/users/usersApiSlice"
+import { useDispatch, useSelector } from 'react-redux'
+import { useGetUserByRoleQuery, useDeleteUserMutation, useGetUserByIdQuery } from "../../features/users/usersApiSlice"
 import DeleteModal from '../../components/modal/deleteModal';
+import { setSidebarInfo, setUserId, selectedUserId } from '../../features/secondary-sidebar/sidebarSlice'
 
 const Teacher = () => {
     const {
@@ -14,12 +17,13 @@ const Teacher = () => {
         isError,
         error
     } = useGetUserByRoleQuery(1)
+
+    console.log(users)
     const [deleteUser] = useDeleteUserMutation()
+    const [getUserById] = useGetUserByIdQuery()
     const [selectedRows, setSelectedRows] = useState([]);
-
-    const [openModal, setOpenModal] = useState(false)
-    // const [modalConfirmation, setModalConfirmation] = useState(false)
-
+    const dispatch = useDispatch();
+    const result = useSelector(selectedUserId)
     const deleteUserByID = (id) => {
         const confirm = window.confirm(`Are you sure you want to delete user: ${id}?`)
         if (confirm) {
@@ -32,8 +36,13 @@ const Teacher = () => {
         }
     }
 
-    const updateUser = (id) => {
+    const handleUpdateUser = (id) => {
         console.log(`Updated user: ${id}`)
+    }
+
+    const ViewUser = (id) => {
+        getUserById({ id })
+        dispatch(setUserId({ id }))
     }
 
     let content;
@@ -71,8 +80,9 @@ const Teacher = () => {
                     // Format to follow
                     // getActions: (params: GridRowParams) => [
                     // <GridActionsCellItem icon={...} onClick={...} label="Delete" />,
-                    <GridActionsCellItem icon={<EditIcon />} onClick={() => { setOpenModal(true) }} label="Edit" />,
+                    <GridActionsCellItem icon={<EditIcon />} onClick={() => { }} label="Edit" />,
                     <GridActionsCellItem icon={<DeleteIcon />} onClick={() => { deleteUserByID(id) }} label="Delete" />,
+                    <GridActionsCellItem icon={<VisibilityIcon />} onClick={() => { ViewUser(id) }} label="Delete" />,
                 ],
             }
         ];
@@ -91,6 +101,7 @@ const Teacher = () => {
                     onSelectionModelChange={(ids) => {
                         // sets the selected id
                         const selectedIDs = new Set(ids);
+                        console.log(selectedIDs)
                         // iterates over the selected row id and checks if a row is selected
                         const selectedRows = rows.filter((row) =>
                             selectedIDs.has(row.id),
@@ -105,7 +116,6 @@ const Teacher = () => {
                         }
                     }}
                 />
-                {openModal && <DeleteModal closeModal={setOpenModal} />}
             </div>
         )
 

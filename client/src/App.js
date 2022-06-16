@@ -11,14 +11,17 @@ import Attendance from "./pages/attendance/index"
 import Login from "./pages/login/index"
 import ErrPageNotFound from "./pages/404/errPageNotFound";
 import RequireAuth from "./features/auth/RequireAuth";
+import { useSelector } from 'react-redux'
 
 function App() {
+  const loggedInState = useSelector((state) => state.auth.isLoggedIn)
+  console.log(loggedInState)
 
   return (
     <BrowserRouter>
       <Routes>
         {/* Public path - IGNORE layout - research */}
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={!loggedInState && <Login />} />
         <Route path="/" element={<Layout />}>
 
           {/* Protected routes */}

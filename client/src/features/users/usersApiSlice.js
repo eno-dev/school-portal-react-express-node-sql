@@ -27,11 +27,11 @@ export const usersApiSlice = apiSlice.injectEndpoints({
         }),
 
         getUserById: builder.query({
-            query: id =>
+            query: () =>
             ({
-                url: `/api/users/role/${id}`,
+                url: `/api/users/`,
                 method: 'POST',
-                body: { "role_id": id },
+                body: { "user_id": 1 },
                 keepUnusedDataFor: 3
             })
         }),
@@ -58,32 +58,6 @@ export const usersApiSlice = apiSlice.injectEndpoints({
         })
     })
 })
-
-// export const userSlice = createSlice({
-//     name: 'users',
-//     initialState,
-//     reducers: {
-//         addUser: (state, action) => {
-
-//         },
-
-//         get: (state, action) => {
-
-//         },
-
-//         getById: (state, action) => {
-
-//         },
-
-//         delete: (state, action) => {
-
-//         },
-
-//         update: (state, action) => {
-
-//         }
-//     }
-// })
 
 export const {
     useGetUserByIdQuery,
