@@ -1,12 +1,10 @@
 import { DataGrid, GridActionsCellItem } from '@mui/x-data-grid';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
+import Alert from '@mui/material/Alert';
 import { useState } from 'react'
-// import { useDispatch } from 'react-redux'
-// import { useGetTeachersQuery } from "../../features/users/usersApiSlice"
-// import { useGetUserByIdQuery } from "../../features/users/usersApiSlice"
-// import { useDeleteUserQuery } from "../../features/users/usersApiSlice"
 import { useGetUserByRoleQuery, useDeleteUserMutation } from "../../features/users/usersApiSlice"
+import DeleteModal from '../../components/modal/deleteModal';
 
 const Teacher = () => {
     const {
@@ -16,16 +14,22 @@ const Teacher = () => {
         isError,
         error
     } = useGetUserByRoleQuery(1)
-
-    const { refetch } = useGetUserByRoleQuery(1)
     const [deleteUser] = useDeleteUserMutation()
-    // const dispatch = useDispatch();
-
     const [selectedRows, setSelectedRows] = useState([]);
-    const [selectedRowsUserId, setSelectedRowsUserId] = useState([]);
+
+    const [openModal, setOpenModal] = useState(false)
+    const [modalConfirmation, setModalConfirmation] = useState(false)
 
     const deleteUserByID = (id) => {
-        const deletePlease = deleteUser({ id })
+        const confirm = window.confirm(`Are you sure you want to delete user: ${id}?`)
+        if (confirm) {
+            deleteUser({ id })
+            return (
+                <Alert variant="outlined" severity="success">
+                    This is a success alert — check it out!
+                </Alert>
+            )
+        }
     }
 
     const updateUser = (id) => {
@@ -67,12 +71,11 @@ const Teacher = () => {
                     // Format to follow
                     // getActions: (params: GridRowParams) => [
                     // <GridActionsCellItem icon={...} onClick={...} label="Delete" />,
-                    <GridActionsCellItem icon={<EditIcon />} onClick={() => { updateUser(id) }} label="Edit" />,
+                    <GridActionsCellItem icon={<EditIcon />} onClick={() => { setOpenModal(true) }} label="Edit" />,
                     <GridActionsCellItem icon={<DeleteIcon />} onClick={() => { deleteUserByID(id) }} label="Delete" />,
                 ],
             }
         ];
-
         // Rows of table
         const rows = tb_data_mui;
 
@@ -102,6 +105,7 @@ const Teacher = () => {
                         }
                     }}
                 />
+                {openModal && <DeleteModal closeModal={setOpenModal} />}
             </div>
         )
 
