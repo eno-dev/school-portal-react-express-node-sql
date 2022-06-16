@@ -18,7 +18,7 @@ const Teacher = () => {
     const [selectedRows, setSelectedRows] = useState([]);
 
     const [openModal, setOpenModal] = useState(false)
-    const [modalConfirmation, setModalConfirmation] = useState(false)
+    // const [modalConfirmation, setModalConfirmation] = useState(false)
 
     const deleteUserByID = (id) => {
         const confirm = window.confirm(`Are you sure you want to delete user: ${id}?`)
