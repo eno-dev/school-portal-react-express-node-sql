@@ -28,7 +28,7 @@ function Index() {
         try {
             // user data to be sent to the backend
             const userData = await login({ username, password }).unwrap()
-            dispatch(setCredentials({ ...userData, username }))
+            dispatch(setCredentials({ ...userData }))
             setUserName('')
             setPassword('')
             navigate('/')

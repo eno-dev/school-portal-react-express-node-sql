@@ -4,10 +4,9 @@ import EditIcon from '@mui/icons-material/Edit';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import Alert from '@mui/material/Alert';
 import { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { useGetUserByRoleQuery, useDeleteUserMutation, useGetUserByIdQuery } from "../../features/users/usersApiSlice"
-import DeleteModal from '../../components/modal/deleteModal';
-import { setSidebarInfo, setUserId, selectedUserId } from '../../features/secondary-sidebar/sidebarSlice'
+import { useDispatch } from 'react-redux'
+import { useGetUserByRoleQuery, useDeleteUserMutation } from "../../features/users/usersApiSlice"
+import { setUserInfo } from '../../features/secondary-sidebar/sidebarSlice'
 
 const Teacher = () => {
     const {
@@ -18,12 +17,10 @@ const Teacher = () => {
         error
     } = useGetUserByRoleQuery(1)
 
-    console.log(users)
     const [deleteUser] = useDeleteUserMutation()
-    const [getUserById] = useGetUserByIdQuery()
     const [selectedRows, setSelectedRows] = useState([]);
     const dispatch = useDispatch();
-    const result = useSelector(selectedUserId)
+
     const deleteUserByID = (id) => {
         const confirm = window.confirm(`Are you sure you want to delete user: ${id}?`)
         if (confirm) {
@@ -41,9 +38,16 @@ const Teacher = () => {
     }
 
     const ViewUser = (id) => {
-        getUserById({ id })
-        dispatch(setUserId({ id }))
+        // Iterates through array and finds the object matching the id passed as an argument
+        let result = users.filter(obj => {
+            return obj.user_id === id
+        })
+        // Selected index 0 of the result array
+        let user = result[0]
+        // store the JS object using the setUserInfo reducer
+        dispatch(setUserInfo({ user }))
     }
+
 
     let content;
     if (isLoading) {
@@ -101,19 +105,13 @@ const Teacher = () => {
                     onSelectionModelChange={(ids) => {
                         // sets the selected id
                         const selectedIDs = new Set(ids);
-                        console.log(selectedIDs)
                         // iterates over the selected row id and checks if a row is selected
                         const selectedRows = rows.filter((row) =>
                             selectedIDs.has(row.id),
                         );
                         // sets the result to selected rows
                         setSelectedRows(selectedRows);
-                        console.log(selectedRows)
-                        // Loops over the objects in selected rows
-                        for (let key in selectedRows) {
-                            // selects all the user ids of the selected row objects
-                            const rowByUser = selectedRows[key].id
-                        }
+                        console.log('Selected row: ', selectedRows)
                     }}
                 />
             </div>

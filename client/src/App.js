@@ -15,7 +15,6 @@ import { useSelector } from 'react-redux'
 
 function App() {
   const loggedInState = useSelector((state) => state.auth.isLoggedIn)
-  console.log(loggedInState)
 
   return (
     <BrowserRouter>

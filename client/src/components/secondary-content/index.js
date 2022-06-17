@@ -1,8 +1,16 @@
 import React from 'react'
 import ProfileBar from './profile-bar'
-
+import { setUserInfo, selectedUser } from '../../features/secondary-sidebar/sidebarSlice'
+import { useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 const Index = () => {
+
+    const selectedUser = useSelector((state) => state.sidebar.user)
+    if (selectedUser) {
+
+    }
+
     return (
         <aside>
             <ProfileBar />
@@ -11,7 +19,7 @@ const Index = () => {
                 <div className="profile-picture">
                     <i className='bx bxs-user-circle type' type="button"></i>
                 </div>
-                <span className="user-name d-flex justify-content-center">User Name</span>
+                <span className="user-name d-flex justify-content-center">{selectedUser.first_name}</span>
                 <div className="profile-info">
                     <h5>About</h5>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur itaque id beatae exercitationem,
@@ -34,7 +42,7 @@ const Index = () => {
                             </span>
                             <span className="phone">
                                 <h6>Phone</h6>
-                                <p>0504839498</p>
+                                <p>{selectedUser.phone}</p>
                             </span>
                         </div>
                     </div>
