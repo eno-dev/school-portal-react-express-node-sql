@@ -48,7 +48,11 @@ export default function BasicTabs() {
 
     return (
         <Box sx={{ width: '100%' }}>
-            <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+            <Box sx={{
+                borderBottom: 1, borderColor: 'divider',
+                '.MuiTabs-indicator': {},
+                '.Mui-selected': {}
+            }}>
                 <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
                     <Tab label="Teacher" {...a11yProps(0)} />
                     <Tab label="Student" {...a11yProps(1)} />

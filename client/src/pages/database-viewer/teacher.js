@@ -1,4 +1,4 @@
-import { DataGrid, GridActionsCellItem } from '@mui/x-data-grid';
+import { DataGrid, GridActionsCellItem, GridToolbarContainer, GridToolbarExport } from '@mui/x-data-grid';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import VisibilityIcon from '@mui/icons-material/Visibility';
@@ -7,6 +7,7 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useGetUserByRoleQuery, useDeleteUserMutation } from "../../features/users/usersApiSlice"
 import { setUserInfo } from '../../features/secondary-sidebar/sidebarSlice'
+import { borderBottom } from '@mui/system';
 
 const Teacher = () => {
     const {
@@ -48,6 +49,13 @@ const Teacher = () => {
         dispatch(setUserInfo({ user }))
     }
 
+    function CustomToolbar() {
+        return (
+            <GridToolbarContainer>
+                <GridToolbarExport />
+            </GridToolbarContainer>
+        );
+    }
 
     let content;
     if (isLoading) {
@@ -55,7 +63,7 @@ const Teacher = () => {
     } else if (isSuccess) {
 
         // Data for the table
-        let tb_data_mui =
+        let rows =
             users.map((val) => {
                 return ({
                     // important to add id even if user id
@@ -88,19 +96,37 @@ const Teacher = () => {
                     <GridActionsCellItem icon={<DeleteIcon />} onClick={() => { deleteUserByID(id) }} label="Delete" />,
                     <GridActionsCellItem icon={<VisibilityIcon />} onClick={() => { ViewUser(id) }} label="Delete" />,
                 ],
+
             }
         ];
         // Rows of table
-        const rows = tb_data_mui;
 
         content = (
-            <div style={{ height: 400, width: '100%' }}>
+            <div style={{ height: 500, width: '100%' }}>
                 <DataGrid
                     rows={rows}
                     columns={columns}
-                    pageSize={5}
-                    rowsPerPageOptions={[5]}
+                    pageSize={10}
+                    rowsPerPageOptions={[10]}
                     checkboxSelection
+                    components={{
+                        Toolbar: CustomToolbar,
+                    }}
+                    sx={{
+                        '.MuiDataGrid-toolbarContainer': {
+                            justifyContent: 'right',
+                            padding: 0
+                        },
+                        // Export button
+                        '.MuiButton-textPrimary': {
+                            // color: 'red'
+                        },
+                        // Column seperator
+                        '.MuiDataGrid-columnSeparator': {
+                            // display: 'none',
+                        },
+
+                    }}
                     // Gets the selection of datagrid
                     onSelectionModelChange={(ids) => {
                         // sets the selected id

@@ -30,7 +30,7 @@ const ProfileBar = () => {
         // Reloads window
         window.location.reload(false);
     }
-
+    // Find profile initials 
     const ProfileInitials = () => {
         const user = useSelector(selectCurrentUser)
         if (user) {
@@ -51,13 +51,18 @@ const ProfileBar = () => {
                             size="small"
                             sx={{
                                 mr: 1.5,
+                                '&:hover': {
+                                    bgcolor: '#EAC671'
+                                },
                             }}
                             aria-controls={open ? 'account-menu' : undefined}
                             aria-haspopup="true"
                             aria-expanded={open ? 'true' : undefined}
                         >
                             {/* Avatar Initials Information */}
-                            <Avatar sx={{ width: 32, height: 32, color: 'white' }}>{ProfileInitials()}</Avatar>
+                            <Avatar sx={{
+                                width: 36, height: 36, color: 'white', background: 'rgba(35,33,85,1)',
+                            }}>{ProfileInitials()}</Avatar>
                         </IconButton>
                     </Tooltip>
                 </Box>
@@ -103,12 +108,6 @@ const ProfileBar = () => {
                         <Avatar /> My account
                     </MenuItem>
                     <Divider />
-                    <MenuItem>
-                        <ListItemIcon>
-                            <PersonAdd fontSize="small" />
-                        </ListItemIcon>
-                        Add another account
-                    </MenuItem>
                     <MenuItem>
                         <ListItemIcon>
                             <Settings fontSize="small" />
