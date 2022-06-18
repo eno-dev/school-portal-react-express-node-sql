@@ -1,15 +1,10 @@
 import React from 'react'
 import ProfileBar from './profile-bar'
-import { setUserInfo, selectedUser } from '../../features/secondary-sidebar/sidebarSlice'
-import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 
 const Index = () => {
 
     const selectedUser = useSelector((state) => state.sidebar.user)
-    if (selectedUser) {
-
-    }
 
     return (
         <aside>

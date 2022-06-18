@@ -2,7 +2,7 @@ import React from 'react'
 import Toggle from './toggle'
 import Logo from '../../assets/img/s-comm_logo.ico'
 
-const sidebarHeader = () => {
+const SidebarHeader = () => {
     return (
         <header className="sidebar-header">
             {/* <!-- Logo --> */}
@@ -21,4 +21,4 @@ const sidebarHeader = () => {
     )
 }
 
-export default sidebarHeader
+export default SidebarHeader

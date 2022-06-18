@@ -2,14 +2,6 @@ import { NavLink } from "react-router-dom";
 
 const SidebarItems = () => {
 
-    // Handle logout function
-    const handleLogout = () => {
-        // Removing the persist:root from storage
-        localStorage.removeItem('persist:root')
-        // Reloads window
-        window.location.reload(false);
-    }
-
     return (
         <div className='menu-bar'>
             <div className='menu'>
@@ -63,7 +55,6 @@ const SidebarItems = () => {
                             <span className="text nav-text">Attendance</span>
                         </NavLink>
                     </li>
-                    <button onClick={handleLogout}>Logout</button>
                 </ul>
             </div>
             {/* <Outlet /> */}
