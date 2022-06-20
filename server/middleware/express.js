@@ -9,33 +9,7 @@ const MySQLStore = require('express-mysql-session')(session);
 
 module.exports = app => {
 
-    // Store all the sessions
-    let sessionStore = new MySQLStore({
-        createDatabaseTable: true,
-        schema: {
-            tableName: 'sessiontb1',
-            columnNames: {
-                session_id: 'session_id',
-                expires: 'expires',
-                data: 'data'
-            }
-        }
-    }, connection)
-
     app.use(cors(corsOptions))
-    app.use(session({
-        secret: 'secret',
-        path: '/',
-        httpOnly: true,
-        store: sessionStore,
-        secure: false,
-        cookie: {
-            sameSite: 'strict',
-            maxAge: 30000
-        },
-        resave: true,
-        saveUninitialized: true
-    }));
 
     // Json body parser
     app.use(bodyParser.json());
