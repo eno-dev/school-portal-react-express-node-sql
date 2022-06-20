@@ -14,7 +14,12 @@ if (process.env.NODE_ENV !== "production") {
     });
 } else {
     connection = mysql.createPool({
-        connectionString: process.env.DATABASE_URL
+        host: 'us-cdbr-east-05.cleardb.net',
+        user: 'b6c384b4e5adfd',
+        password: 'a101d1fe',
+        database: 'heroku_bea33a38296057c',
+        multipleStatements: true
+        // mysql:/b6c384b4e5adfd:a101d1fe@us-cdbr-east-05.cleardb.net/heroku_bea33a38296057c?reconnect=true
     });
 }
 
