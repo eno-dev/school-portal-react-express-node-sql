@@ -1,15 +1,15 @@
 const express = require('express');
 const app = express();
-const { port } = require('./config/config')
-const verifyJWT = require('./middleware/verifyJWT');
+const { port } = require('./server/config/config')
+const verifyJWT = require('./server/middleware/verifyJWT');
 const path = require('path')
 // Implement Middleware
-require('./middleware/express')(app);
+require('./server/middleware/express')(app);
 
 // route variables
-const authRoute = require('./routes/auth')
-const userRoute = require('./routes/user')
-const refreshRoute = require('./routes/refresh')
+const authRoute = require('./server/routes/auth')
+const userRoute = require('./server/routes/user')
+const refreshRoute = require('./server/routes/refresh')
 
 // using the routes
 app.use('/api', authRoute)
