@@ -17,7 +17,6 @@ if (process.env.NODE_ENV !== "production") {
         connectionString: process.env.DATABASE_URL
     });
 }
-console.log(connection)
 
 module.exports = {
     connection
