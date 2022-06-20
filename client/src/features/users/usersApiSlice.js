@@ -7,7 +7,7 @@ export const usersApiSlice = apiSlice.injectEndpoints({
         getUser: builder.query({
             query: () =>
             ({
-                url: '/api/users/role/1',
+                url: '/users/role/1',
                 method: 'POST',
                 body: { "role_id": 1 },
                 keepUnusedDataFor: 3
@@ -17,7 +17,7 @@ export const usersApiSlice = apiSlice.injectEndpoints({
         getUserByRole: builder.query({
             query: id =>
             ({
-                url: `/api/users/role/${id}`,
+                url: `/users/role/${id}`,
                 method: 'POST',
                 body: { "role_id": id },
                 keepUnusedDataFor: 3
@@ -29,7 +29,7 @@ export const usersApiSlice = apiSlice.injectEndpoints({
         getUserById: builder.query({
             query: () =>
             ({
-                url: `/api/users/`,
+                url: `/users/`,
                 method: 'POST',
                 body: { "user_id": 1 },
                 keepUnusedDataFor: 3
@@ -39,7 +39,7 @@ export const usersApiSlice = apiSlice.injectEndpoints({
         updateUser: builder.query({
             query: () =>
             ({
-                url: '/api/users/role/1',
+                url: '/users/role/1',
                 method: 'POST',
                 body: { "role_id": 1 },
                 keepUnusedDataFor: 3
@@ -49,7 +49,7 @@ export const usersApiSlice = apiSlice.injectEndpoints({
         deleteUser: builder.mutation({
             query: ({ id }) =>
             ({
-                url: `/api/users/delete/${id}`,
+                url: `/users/delete/${id}`,
                 method: 'DELETE',
                 body: { "user_id": id }
             }),
