@@ -253,6 +253,18 @@
 // Sidebar when screen is smaller
 @media only screen and (max-device-width : 480px) {
 
+    #account-menu {
+
+        .css-101mzzk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper::before {
+            // background-color: red;
+            left: 25px;
+        }
+
+        .MuiPaper-root {
+            // background-color: black;
+        }
+    }
+
     /* Styles */
 
     .sidebar,
@@ -264,15 +276,6 @@
         margin-top: 1vh;
         margin-bottom: 0vh;
         // border: 1px dashed black;
-
-
-        #account-menu {
-
-            .MuiPaper-root {
-
-                background-color: black;
-            }
-        }
 
         .menu-bar {
             margin-top: none;

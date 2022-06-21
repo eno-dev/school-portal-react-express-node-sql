@@ -578,6 +578,9 @@ nav-link a {
 }
 
 @media only screen and (max-device-width: 480px) {
+  #account-menu .css-101mzzk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper::before {
+    left: 25px;
+  }
   /* Styles */
   .sidebar,
   .sidebar.close {
@@ -592,10 +595,6 @@ nav-link a {
     height: 20vw;
     margin-top: 1vh;
     margin-bottom: 0vh;
-  }
-  .sidebar #account-menu .MuiPaper-root,
-  .sidebar.close #account-menu .MuiPaper-root {
-    background-color: black;
   }
   .sidebar .menu-bar,
   .sidebar.close .menu-bar {
