@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { setCredentials, logOut } from '../features/auth/authSlice'
 
 const baseQuery = fetchBaseQuery({
-    baseUrl: 'http://localhost:3001/api',
+    baseUrl: 'https://school-portal-sern.herokuapp.com/api',
     credentials: 'include',
     prepareHeaders: (headers, { getState }) => {
         const accessToken = getState().auth.accessToken
