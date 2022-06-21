@@ -1,32 +1,34 @@
 // @import '../abstracts/variables';
 
 // Closed Sidebar
-.sidebar.close {
-    width: 88px;
+@media only screen and (min-device-width : 480px) {
+    .sidebar.close {
+        width: 88px;
 
-    .active {
-        box-shadow: inset 6px 0px #EAC671;
+        .active {
+            box-shadow: inset 6px 0px #EAC671;
+        }
+
+        li a {
+            border-radius: 6px;
+        }
+
+        // School Name
+        header .image-text .schoolname {
+            // font-size: 0;
+            display: none;
+        }
+
+        .toggle {
+            transform: rotate(90deg);
+        }
+
+        .text {
+            opacity: 0;
+            font-size: 0;
+        }
+
     }
-
-    li a {
-        border-radius: 6px;
-    }
-
-    // School Name
-    header .image-text .schoolname {
-        // font-size: 0;
-        display: none;
-    }
-
-    .toggle {
-        transform: rotate(90deg);
-    }
-
-    .text {
-        opacity: 0;
-        font-size: 0;
-    }
-
 }
 
 
@@ -113,7 +115,10 @@
         .image-text {
             display: flex;
             height: 60px;
-            min-width: 200px;
+
+            @media only screen and (min-device-width : 480px) {
+                min-width: 200px;
+            }
 
             // Container for the school name
             .header-text {
@@ -166,19 +171,22 @@
 
         /* Menu Toggle */
         .menu-toggle {
+            @media only screen and (min-device-width : 480px) {
+                position: absolute;
+                top: 50%;
+                right: -25px;
+                transform: translateY(-50%);
+            }
+
             display: flex;
-            position: absolute;
-            top: 50%;
-            right: -25px;
-            transform: translateY(-50%);
-            height: 25px;
             width: 25px;
-            background-color: $button-color;
-            justify-content: center;
-            border-radius: 50%;
-            color: white;
-            font-size: 20px;
+            height: 25px;
             align-items: center;
+            border-radius: 50%;
+            font-size: 20px;
+            justify-content: center;
+            background-color: $button-color;
+            color: white;
             border: none;
         }
 
@@ -229,12 +237,95 @@
 
 }
 
-// Sidebar collapse
+// Profile circle when the screen is large
+@media only screen and (min-device-width : 480px) {
+
+    .sidebar,
+    .sidebar.close {
+        .sidebar-header {
+            .profile-bar {
+                display: none;
+            }
+        }
+    }
+}
+
+// Sidebar when screen is smaller
 @media only screen and (max-device-width : 480px) {
 
     /* Styles */
-    .sidebar {
-        width: 88px;
+
+    .sidebar,
+    .sidebar.close {
+        display: flex;
+        flex-direction: row;
+        width: 97vw;
+        height: 20vw;
+        margin-top: 1vh;
+        margin-bottom: 0vh;
+        // border: 1px dashed black;
+
+
+        #account-menu {
+
+            .MuiPaper-root {
+
+                background-color: black;
+            }
+        }
+
+        .menu-bar {
+            margin-top: none;
+        }
+
+
+        .sidebar-header {
+            display: flex;
+            // border: 1px dashed black;
+            width: inherit;
+            justify-content: space-between;
+
+            .profile-bar {
+                display: flex;
+                align-items: center;
+
+                .profile-items {
+                    .MuiAvatar-root.MuiAvatar-circular.MuiAvatar-colorDefault.css-qh8ieu-MuiAvatar-root {
+                        // color: red;
+                        height: 54px;
+                        width: 54px;
+                    }
+                }
+            }
+
+            .username {
+                display: none;
+            }
+
+            .image-text {
+                display: flex;
+                align-items: center;
+                // border: 1px dashed black;
+                justify-content: flex-end;
+
+
+                // Toggle
+                button {
+                    width: 54px;
+                    height: 54px;
+
+                    i {
+                        font-size: 25px;
+                    }
+                }
+
+                .text.header-text {
+                    display: none;
+                }
+
+
+            }
+        }
 
         .active {
             box-shadow: inset 6px 0px #EAC671;
@@ -245,18 +336,36 @@
         }
 
         // School Name
-        header .image-text .schoolname {
-            // font-size: 0;
-            display: none;
-        }
+        header .image-text {
+            display: flex;
+            width: 100px;
+            height: auto;
 
-        .toggle {
-            transform: rotate(90deg);
+            .image {
+                display: none;
+            }
+
+            .schoolname {
+                // font-size: 0;
+                display: none;
+            }
         }
 
         .text {
             opacity: 0;
             font-size: 0;
+        }
+
+        .menu-bar {
+            // margin-top: -68px;
+        }
+
+        // Menu Links
+        .menu-links {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            display: none;
         }
     }
 }

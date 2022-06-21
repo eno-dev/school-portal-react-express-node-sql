@@ -1,66 +1,71 @@
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-/* Styles */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    /* Styles */
 }
 
 /* Smartphones (landscape) ----------- */
-@media only screen 
-and (min-width : 321px) {
-/* Styles */
+@media only screen and (min-width : 321px) {
+    /* Styles */
 }
 
 /* Smartphones (portrait) ----------- */
-@media only screen 
-and (max-width : 320px) {
-/* Styles */
+@media only screen and (max-width : 320px) {
+    /* Styles */
 }
 
 /* iPads (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
-/* Styles */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    /* Styles */
 }
 
 /* iPads (landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) {
-/* Styles */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    /* Styles */
 }
 
 /* iPads (portrait) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
-/* Styles */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    /* Styles */
 }
 
 /* Desktops and laptops ----------- */
-@media only screen 
-and (min-width : 1224px) {
-/* Styles */
+@media only screen and (min-width : 1224px) {
+    /* Styles */
 }
 
 /* Large screens ----------- */
-@media only screen 
-and (min-width : 1824px) {
-/* Styles */
+@media only screen and (min-width : 1824px) {
+    /* Styles */
 }
 
 .all_content {
     display: flex;
     flex-direction: row;
     min-height: 100vh;
+
+    @media only screen and (max-width : 480px) {
+        /* Styles */
+        flex-direction: column;
+
+    }
 }
 
 .sidebar {
-    position: relative;
-    width: fit-content;
+
+    /* Smartphones (portrait) ----------- */
+    @media only screen and (max-width : 480px) {
+        /* Styles */
+        width: 100vw;
+
+    }
+
+    @media only screen and (min-width : 480px) {
+        /* Styles */
+        // position: relative;
+        width: fit-content;
+
+    }
+
 }
 
 .main_content {
@@ -85,7 +90,7 @@ and (min-width : 1824px) {
     position: relative;
 }
 
-.main_content{
+.main_content {
     .footer {
         height: 50px;
         margin-top: auto;

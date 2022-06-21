@@ -70,11 +70,34 @@
   min-height: 100vh;
 }
 
+@media only screen and (max-width: 480px) {
+  .all_content {
+    /* Styles */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .sidebar {
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  /* Smartphones (portrait) ----------- */
+}
+
+@media only screen and (max-width: 480px) {
+  .sidebar {
+    /* Styles */
+    width: 100vw;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .sidebar {
+    /* Styles */
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }
 
 .main_content {
@@ -132,6 +155,13 @@ nav-link a {
           justify-content: center;
   padding-top: 10px;
   width: 300px;
+}
+
+@media only screen and (max-device-width: 768px) {
+  .right {
+    /* Styles */
+    display: none;
+  }
 }
 
 .right aside {
@@ -233,6 +263,13 @@ nav-link a {
   font-size: medium;
 }
 
+@media only screen and (min-device-width: 768px) {
+  .right nav {
+    /* Styles */
+    display: none;
+  }
+}
+
 .right nav ul {
   list-style-type: none;
   margin: 0;
@@ -254,31 +291,28 @@ nav-link a {
   padding: 20px 5px;
 }
 
-.sidebar.close {
-  width: 88px;
-}
-
-.sidebar.close .active {
-  -webkit-box-shadow: inset 6px 0px #EAC671;
-          box-shadow: inset 6px 0px #EAC671;
-}
-
-.sidebar.close li a {
-  border-radius: 6px;
-}
-
-.sidebar.close header .image-text .schoolname {
-  display: none;
-}
-
-.sidebar.close .toggle {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-.sidebar.close .text {
-  opacity: 0;
-  font-size: 0;
+@media only screen and (min-device-width: 480px) {
+  .sidebar.close {
+    width: 88px;
+  }
+  .sidebar.close .active {
+    -webkit-box-shadow: inset 6px 0px #EAC671;
+            box-shadow: inset 6px 0px #EAC671;
+  }
+  .sidebar.close li a {
+    border-radius: 6px;
+  }
+  .sidebar.close header .image-text .schoolname {
+    display: none;
+  }
+  .sidebar.close .toggle {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .sidebar.close .text {
+    opacity: 0;
+    font-size: 0;
+  }
 }
 
 .sidebar {
@@ -394,9 +428,14 @@ nav-link a {
   display: -ms-flexbox;
   display: flex;
   height: 60px;
-  min-width: 200px;
   /* Website name below Logo */
   /* School name */
+}
+
+@media only screen and (min-device-width: 480px) {
+  .sidebar header .image-text {
+    min-width: 200px;
+  }
 }
 
 .sidebar header .image-text .header-text {
@@ -460,24 +499,29 @@ nav-link a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
-  top: 50%;
-  right: -25px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  height: 25px;
   width: 25px;
-  background-color: #7671EA;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 50%;
-  color: white;
-  font-size: 20px;
+  height: 25px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: 50%;
+  font-size: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #7671EA;
+  color: white;
   border: none;
+}
+
+@media only screen and (min-device-width: 480px) {
+  .sidebar header .menu-toggle {
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
 }
 
 .sidebar .menu-bar {
@@ -526,28 +570,133 @@ nav-link a {
   color: white;
 }
 
+@media only screen and (min-device-width: 480px) {
+  .sidebar .sidebar-header .profile-bar,
+  .sidebar.close .sidebar-header .profile-bar {
+    display: none;
+  }
+}
+
 @media only screen and (max-device-width: 480px) {
   /* Styles */
-  .sidebar {
-    width: 88px;
+  .sidebar,
+  .sidebar.close {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 97vw;
+    height: 20vw;
+    margin-top: 1vh;
+    margin-bottom: 0vh;
   }
-  .sidebar .active {
+  .sidebar #account-menu .MuiPaper-root,
+  .sidebar.close #account-menu .MuiPaper-root {
+    background-color: black;
+  }
+  .sidebar .menu-bar,
+  .sidebar.close .menu-bar {
+    margin-top: none;
+  }
+  .sidebar .sidebar-header,
+  .sidebar.close .sidebar-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: inherit;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .sidebar .sidebar-header .profile-bar,
+  .sidebar.close .sidebar-header .profile-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .sidebar .sidebar-header .profile-bar .profile-items .MuiAvatar-root.MuiAvatar-circular.MuiAvatar-colorDefault.css-qh8ieu-MuiAvatar-root,
+  .sidebar.close .sidebar-header .profile-bar .profile-items .MuiAvatar-root.MuiAvatar-circular.MuiAvatar-colorDefault.css-qh8ieu-MuiAvatar-root {
+    height: 54px;
+    width: 54px;
+  }
+  .sidebar .sidebar-header .username,
+  .sidebar.close .sidebar-header .username {
+    display: none;
+  }
+  .sidebar .sidebar-header .image-text,
+  .sidebar.close .sidebar-header .image-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .sidebar .sidebar-header .image-text button,
+  .sidebar.close .sidebar-header .image-text button {
+    width: 54px;
+    height: 54px;
+  }
+  .sidebar .sidebar-header .image-text button i,
+  .sidebar.close .sidebar-header .image-text button i {
+    font-size: 25px;
+  }
+  .sidebar .sidebar-header .image-text .text.header-text,
+  .sidebar.close .sidebar-header .image-text .text.header-text {
+    display: none;
+  }
+  .sidebar .active,
+  .sidebar.close .active {
     -webkit-box-shadow: inset 6px 0px #EAC671;
             box-shadow: inset 6px 0px #EAC671;
   }
-  .sidebar li a {
+  .sidebar li a,
+  .sidebar.close li a {
     border-radius: 6px;
   }
-  .sidebar header .image-text .schoolname {
+  .sidebar header .image-text,
+  .sidebar.close header .image-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100px;
+    height: auto;
+  }
+  .sidebar header .image-text .image,
+  .sidebar.close header .image-text .image {
     display: none;
   }
-  .sidebar .toggle {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+  .sidebar header .image-text .schoolname,
+  .sidebar.close header .image-text .schoolname {
+    display: none;
   }
-  .sidebar .text {
+  .sidebar .text,
+  .sidebar.close .text {
     opacity: 0;
     font-size: 0;
+  }
+  .sidebar .menu-links,
+  .sidebar.close .menu-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: none;
   }
 }
 

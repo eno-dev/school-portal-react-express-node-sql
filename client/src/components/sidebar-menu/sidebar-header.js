@@ -1,10 +1,12 @@
 import React from 'react'
 import Toggle from './toggle'
 import Logo from '../../assets/img/s-comm_logo.ico'
+import ProfileBar from '../secondary-content/profile-bar'
 
 const SidebarHeader = () => {
     return (
         <header className="sidebar-header">
+            <ProfileBar />
             {/* <!-- Logo --> */}
             <div className="image-text">
                 <span className="image">
