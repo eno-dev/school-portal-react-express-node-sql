@@ -12,6 +12,7 @@ if (process.env.NODE_ENV !== "production") {
         database: process.env.DB_NAME,
         multipleStatements: true
     });
+    console.log("Local DB")
 } else {
     connection = mysql.createConnection(process.env.JAWSDB_URL)
     // connection.connect()
@@ -25,7 +26,7 @@ if (process.env.NODE_ENV !== "production") {
     // mysql:/b6c384b4e5adfd:a101d1fe@us-cdbr-east-05.cleardb.net/heroku_bea33a38296057c?reconnect=true
 
     // });
-    console.log(connection)
+    console.log("SharkDB")
 }
 
 module.exports = {
