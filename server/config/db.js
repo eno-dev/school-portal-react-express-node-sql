@@ -14,7 +14,7 @@ if (process.env.NODE_ENV !== "production") {
     });
 } else {
     connection = mysql.createConnection(process.env.JAWSDB_URL)
-    connection.connect()
+    // connection.connect()
     // CLEAR DB
     // connection = mysql.createPool({
     //     host: 'us-cdbr-east-05.cleardb.net',
