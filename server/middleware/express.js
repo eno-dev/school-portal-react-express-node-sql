@@ -13,7 +13,8 @@ module.exports = app => {
     app.use(cors(corsOptions))
     app.use(session({
         secret: 'secret',
-        path: '/',
+        // Check for potential problem in the future
+        // path: '/',
         httpOnly: true,
         secure: false,
         cookie: {
