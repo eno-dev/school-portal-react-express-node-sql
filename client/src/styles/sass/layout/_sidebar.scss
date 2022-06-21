@@ -3,9 +3,9 @@
 // Closed Sidebar
 .sidebar.close {
     width: 88px;
-    
+
     .active {
-        box-shadow:inset 6px 0px #EAC671;
+        box-shadow: inset 6px 0px #EAC671;
     }
 
     li a {
@@ -29,6 +29,7 @@
 
 }
 
+
 // Open Sidebar
 .sidebar {
     background-color: $sidebar-color;
@@ -36,6 +37,13 @@
     padding-top: 20px;
     padding: 14px 14px;
     transition: $tran-05;
+
+    /* iPads (portrait and landscape) ----------- */
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+        /* Styles */
+
+    }
+
     width: 230px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -68,23 +76,23 @@
         align-items: center;
         margin-top: 10px;
         padding: 0;
-        
+
 
         /* Menu item names only */
         a {
-        list-style: none;
-        height: 100%;
-        background-color: transparent;
-        display: flex;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-        border-top-right-radius: $border-rad-menu;
-        border-bottom-right-radius: $border-rad-menu;
-        text-decoration: none;
-        transition: $tran-05;
+            list-style: none;
+            height: 100%;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            border-top-right-radius: $border-rad-menu;
+            border-bottom-right-radius: $border-rad-menu;
+            text-decoration: none;
+            transition: $tran-05;
         }
-        
+
         /* Icon design features */
         .icon {
             min-width: 60px;
@@ -116,17 +124,18 @@
                 padding-right: 10px;
                 // max-width: 12ch;
             }
-        /* Website name below Logo */
+
+            /* Website name below Logo */
             .name {
                 margin-top: 2px;
                 font-size: 18px;
                 font-weight: 600;
             }
-        
-        /* School name */
+
+            /* School name */
             .schoolname {
-            font-size: 18px;
-            font-weight: 575;
+                font-size: 18px;
+                font-weight: 575;
             }
         }
 
@@ -197,7 +206,8 @@
 
 
     /* Hovering over sidebar */
-    a:hover, a:active {
+    a:hover,
+    a:active {
         background-color: $button-color;
 
         span,
@@ -210,10 +220,43 @@
     .active {
         background-color: $button-color;
         box-shadow: 10px 0px #EAC671 inset;
+
         span,
         .icon {
             color: white;
         }
-      }
-      
+    }
+
+}
+
+// Sidebar collapse
+@media only screen and (max-device-width : 480px) {
+
+    /* Styles */
+    .sidebar {
+        width: 88px;
+
+        .active {
+            box-shadow: inset 6px 0px #EAC671;
+        }
+
+        li a {
+            border-radius: 6px;
+        }
+
+        // School Name
+        header .image-text .schoolname {
+            // font-size: 0;
+            display: none;
+        }
+
+        .toggle {
+            transform: rotate(90deg);
+        }
+
+        .text {
+            opacity: 0;
+            font-size: 0;
+        }
+    }
 }
