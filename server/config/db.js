@@ -21,6 +21,7 @@ if (process.env.NODE_ENV !== "production") {
         multipleStatements: true
         // mysql:/b6c384b4e5adfd:a101d1fe@us-cdbr-east-05.cleardb.net/heroku_bea33a38296057c?reconnect=true
     });
+    console.log(connection)
 }
 
 module.exports = {

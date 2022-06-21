@@ -10,7 +10,7 @@ export const usersApiSlice = apiSlice.injectEndpoints({
                 url: '/users/role/1',
                 method: 'POST',
                 body: { "role_id": 1 },
-                keepUnusedDataFor: 3
+                keepUnusedDataFor: 10
             })
         }),
 
