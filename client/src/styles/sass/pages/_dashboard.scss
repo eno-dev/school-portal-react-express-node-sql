@@ -4,6 +4,11 @@
     #welcome {
         margin-bottom: calc(#{$margin-block-div}/1.7);
 
+        .welcomeMessage,
+        .welcomeName {
+            // text-align: center;
+        }
+
         // Hi message
         h2 {
             margin-bottom: 0.25rem;
@@ -24,36 +29,14 @@
         min-height: 250px;
         margin-bottom: calc(#{$margin-block-div});
 
-        h3 {
-            padding: 10px;
-        }
-    }
-
-    // Above Table
-    .row {
-        display: flex;
-
-        .search {
-            padding-bottom: 4em;
-            padding-top: 1em;
-
-            form {
-                width: 20em;
-            }
-        }
-
-        .heading {
-            float: left;
-            margin-bottom: 0;
-            align-items: center;
-        }
-
-        header {
+        @media only screen and (max-device-width : 768px) {
+            /* Styles */
             display: flex;
-            padding-bottom: 10px;
+            justify-content: center;
+            padding: 10px;
+
         }
     }
-
 
     // Class title
     .class-title {
@@ -92,6 +75,7 @@
         // Screen is bigger
         @media only screen and (min-device-width : 768px) {
             /* Styles */
+            height: 200px;
             flex-direction: row;
             justify-content: space-between;
         }
@@ -100,12 +84,17 @@
 
         // Classes
         >* {
+
+            // Smaller screens
             @media only screen and (max-device-width : 768px) {
                 /* Styles */
                 display: flex;
                 height: 200px;
-                gap: 2px
+                gap: 2px;
+                width: 100%;
+                justify-content: center;
             }
+
 
             width: 300px;
             background-color: $sidebar-color;
