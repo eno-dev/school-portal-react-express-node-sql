@@ -116,7 +116,7 @@
 .main_body {
   height: 100%;
   padding: 20px 14px;
-  overflow: scroll;
+  overflow: hidden;
   min-width: 300px;
 }
 
@@ -579,112 +579,93 @@ nav-link a {
 
 @media only screen and (max-device-width: 480px) {
   #account-menu .css-101mzzk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper::before {
-    left: 25px;
+    right: 27px;
   }
-  /* Styles */
-  .sidebar,
-  .sidebar.close {
+  .sidebar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 97vw;
-    height: 20vw;
+    height: 10vh;
     margin-top: 1vh;
     margin-bottom: 0vh;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  .sidebar .menu-bar,
-  .sidebar.close .menu-bar {
-    margin-top: none;
+  .sidebar .menu-bar {
+    margin-top: 0;
+    background-color: #EDF2FA;
   }
-  .sidebar .sidebar-header,
-  .sidebar.close .sidebar-header {
+  .sidebar .sidebar-header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: inherit;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .sidebar .sidebar-header .profile-bar,
-  .sidebar.close .sidebar-header .profile-bar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .sidebar .sidebar-header .profile-bar .profile-items .MuiAvatar-root.MuiAvatar-circular.MuiAvatar-colorDefault.css-qh8ieu-MuiAvatar-root,
-  .sidebar.close .sidebar-header .profile-bar .profile-items .MuiAvatar-root.MuiAvatar-circular.MuiAvatar-colorDefault.css-qh8ieu-MuiAvatar-root {
-    height: 54px;
-    width: 54px;
-  }
-  .sidebar .sidebar-header .username,
-  .sidebar.close .sidebar-header .username {
-    display: none;
-  }
-  .sidebar .sidebar-header .image-text,
-  .sidebar.close .sidebar-header .image-text {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-  .sidebar .sidebar-header .image-text button,
-  .sidebar.close .sidebar-header .image-text button {
+  .sidebar .sidebar-header .menu-toggle {
     width: 54px;
     height: 54px;
   }
-  .sidebar .sidebar-header .image-text button i,
-  .sidebar.close .sidebar-header .image-text button i {
+  .sidebar .sidebar-header .menu-toggle i {
     font-size: 25px;
   }
-  .sidebar .sidebar-header .image-text .text.header-text,
-  .sidebar.close .sidebar-header .image-text .text.header-text {
+  .sidebar .sidebar-header .profile-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .sidebar .sidebar-header .profile-bar .profile-items button {
+    margin-right: 0;
+  }
+  .sidebar .sidebar-header .profile-bar .profile-items .MuiAvatar-root.MuiAvatar-circular.MuiAvatar-colorDefault.css-qh8ieu-MuiAvatar-root {
+    height: 54px;
+    width: 54px;
+  }
+  .sidebar .sidebar-header .username {
     display: none;
   }
-  .sidebar .active,
-  .sidebar.close .active {
+  .sidebar .sidebar-header .image-text {
+    text-align: center;
+    font-size: 2em;
+    height: auto;
+    width: auto;
+  }
+  .sidebar .active {
     -webkit-box-shadow: inset 6px 0px #EAC671;
             box-shadow: inset 6px 0px #EAC671;
   }
-  .sidebar li a,
-  .sidebar.close li a {
+  .sidebar li a {
     border-radius: 6px;
   }
-  .sidebar header .image-text,
-  .sidebar.close header .image-text {
+  .sidebar header .image-text {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100px;
-    height: auto;
   }
-  .sidebar header .image-text .image,
-  .sidebar.close header .image-text .image {
+  .sidebar header .image-text .image {
     display: none;
   }
-  .sidebar header .image-text .schoolname,
-  .sidebar.close header .image-text .schoolname {
+  .sidebar header .image-text .schoolname {
     display: none;
   }
-  .sidebar .text,
-  .sidebar.close .text {
+  .sidebar .text {
     opacity: 0;
     font-size: 0;
   }
-  .sidebar .menu-links,
-  .sidebar.close .menu-links {
+  .sidebar .menu-links {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -696,6 +677,74 @@ nav-link a {
         -ms-flex-pack: center;
             justify-content: center;
     display: none;
+  }
+  .sidebar.close {
+    display: block;
+  }
+  .sidebar.close .sidebar-header .image-text {
+    height: auto;
+    width: auto;
+  }
+  .sidebar.close .menu-bar {
+    margin-top: 15px;
+  }
+  .sidebar.close .menu-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+  }
+  .sidebar.close .menu-links .nav-link {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 80px;
+  }
+  .sidebar.close .menu-links li a {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .sidebar.close .text {
+    opacity: 1;
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (min-device-width: 480px) and (max-device-width: 810px) {
+  .sidebar {
+    width: 88px;
+  }
+  .sidebar .active {
+    -webkit-box-shadow: inset 6px 0px #EAC671;
+            box-shadow: inset 6px 0px #EAC671;
+  }
+  .sidebar li a {
+    border-radius: 6px;
+  }
+  .sidebar header .image-text .schoolname {
+    display: none;
+  }
+  .sidebar .toggle {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .sidebar .text {
+    opacity: 0;
+    font-size: 0;
   }
 }
 
@@ -718,6 +767,7 @@ nav-link a {
   width: 100%;
   min-height: 250px;
   margin-bottom: calc(30px);
+  padding: 12px;
 }
 
 @media only screen and (max-device-width: 768px) {

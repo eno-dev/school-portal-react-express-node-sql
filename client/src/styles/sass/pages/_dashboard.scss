@@ -4,11 +4,6 @@
     #welcome {
         margin-bottom: calc(#{$margin-block-div}/1.7);
 
-        .welcomeMessage,
-        .welcomeName {
-            // text-align: center;
-        }
-
         // Hi message
         h2 {
             margin-bottom: 0.25rem;
@@ -28,6 +23,7 @@
         width: 100%;
         min-height: 250px;
         margin-bottom: calc(#{$margin-block-div});
+        padding: 12px;
 
         @media only screen and (max-device-width : 768px) {
             /* Styles */
