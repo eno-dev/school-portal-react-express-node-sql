@@ -3,7 +3,8 @@ import { setCredentials, logOut } from '../features/auth/authSlice'
 
 const baseQuery = fetchBaseQuery({
     // change based on production/development
-    baseUrl: 'http://localhost:3001/api',
+    baseUrl: 'https://school-portal-sern.herokuapp.com/api',
+    // baseUrl: 'http://localhost:3001/api',
     credentials: 'include',
     prepareHeaders: (headers, { getState }) => {
         const accessToken = getState().auth.accessToken
