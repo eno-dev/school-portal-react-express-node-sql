@@ -15,7 +15,6 @@ if (process.env.NODE_ENV !== "production") {
     console.log("Local DB")
 } else {
     connection = mysql.createConnection(process.env.JAWSDB_URL)
-
     console.log("SharkDB")
 }
 
