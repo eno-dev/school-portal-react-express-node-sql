@@ -25,11 +25,20 @@ const postLogin = (req, res) => {
             if (err) {
                 res.send({ err: err });
             }
+            // Checks that the result exists
             if (result.length > 0) {
                 if (password === result[0].password) {
                     const user = JSON.parse(JSON.stringify(result[0]))
                     const accessToken = generateAccessToken(user);
                     const refreshToken = generateRefreshToken(user);
+                    // Store refresh token to database
+                    connection.query(sqlQuery, [user.user_id], (err, result) => {
+                        if (err) {
+                            res.send({ err: err })
+                        }
+
+
+                    })
                     // Create array of current user to include the refreshToken 
                     // saving current refresh token with user
                     const currentUser = { ...user, refreshToken };
