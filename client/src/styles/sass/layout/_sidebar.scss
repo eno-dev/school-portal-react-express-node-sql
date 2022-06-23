@@ -1,33 +1,36 @@
 // @import '../abstracts/variables';
 
 // Closed Sidebar
-.sidebar.close {
-    width: 88px;
-    
-    .active {
-        box-shadow:inset 6px 0px #EAC671;
-    }
+@media only screen and (min-device-width : 480px) {
+    .sidebar.close {
+        width: 88px;
 
-    li a {
-        border-radius: 6px;
-    }
+        .active {
+            box-shadow: inset 6px 0px #EAC671;
+        }
 
-    // School Name
-    header .image-text .schoolname {
-        // font-size: 0;
-        display: none;
-    }
+        li a {
+            border-radius: 6px;
+        }
 
-    .toggle {
-        transform: rotate(90deg);
-    }
+        // School Name
+        header .image-text .schoolname {
+            // font-size: 0;
+            display: none;
+        }
 
-    .text {
-        opacity: 0;
-        font-size: 0;
-    }
+        .toggle {
+            transform: rotate(90deg);
+        }
 
+        .text {
+            opacity: 0;
+            font-size: 0;
+        }
+
+    }
 }
+
 
 // Open Sidebar
 .sidebar {
@@ -36,6 +39,13 @@
     padding-top: 20px;
     padding: 14px 14px;
     transition: $tran-05;
+
+    /* iPads (portrait and landscape) ----------- */
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+        /* Styles */
+
+    }
+
     width: 230px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -68,23 +78,23 @@
         align-items: center;
         margin-top: 10px;
         padding: 0;
-        
+
 
         /* Menu item names only */
         a {
-        list-style: none;
-        height: 100%;
-        background-color: transparent;
-        display: flex;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-        border-top-right-radius: $border-rad-menu;
-        border-bottom-right-radius: $border-rad-menu;
-        text-decoration: none;
-        transition: $tran-05;
+            list-style: none;
+            height: 100%;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            border-top-right-radius: $border-rad-menu;
+            border-bottom-right-radius: $border-rad-menu;
+            text-decoration: none;
+            transition: $tran-05;
         }
-        
+
         /* Icon design features */
         .icon {
             min-width: 60px;
@@ -105,7 +115,10 @@
         .image-text {
             display: flex;
             height: 60px;
-            min-width: 200px;
+
+            @media only screen and (min-device-width : 480px) {
+                min-width: 200px;
+            }
 
             // Container for the school name
             .header-text {
@@ -116,17 +129,18 @@
                 padding-right: 10px;
                 // max-width: 12ch;
             }
-        /* Website name below Logo */
+
+            /* Website name below Logo */
             .name {
                 margin-top: 2px;
                 font-size: 18px;
                 font-weight: 600;
             }
-        
-        /* School name */
+
+            /* School name */
             .schoolname {
-            font-size: 18px;
-            font-weight: 575;
+                font-size: 18px;
+                font-weight: 575;
             }
         }
 
@@ -157,19 +171,22 @@
 
         /* Menu Toggle */
         .menu-toggle {
+            @media only screen and (min-device-width : 480px) {
+                position: absolute;
+                top: 50%;
+                right: -25px;
+                transform: translateY(-50%);
+            }
+
             display: flex;
-            position: absolute;
-            top: 50%;
-            right: -25px;
-            transform: translateY(-50%);
-            height: 25px;
             width: 25px;
-            background-color: $button-color;
-            justify-content: center;
-            border-radius: 50%;
-            color: white;
-            font-size: 20px;
+            height: 25px;
             align-items: center;
+            border-radius: 50%;
+            font-size: 20px;
+            justify-content: center;
+            background-color: $button-color;
+            color: white;
             border: none;
         }
 
@@ -197,7 +214,8 @@
 
 
     /* Hovering over sidebar */
-    a:hover, a:active {
+    a:hover,
+    a:active {
         background-color: $button-color;
 
         span,
@@ -210,10 +228,207 @@
     .active {
         background-color: $button-color;
         box-shadow: 10px 0px #EAC671 inset;
+
         span,
         .icon {
             color: white;
         }
-      }
-      
+    }
+
+}
+
+// Profile circle when the screen is large
+@media only screen and (min-device-width : 480px) {
+
+    .sidebar,
+    .sidebar.close {
+        .sidebar-header {
+            .profile-bar {
+                display: none;
+            }
+        }
+    }
+}
+
+// Sidebar when screen is smaller
+@media only screen and (max-device-width : 480px) {
+
+    #account-menu {
+
+        // Little arrow above menu
+        .css-101mzzk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper::before {
+            // background-color: red;
+            right: 27px;
+        }
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        width: 97vw;
+        height: 10vh;
+        margin-top: 1vh;
+        margin-bottom: 0vh;
+        justify-content: center;
+        // border: 1px dashed black;
+
+        .menu-bar {
+            margin-top: 0;
+            background-color: #EDF2FA;
+        }
+
+        .sidebar-header {
+            display: flex;
+            // border: 1px dashed black;
+            // width: inherit;
+            align-items: center;
+            justify-content: space-between;
+
+            // Toggle
+            .menu-toggle {
+                width: 54px;
+                height: 54px;
+
+                i {
+                    font-size: 25px;
+                }
+            }
+
+            .profile-bar {
+                display: flex;
+                align-items: center;
+                // border: 1px dashed black;
+
+                .profile-items {
+                    button {
+                        margin-right: 0;
+                    }
+
+                    .MuiAvatar-root.MuiAvatar-circular.MuiAvatar-colorDefault.css-qh8ieu-MuiAvatar-root {
+                        // color: red;
+                        height: 54px;
+                        width: 54px;
+                    }
+                }
+            }
+
+            .username {
+                display: none;
+            }
+
+            .image-text {
+                text-align: center;
+                font-size: 2em;
+                height: auto;
+                width: auto;
+            }
+        }
+
+        .active {
+            box-shadow: inset 6px 0px #EAC671;
+        }
+
+        li a {
+            border-radius: 6px;
+        }
+
+        // School Name
+        header .image-text {
+            display: flex;
+
+            .image {
+                display: none;
+            }
+
+            .schoolname {
+                // font-size: 0;
+                display: none;
+            }
+        }
+
+        .text {
+            opacity: 0;
+            font-size: 0;
+        }
+
+
+
+        // Menu Links
+        .menu-links {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            display: none;
+        }
+    }
+
+    .sidebar.close {
+        display: block;
+
+        .sidebar-header {
+            .image-text {
+                height: auto;
+                width: auto;
+            }
+        }
+
+        .menu-bar {
+            margin-top: 15px;
+        }
+
+        // Menu Links
+        .menu-links {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            // display: none;
+            transition: all 0.8s ease;
+
+            .nav-link {
+                width: 100%;
+                display: flex;
+                height: 80px;
+            }
+
+            li a {
+                justify-content: center;
+            }
+        }
+
+        .text {
+            opacity: 1;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+@media only screen and (min-device-width : 480px) and (max-device-width : 810px) {
+    .sidebar {
+        width: 88px;
+
+        .active {
+            box-shadow: inset 6px 0px #EAC671;
+        }
+
+        li a {
+            border-radius: 6px;
+        }
+
+        // School Name
+        header .image-text .schoolname {
+            // font-size: 0;
+            display: none;
+        }
+
+        .toggle {
+            transform: rotate(90deg);
+        }
+
+        .text {
+            opacity: 0;
+            font-size: 0;
+        }
+    }
 }

@@ -1,3 +1,64 @@
+.main_content .main_body .grades {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main_content .main_body .grades .loadingScreen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  /* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+  /* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */
+}
+
 .all_content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9,11 +70,34 @@
   min-height: 100vh;
 }
 
+@media only screen and (max-width: 480px) {
+  .all_content {
+    /* Styles */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .sidebar {
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  /* Smartphones (portrait) ----------- */
+}
+
+@media only screen and (max-width: 480px) {
+  .sidebar {
+    /* Styles */
+    width: 100vw;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .sidebar {
+    /* Styles */
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }
 
 .main_content {
@@ -32,6 +116,8 @@
 .main_body {
   height: 100%;
   padding: 20px 14px;
+  overflow: hidden;
+  min-width: 300px;
 }
 
 .right {
@@ -69,6 +155,13 @@ nav-link a {
           justify-content: center;
   padding-top: 10px;
   width: 300px;
+}
+
+@media only screen and (max-device-width: 768px) {
+  .right {
+    /* Styles */
+    display: none;
+  }
 }
 
 .right aside {
@@ -170,6 +263,13 @@ nav-link a {
   font-size: medium;
 }
 
+@media only screen and (min-device-width: 768px) {
+  .right nav {
+    /* Styles */
+    display: none;
+  }
+}
+
 .right nav ul {
   list-style-type: none;
   margin: 0;
@@ -191,31 +291,28 @@ nav-link a {
   padding: 20px 5px;
 }
 
-.sidebar.close {
-  width: 88px;
-}
-
-.sidebar.close .active {
-  -webkit-box-shadow: inset 6px 0px #EAC671;
-          box-shadow: inset 6px 0px #EAC671;
-}
-
-.sidebar.close li a {
-  border-radius: 6px;
-}
-
-.sidebar.close header .image-text .schoolname {
-  display: none;
-}
-
-.sidebar.close .toggle {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-.sidebar.close .text {
-  opacity: 0;
-  font-size: 0;
+@media only screen and (min-device-width: 480px) {
+  .sidebar.close {
+    width: 88px;
+  }
+  .sidebar.close .active {
+    -webkit-box-shadow: inset 6px 0px #EAC671;
+            box-shadow: inset 6px 0px #EAC671;
+  }
+  .sidebar.close li a {
+    border-radius: 6px;
+  }
+  .sidebar.close header .image-text .schoolname {
+    display: none;
+  }
+  .sidebar.close .toggle {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .sidebar.close .text {
+    opacity: 0;
+    font-size: 0;
+  }
 }
 
 .sidebar {
@@ -225,6 +322,7 @@ nav-link a {
   padding: 14px 14px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  /* iPads (portrait and landscape) ----------- */
   width: 230px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -234,6 +332,12 @@ nav-link a {
   /* Sidebar items */
   /* Sidebar icon and test design */
   /* Hovering over sidebar */
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .sidebar {
+    /* Styles */
+  }
 }
 
 .sidebar .icon {
@@ -324,9 +428,14 @@ nav-link a {
   display: -ms-flexbox;
   display: flex;
   height: 60px;
-  min-width: 200px;
   /* Website name below Logo */
   /* School name */
+}
+
+@media only screen and (min-device-width: 480px) {
+  .sidebar header .image-text {
+    min-width: 200px;
+  }
 }
 
 .sidebar header .image-text .header-text {
@@ -390,24 +499,29 @@ nav-link a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
-  top: 50%;
-  right: -25px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  height: 25px;
   width: 25px;
-  background-color: #7671EA;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 50%;
-  color: white;
-  font-size: 20px;
+  height: 25px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: 50%;
+  font-size: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #7671EA;
+  color: white;
   border: none;
+}
+
+@media only screen and (min-device-width: 480px) {
+  .sidebar header .menu-toggle {
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
 }
 
 .sidebar .menu-bar {
@@ -433,12 +547,14 @@ nav-link a {
   color: #212529;
 }
 
-.sidebar a:hover, .sidebar a:active {
+.sidebar a:hover,
+.sidebar a:active {
   background-color: #7671EA;
 }
 
 .sidebar a:hover span,
-.sidebar a:hover .icon, .sidebar a:active span,
+.sidebar a:hover .icon,
+.sidebar a:active span,
 .sidebar a:active .icon {
   color: white;
 }
@@ -452,6 +568,184 @@ nav-link a {
 .sidebar .active span,
 .sidebar .active .icon {
   color: white;
+}
+
+@media only screen and (min-device-width: 480px) {
+  .sidebar .sidebar-header .profile-bar,
+  .sidebar.close .sidebar-header .profile-bar {
+    display: none;
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+  #account-menu .css-101mzzk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper::before {
+    right: 27px;
+  }
+  .sidebar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 97vw;
+    height: 10vh;
+    margin-top: 1vh;
+    margin-bottom: 0vh;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .sidebar .menu-bar {
+    margin-top: 0;
+    background-color: #EDF2FA;
+  }
+  .sidebar .sidebar-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .sidebar .sidebar-header .menu-toggle {
+    width: 54px;
+    height: 54px;
+  }
+  .sidebar .sidebar-header .menu-toggle i {
+    font-size: 25px;
+  }
+  .sidebar .sidebar-header .profile-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .sidebar .sidebar-header .profile-bar .profile-items button {
+    margin-right: 0;
+  }
+  .sidebar .sidebar-header .profile-bar .profile-items .MuiAvatar-root.MuiAvatar-circular.MuiAvatar-colorDefault.css-qh8ieu-MuiAvatar-root {
+    height: 54px;
+    width: 54px;
+  }
+  .sidebar .sidebar-header .username {
+    display: none;
+  }
+  .sidebar .sidebar-header .image-text {
+    text-align: center;
+    font-size: 2em;
+    height: auto;
+    width: auto;
+  }
+  .sidebar .active {
+    -webkit-box-shadow: inset 6px 0px #EAC671;
+            box-shadow: inset 6px 0px #EAC671;
+  }
+  .sidebar li a {
+    border-radius: 6px;
+  }
+  .sidebar header .image-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .sidebar header .image-text .image {
+    display: none;
+  }
+  .sidebar header .image-text .schoolname {
+    display: none;
+  }
+  .sidebar .text {
+    opacity: 0;
+    font-size: 0;
+  }
+  .sidebar .menu-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: none;
+  }
+  .sidebar.close {
+    display: block;
+  }
+  .sidebar.close .sidebar-header .image-text {
+    height: auto;
+    width: auto;
+  }
+  .sidebar.close .menu-bar {
+    margin-top: 15px;
+  }
+  .sidebar.close .menu-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+  }
+  .sidebar.close .menu-links .nav-link {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 80px;
+  }
+  .sidebar.close .menu-links li a {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .sidebar.close .text {
+    opacity: 1;
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (min-device-width: 480px) and (max-device-width: 810px) {
+  .sidebar {
+    width: 88px;
+  }
+  .sidebar .active {
+    -webkit-box-shadow: inset 6px 0px #EAC671;
+            box-shadow: inset 6px 0px #EAC671;
+  }
+  .sidebar li a {
+    border-radius: 6px;
+  }
+  .sidebar header .image-text .schoolname {
+    display: none;
+  }
+  .sidebar .toggle {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .sidebar .text {
+    opacity: 0;
+    font-size: 0;
+  }
 }
 
 .main_body #welcome {
@@ -473,40 +767,20 @@ nav-link a {
   width: 100%;
   min-height: 250px;
   margin-bottom: calc(30px);
+  padding: 12px;
 }
 
-.main_body .announcements h3 {
-  padding: 10px;
-}
-
-.main_body .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.main_body .row .search {
-  padding-bottom: 4em;
-  padding-top: 1em;
-}
-
-.main_body .row .search form {
-  width: 20em;
-}
-
-.main_body .row .heading {
-  float: left;
-  margin-bottom: 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.main_body .row header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 10px;
+@media only screen and (max-device-width: 768px) {
+  .main_body .announcements {
+    /* Styles */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 10px;
+  }
 }
 
 .main_body .class-title {
@@ -541,10 +815,32 @@ nav-link a {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 250px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  height: 100vh;
+}
+
+@media only screen and (max-device-width: 768px) {
+  .main_body .classes {
+    /* Styles */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 2em;
+  }
+}
+
+@media only screen and (min-device-width: 768px) {
+  .main_body .classes {
+    /* Styles */
+    height: 200px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .main_body .classes > * {
@@ -553,6 +849,21 @@ nav-link a {
   text-align: center;
   border-radius: 16px;
   padding-top: 12px;
+}
+
+@media only screen and (max-device-width: 768px) {
+  .main_body .classes > * {
+    /* Styles */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 200px;
+    gap: 2px;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .main_body .MuiBox-root {
@@ -575,6 +886,46 @@ nav-link a {
   outline: 0px;
 }
 
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  /* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+  /* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */
+}
+
 .login {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -587,29 +938,6 @@ nav-link a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.login_items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: #EDF2FA;
-  width: 400px;
-  height: 400px;
-  margin: 7em auto;
-  border-radius: 1.5em;
-  -webkit-box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
-          box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.login * {
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -652,7 +980,6 @@ nav-link a {
           align-items: center;
 }
 
-/* Submit button */
 .login form input[type=submit] {
   width: 140px;
   height: 45px;
@@ -673,7 +1000,7 @@ nav-link a {
   outline: none;
 }
 
-.login form input[type=submit]:hover {
+.login form input[type=submit] :hover {
   background-color: #7671EA;
   -webkit-box-shadow: 0px 15px 20px rgba(157, 78, 221, 0.4);
           box-shadow: 0px 15px 20px rgba(157, 78, 221, 0.4);
@@ -683,16 +1010,50 @@ nav-link a {
 }
 
 .login form input[type=text],
-input[type=password] {
+.login form input[type=password] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 10px 10px;
 }
 
-/* Password field */
 .login form .password {
   padding-top: 10px;
   padding-bottom: 25px;
+}
+
+.login_items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #EDF2FA;
+  /* Smartphones (landscape) ----------- */
+  /* iPads (portrait and landscape) ----------- */
+  height: 400px;
+  margin: 7em auto;
+  border-radius: 1.5em;
+  -webkit-box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+          box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media only screen and (min-width: 321px) {
+  .login_items {
+    /* Styles */
+    width: 350px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .login_items {
+    /* Styles */
+    max-width: 400px;
+  }
 }
 
 .main_body .search-users .button {
