@@ -4,6 +4,7 @@ const mysql = require('mysql');
 let connection;
 
 if (process.env.NODE_ENV !== "production") {
+
     connection = mysql.createPool({
         host: process.env.DB_HOST,
         user: process.env.DB_USER,
@@ -11,6 +12,7 @@ if (process.env.NODE_ENV !== "production") {
         database: process.env.DB_NAME,
         multipleStatements: true
     });
+    console.log("Local DB")
 } else {
     connection = mysql.createConnection(process.env.JAWSDB_URL)
     console.log("SharkDB")

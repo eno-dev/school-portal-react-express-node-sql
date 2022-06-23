@@ -7,7 +7,7 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useGetUserByRoleQuery, useDeleteUserMutation } from "../../features/users/usersApiSlice"
 import { setUserInfo } from '../../features/secondary-sidebar/sidebarSlice'
-import { borderBottom } from '@mui/system';
+import LinearProgress from '@mui/material/LinearProgress';
 
 const Teacher = () => {
     const {
@@ -59,7 +59,7 @@ const Teacher = () => {
 
     let content;
     if (isLoading) {
-        content = <p>"Loading..."</p>;
+        content = <p><LinearProgress /></p>;
     } else if (isSuccess) {
 
         // Data for the table

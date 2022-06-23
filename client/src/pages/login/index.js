@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { setCredentials } from '../../features/auth/authSlice'
 import { useLoginMutation } from '../../features/auth/authApiSlice'
+import LoadingScreen from '../../components/loading/LoadingScreen';
 
 function Index() {
     const userRef = useRef();
@@ -47,7 +48,7 @@ function Index() {
         };
     }
 
-    const content = isLoading ? <h1>Loading...</h1> : (
+    const content = isLoading ? <LoadingScreen /> : (
         <div className="login">
             <div className="login_items">
                 <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
