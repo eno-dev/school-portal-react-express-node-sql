@@ -12,9 +12,9 @@ const userRoute = require('./server/routes/user')
 const refreshRoute = require('./server/routes/refresh')
 
 // using the routes
-app.use('/api', authRoute)
+app.use('/api/auth', authRoute)
 // Add refresh token route
-// app.use('/api/refresh', refreshRoute)
+app.use('/api/auth', refreshRoute)
 // You can either use verifyJWT above the routes to select all 
 // or within the routes to select seperately 
 // app.use(verifyJWT);
