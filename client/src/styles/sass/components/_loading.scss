@@ -1,0 +1,16 @@
+.main_content {
+
+    .main_body{
+
+        .grades {
+            display: flex;
+            justify-content: center;
+
+            .loadingScreen {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    } 
+}
