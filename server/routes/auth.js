@@ -4,7 +4,7 @@ const authController = require('../controllers/authContoller');
 const verifyJWT = require('../middleware/verifyJWT')
 
 router.post('/login', authController.postLogin)
-router.get('/logout', verifyJWT, authController.logOut)
+// router.get('/logout', verifyJWT, authController.logOut)
 // router.get('/refresh', authController.refreshToken)
 
 module.exports = router;

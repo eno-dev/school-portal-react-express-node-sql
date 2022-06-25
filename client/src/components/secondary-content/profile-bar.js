@@ -13,8 +13,12 @@ import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
 import { useSelector } from 'react-redux'
 import { selectCurrentUser } from "../../features/auth/authSlice"
+import { useLogoutMutation } from '../../features/auth/authApiSlice'
+import { useDispatch } from 'react-redux'
 
 const ProfileBar = () => {
+    const dispatch = useDispatch();
+
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -25,6 +29,7 @@ const ProfileBar = () => {
     };
     // Handle logout function
     const handleLogout = () => {
+        // dispatch(useLogoutMutation)
         // Removing the persist:root from storage
         localStorage.removeItem('persist:root')
         // Reloads window

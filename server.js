@@ -10,6 +10,7 @@ require('./server/middleware/express')(app);
 const authRoute = require('./server/routes/auth')
 const userRoute = require('./server/routes/user')
 const refreshRoute = require('./server/routes/refresh')
+const logoutRoute = require('./server/routes/logout')
 
 // using the routes
 app.use('/api/auth', authRoute)
@@ -18,6 +19,7 @@ app.use('/api/auth', refreshRoute)
 // You can either use verifyJWT above the routes to select all 
 // or within the routes to select seperately 
 // app.use(verifyJWT);
+app.use('/api/auth', logoutRoute)
 app.use('/api/users/', verifyJWT, userRoute)
 
 if (process.env.NODE_ENV === 'production') {

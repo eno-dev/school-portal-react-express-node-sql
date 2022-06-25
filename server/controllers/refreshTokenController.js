@@ -18,7 +18,6 @@ const saveRefreshToken = (refreshToken, user) => {
     connection.query(sqlToken, [user.user_id, refreshToken, issueDateTime, expiryDateTime], (err, result, fields) => {
         if (!err) {
             // res.send({ err })
-            console.log('Query for saving')
             return result
         } else {
             return err

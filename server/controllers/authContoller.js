@@ -64,15 +64,7 @@ const postLogin = async (req, res, next) => {
 
 };
 
-// Log-out function 
-const logOut = (req, res) => {
-    return res
-        .clearCookie('jwt', { httpOnly: true, sameSite: 'None', secure: true })
-        .status(200).json("You logged out successfully!")
-}
 
 module.exports = {
-    // refreshToken,
-    postLogin,
-    logOut
+    postLogin
 }
