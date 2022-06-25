@@ -1,5 +1,32 @@
 const jwt = require('jsonwebtoken')
+const jwtDecode = require('jwt-decode');
+const { connection } = require('../config/db');
 
+const saveRefreshToken = (refreshToken, user) => {
+    // Decode the token
+    let refreshDecoded = jwtDecode(refreshToken)
+    let issuedAt = refreshDecoded.iat
+    let expires = refreshDecoded.exp
+
+    // Changing data format
+    const issueDateTime = new Date(issuedAt * 1000).toISOString().slice(0, 19).replace('T', ' ');
+    const expiryDateTime = new Date(expires * 1000).toISOString().slice(0, 19).replace('T', ' ');
+
+
+    let sqlToken = `CALL sp_store_refresh_token(?,?,?,?)`
+    // Store refresh token in the database
+    connection.query(sqlToken, [user.user_id, refreshToken, issueDateTime, expiryDateTime], (err, result, fields) => {
+        if (!err) {
+            // res.send({ err })
+            console.log('Query for saving')
+            return result
+        } else {
+            return err
+            // res.send({ result })
+        }
+
+    })
+};
 
 const generateAccessToken = (user) => {
     return jwt.sign({
@@ -24,6 +51,7 @@ const handleRefreshToken = (req, res) => {
     // check if there is a cookie with a jwt property
     if (!cookies?.jwt) return res.status(401).json("You are not authenticated!");
     const refreshToken = cookies.jwt;
+
     // const foundUser = currentUser.find(user => user.refreshToken === refreshToken)
     res.clearCookie('jwt', { httpOnly: true, sameSite: 'None', secure: true })
     const newRefreshTokenArray = []
@@ -32,6 +60,7 @@ const handleRefreshToken = (req, res) => {
         // refreshTokens = refreshTokens.filter((token) => token !== refreshToken);
         const newAccessToken = generateAccessToken(user);
         const newRefreshToken = generateRefreshToken(user);
+
         user.refreshToken = [...newRefreshTokenArray, newRefreshToken]
         res.cookie('jwt', newRefreshToken, { httpOnly: true, secure: true, sameSite: 'None', maxAge: 24 * 60 * 60 * 1000 });
 
@@ -44,5 +73,6 @@ const handleRefreshToken = (req, res) => {
 module.exports = {
     generateRefreshToken,
     generateAccessToken,
-    handleRefreshToken
+    handleRefreshToken,
+    saveRefreshToken
 }

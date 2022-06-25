@@ -1,10 +1,10 @@
 const { connection } = require('../config/db');
 const jwt = require('jsonwebtoken')
-const { generateAccessToken } = require('../controllers/refreshTokenController')
-const { generateRefreshToken } = require('../controllers/refreshTokenController')
+const jwtDecode = require('jwt-decode');
+const { generateAccessToken, generateRefreshToken, saveRefreshToken } = require('../controllers/refreshTokenController')
 
 // Sends login information to database
-const postLogin = (req, res) => {
+const postLogin = async (req, res, next) => {
     // get the cookies from the request
     const cookies = req.cookies;
     // variable passed from frontend form
@@ -19,9 +19,8 @@ const postLogin = (req, res) => {
             ON u.role_id = r.role_id
             WHERE user_name = ?;`
 
-    connection.query(
-        sqlQuery, [username],
-        (err, result) => {
+    try {
+        connection.query(sqlQuery, [username], (err, result) => {
             if (err) {
                 res.send({ err: err });
             }
@@ -31,18 +30,12 @@ const postLogin = (req, res) => {
                     const user = JSON.parse(JSON.stringify(result[0]))
                     const accessToken = generateAccessToken(user);
                     const refreshToken = generateRefreshToken(user);
-                    // Store refresh token to database
-                    connection.query(sqlQuery, [user.user_id], (err, result) => {
-                        if (err) {
-                            res.send({ err: err })
-                        }
 
-
-                    })
                     // Create array of current user to include the refreshToken 
                     // saving current refresh token with user
                     const currentUser = { ...user, refreshToken };
-
+                    // Save refresh token to database
+                    saveRefreshToken(refreshToken, user);
                     // Creates Secure Cookie with refresh token
                     res.cookie('jwt', refreshToken, {
                         httpOnly: true,
@@ -51,11 +44,10 @@ const postLogin = (req, res) => {
                         sameSite: 'None',
                         maxAge: 24 * 60 * 60 * 1000
                     });
-
+                    // Send user and accessToken
                     res.json({
                         user,
-                        accessToken,
-                        // refreshToken
+                        accessToken
                     });
                 } else {
                     res.send({ message: "Wrong username/password combination!" });
@@ -65,7 +57,11 @@ const postLogin = (req, res) => {
                 res.send({ message: "User doesn't exist" });
             }
         }
-    );
+        );
+    } catch (e) {
+        next(e)
+    }
+
 };
 
 // Log-out function 
