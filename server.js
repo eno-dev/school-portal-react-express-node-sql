@@ -16,10 +16,11 @@ const logoutRoute = require('./server/routes/logout')
 app.use('/api/auth', authRoute)
 // Add refresh token route
 app.use('/api/auth', refreshRoute)
+// Logs user out and removes JWT cookie
+app.use('/api/auth', logoutRoute)
 // You can either use verifyJWT above the routes to select all 
 // or within the routes to select seperately 
 // app.use(verifyJWT);
-app.use('/api/auth', logoutRoute)
 app.use('/api/users/', verifyJWT, userRoute)
 
 if (process.env.NODE_ENV === 'production') {

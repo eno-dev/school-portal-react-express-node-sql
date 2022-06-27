@@ -31,9 +31,6 @@ const postLogin = async (req, res, next) => {
                     const accessToken = generateAccessToken(user);
                     const refreshToken = generateRefreshToken(user);
 
-                    // Create array of current user to include the refreshToken 
-                    // saving current refresh token with user
-                    const currentUser = { ...user, refreshToken };
                     // Save refresh token to database
                     saveRefreshToken(refreshToken, user);
                     // Creates Secure Cookie with refresh token

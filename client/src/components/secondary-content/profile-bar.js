@@ -29,10 +29,11 @@ const ProfileBar = () => {
     };
     // Handle logout function
     const handleLogout = () => {
+        // Dispatches logout reducer
         dispatch(logout)
-        // Removing the persist:root from storage
+        // Removes the persist:root from storage
         localStorage.removeItem('persist:root')
-        // Reloads window
+        // Reloads window to use is redirected to login
         window.location.reload(false);
     }
     // Find profile initials 
