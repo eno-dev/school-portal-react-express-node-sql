@@ -18,7 +18,7 @@ import { useDispatch } from 'react-redux'
 
 const ProfileBar = () => {
     const dispatch = useDispatch();
-
+    const [logout] = useLogoutMutation();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -29,7 +29,7 @@ const ProfileBar = () => {
     };
     // Handle logout function
     const handleLogout = () => {
-        // dispatch(useLogoutMutation)
+        dispatch(logout)
         // Removing the persist:root from storage
         localStorage.removeItem('persist:root')
         // Reloads window
