@@ -1,13 +1,4 @@
-.main_content .main_body .grades {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.main_content .main_body .grades .loadingScreen {
+.main_content .loadingScreen {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,7 +107,6 @@
 .main_body {
   height: 100%;
   padding: 20px 14px;
-  overflow: hidden;
   min-width: 300px;
 }
 
@@ -274,7 +264,6 @@ nav-link a {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 .right nav li {
@@ -1095,13 +1084,32 @@ nav-link a {
           flex-direction: column;
 }
 
-.homepage h1 {
+.homepage #school-name {
+  background-image: -webkit-gradient(linear, left top, right top, from(#2c3e50), to(#3498db));
+  background-image: linear-gradient(to right, #2c3e50, #3498db);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200px;
+}
+
+.homepage #school-name .schoolHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .homepage .homepage-body {
@@ -1111,6 +1119,7 @@ nav-link a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 1000px;
 }
 
 .homepage footer {
@@ -1120,6 +1129,39 @@ nav-link a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.homepage .home-navbar {
+  background-color: blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.homepage .MuiButton-root .login-text a {
+  color: white;
+  text-decoration: none;
+}
+
+.homepage #arrowUp {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.homepage #arrowUp .MuiSvgIcon-root {
+  font-size: 40px;
+  border-radius: 50%;
+}
+
+.homepage #arrowUp .MuiSvgIcon-root:hover {
+  fill: #50c8e8;
+  background-color: #7671EA;
 }
 
 /* Selecting all pages */

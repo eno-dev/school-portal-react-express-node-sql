@@ -3,6 +3,7 @@ import Toggle from './toggle'
 import Logo from '../../assets/img/s-comm_logo.ico'
 import ProfileBar from '../secondary-content/profile-bar'
 import { useMediaQuery } from 'react-responsive'
+import MediaQueries from '../media-query/MediaQueries'
 
 const SidebarHeader = () => {
     const isLargerThanMobile = useMediaQuery({ query: '(min-width: 480px)' })

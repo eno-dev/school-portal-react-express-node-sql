@@ -29,20 +29,7 @@ const appReducer = combineReducers({
 
 })
 
-export const rootReducer = (state, action) => {
-    if (action.type === 'USER_LOGOUT') {
-        console.log('I reached logout')
-        // for all keys defined in your persistConfig(s)
-        storage.removeItem('persist:root')
-        return appReducer(undefined, action)
-    }
-
-    return appReducer(state, action)
-}
-
-
 const persistedReducer = persistReducer(persistConfig, appReducer)
-
 
 export const store = configureStore({
     reducer: persistedReducer,

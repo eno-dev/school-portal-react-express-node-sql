@@ -1,8 +1,9 @@
 const Header = () => {
     return (
-        <header>
+        <header id="school-name">
             <div className="schoolHeader">
                 <h1>Ali Bin Abi Taleb School</h1>
+                <h1>Cycle 3</h1>
             </div>
         </header>
     )
