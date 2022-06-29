@@ -1,0 +1,19 @@
+.homepage {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .homepage-body {
+        display: flex;
+        justify-content: center;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+    }
+}

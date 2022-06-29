@@ -1,7 +1,7 @@
 // Abstracts
 @import './sass/abstracts/variables';
 // Components
-@import './sass/components/buttons', './sass/components/carousel', './sass/components/slider', './sass/components/loading';
+@import './sass/components/buttons', './sass/components/carousel', './sass/components/loading';
 // Core
 @import './sass/core/reset';
 // Layout
@@ -9,17 +9,16 @@
 //=========================== 
 //          Pages
 //=========================== 
-@import'./sass/pages/analytics',
-'./sass/pages/attendance',
-'./sass/pages/dashboard',
-'./sass/pages/database-viewer',
-'./sass/pages/login',
-'./sass/pages/notifications',
-'./sass/pages/search', 
-'./sass/pages/viewusers';
+@import'../pages/analytics/analytics',
+'../pages/attendance/attendance',
+'../pages/dashboard/dashboard',
+'../pages/database-viewer/database-viewer',
+'../pages/login/login',
+'../pages/notifications/notifications',
+'../pages/search/search',
+'../pages/homepage/homepage';
 
 // Sections
-@import './sass/sections/cta', './sass/sections/hero';
 
 /* Selecting all pages */
 * {

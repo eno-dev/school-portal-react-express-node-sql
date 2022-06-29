@@ -1,6 +1,7 @@
 import "./styles/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./components/layout/Layout";
+import Layout from "./components/layout/Layout"
+import Homepage from "./pages/homepage/Index"
 import Dashboard from "./pages/dashboard/index"
 import Database from "./pages/database-viewer/index"
 import Grades from "./pages/grades/index"
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         {/* Public path - IGNORE layout - research */}
         <Route path="/login" element={!loggedInState && <Login />} />
+        <Route path="/homepage" element={<Homepage />} />
         <Route path="/" element={<Layout />}>
 
           {/* Protected routes */}

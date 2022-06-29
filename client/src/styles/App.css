@@ -1085,40 +1085,41 @@ nav-link a {
   width: 200px;
 }
 
-.main_body .row .search {
-  padding-top: 20px;
-}
-
-.viewusers-table .tab-content {
-  background-color: #f8f9fa;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.viewusers-table .tab-content .table tbody tr:hover td,
-.viewusers-table .tab-content .table tbody tr:hover th {
-  background-color: #E0E8F7;
-  cursor: pointer;
-}
-
-.viewusers-table .tab-content td {
-  overflow: auto;
-}
-
-.viewusers-table .tab-content .tab-pane tr a {
-  display: inline;
-}
-
-.viewusers-table .tab-content .tab-pane .text-end {
+.homepage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.homepage h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.homepage .homepage-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.homepage footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /* Selecting all pages */

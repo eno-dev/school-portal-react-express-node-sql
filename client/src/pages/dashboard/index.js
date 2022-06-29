@@ -1,11 +1,9 @@
 import jwtDecode from "jwt-decode";
 import { useSelector } from "react-redux"
 import { selectCurrentUser } from "../../features/auth/authSlice"
-import { Link } from "react-router-dom"
-import Classes from "./Classes"
-import Announcements from "./Announcements"
+import Classes from "./components/Classes"
+import Announcements from "./components/Announcements"
 const Index = () => {
-
     const user = useSelector(selectCurrentUser)
 
     const content = (
