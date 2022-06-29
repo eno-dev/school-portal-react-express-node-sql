@@ -4,6 +4,10 @@ import { useDispatch } from 'react-redux'
 import { setCredentials } from '../../features/auth/authSlice'
 import { useLoginMutation } from '../../features/auth/authApiSlice'
 import LoadingScreen from '../../components/loading/LoadingScreen';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import { Button } from '@mui/material';
+
 
 function Index() {
     const userRef = useRef();
@@ -48,45 +52,63 @@ function Index() {
         };
     }
 
+    const handleUserInput = (e) => setUserName(e.target.value)
+    const handlePasswordInput = (e) => setPassword(e.target.value)
+
+
     const content = isLoading ? <LoadingScreen /> : (
         <div className="login">
             <div className="login_items">
                 <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
                 <header>
-                    <h1>Login</h1>
+                    <h1>Sign In</h1>
                 </header>
-                <form className="form-floating" onSubmit={handleLoginSubmit}>
-                    <div className="username">
-                        <label htmlFor="username">
-                            {/* <!-- font awesome icon --> */}
-                            {/* {{!-- < i className="fas fa-user"></i> --}} */}
 
-                        </label>
-                        <input
-                            type="text"
-                            name="username"
-                            placeholder="Username"
-                            id="username"
-                            ref={userRef}
-                            required
-                            onChange={e => setUserName(e.target.value)} />
-                    </div>
-                    <div className="password">
-                        <label htmlFor="password">
-                            <i className="fas fa-lock"></i>
-                        </label>
-                        <input
-                            type="password"
-                            name="password"
-                            placeholder="Password"
-                            id="password"
-                            required
-                            onChange={e => setPassword(e.target.value)} />
-                    </div>
-                    <div className="button">
-                        <input type="submit" value="Login" />
-                    </div>
-                </form>
+                <div className="username">
+                    <Box
+                        className="form-floating"
+                        onSubmit={handleLoginSubmit}
+                        component="form"
+                        sx={{
+                            '& > :not(style)': { m: 1, width: '25ch' },
+                        }}
+                        noValidate
+                        autoComplete="off"
+                    >
+                        <>
+                            <TextField
+                                className='username'
+                                id="username"
+                                label="Username"
+                                variant="outlined"
+                                type="text"
+                                name="username"
+                                placeholder="Username"
+                                ref={userRef}
+                                required
+                                onChange={handleUserInput}
+                            />
+
+                            <TextField
+                                className='password'
+                                id="password"
+                                label="Password"
+                                variant="outlined"
+                                type="password"
+                                name="password"
+                                placeholder="Password"
+                                required
+                                onChange={handlePasswordInput}
+                            />
+                            {/* <Button type="submit" value="Login">
+                                Login
+                            </Button> */}
+                            <div className="button">
+                                <input type="submit" value="Login" />
+                            </div>
+                        </>
+                    </Box>
+                </div>
             </div>
         </div>
     )

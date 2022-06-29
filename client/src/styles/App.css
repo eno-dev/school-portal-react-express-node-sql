@@ -950,6 +950,7 @@ nav-link a {
           justify-content: center;
   font-size: x-large;
   font-family: 'Open Sans', sans-serif;
+  margin-bottom: 10px;
 }
 
 .login form {
@@ -968,20 +969,20 @@ nav-link a {
           align-items: center;
 }
 
-.login form input {
+.login form .button {
+  margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-.login form input[type=submit] {
-  width: 140px;
+.login form .button input[type=submit] {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   height: 45px;
   font-family: 'Roboto', sans-serif;
   font-size: 11px;
@@ -1000,7 +1001,7 @@ nav-link a {
   outline: none;
 }
 
-.login form input[type=submit] :hover {
+.login form .button input[type=submit]:hover {
   background-color: #7671EA;
   -webkit-box-shadow: 0px 15px 20px rgba(157, 78, 221, 0.4);
           box-shadow: 0px 15px 20px rgba(157, 78, 221, 0.4);
@@ -1011,14 +1012,7 @@ nav-link a {
 
 .login form input[type=text],
 .login form input[type=password] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 10px 10px;
-}
-
-.login form .password {
-  padding-top: 10px;
-  padding-bottom: 25px;
+  background-color: white;
 }
 
 .login_items {
