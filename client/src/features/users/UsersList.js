@@ -1,6 +1,5 @@
 import { useGetUsersQuery } from "./usersApiSlice"
 import { Link } from "react-router-dom";
-import LinearProgress from '@mui/material/LinearProgress';
 
 const UsersList = () => {
     const {

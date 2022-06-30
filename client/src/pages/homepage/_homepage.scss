@@ -40,6 +40,15 @@
         text-decoration: none;
     }
 
+    .MuiToolbar-root {
+        justify-content: space-between;
+
+        // .MuiButton-root {
+        //     border: 1px dashed;
+        // }
+
+    }
+
     // Arrow up
     #arrowUp {
         position: sticky;
@@ -56,6 +65,7 @@
             }
         }
     }
+
 
 
 }

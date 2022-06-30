@@ -13,6 +13,8 @@ import Login from "./pages/login/index"
 import ErrPageNotFound from "./pages/404/errPageNotFound";
 import RequireAuth from "./features/auth/RequireAuth";
 import { useSelector } from 'react-redux'
+import Schedule from "./pages/homepage/schedule/Index";
+import HomeScreen from "./pages/homepage/components/HomeScreen";
 
 function App() {
   const loggedInState = useSelector((state) => state.auth.isLoggedIn)
@@ -22,7 +24,12 @@ function App() {
       <Routes>
         {/* Public path - IGNORE layout - research */}
         <Route path="/login" element={!loggedInState && <Login />} />
-        <Route path="/homepage" element={<Homepage />} />
+        {/* Homepage route */}
+        <Route path="/homepage" element={<Homepage />}>
+          <Route path="" element={<HomeScreen />} />
+          <Route path="schedule" element={<Schedule />} />
+        </Route>
+
         <Route path="/" element={<Layout />}>
 
           {/* Protected routes */}

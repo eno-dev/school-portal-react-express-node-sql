@@ -1,7 +1,9 @@
+import { Outlet } from "react-router-dom"
+
 const Body = () => {
     return (
         <div className="homepage-body">
-            <p>This is the body</p>
+            <Outlet />
         </div>
     )
 }

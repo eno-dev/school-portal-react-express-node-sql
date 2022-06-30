@@ -1146,6 +1146,12 @@ nav-link a {
   text-decoration: none;
 }
 
+.homepage .MuiToolbar-root {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .homepage #arrowUp {
   position: -webkit-sticky;
   position: sticky;
