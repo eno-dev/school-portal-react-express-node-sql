@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'
+import { Navigate, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { setCredentials } from '../../features/auth/authSlice'
 import { useLoginMutation } from '../../features/auth/authApiSlice'
@@ -7,9 +7,11 @@ import LoadingScreen from '../../components/loading/LoadingScreen';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
+import { useSelector } from 'react-redux';
 
 
 function Index() {
+    const isLoggedIn = useSelector((state) => state.auth.isLoggedIn)
     const userRef = useRef();
     const errRef = useRef();
     const [username, setUserName] = useState("");
@@ -27,7 +29,6 @@ function Index() {
         setErrMsg('');
     }, [username, password])
 
-
     const handleLoginSubmit = async e => {
         e.preventDefault()
         try {
@@ -36,7 +37,7 @@ function Index() {
             dispatch(setCredentials({ ...userData }))
             setUserName('')
             setPassword('')
-            navigate('/')
+            navigate('/portal')
         } catch (err) {
             if (!err?.originalStatus) {
                 // isLoading: true until timeout occurs
@@ -52,9 +53,13 @@ function Index() {
         };
     }
 
+
     const handleUserInput = (e) => setUserName(e.target.value)
     const handlePasswordInput = (e) => setPassword(e.target.value)
 
+    if (isLoggedIn) {
+        console.log('SWEAR')
+    }
 
     const content = isLoading ? <LoadingScreen /> : (
         <div className="login">

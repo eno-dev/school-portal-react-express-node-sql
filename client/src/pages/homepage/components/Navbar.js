@@ -52,25 +52,35 @@ const Navbar = () => {
             <Box sx={{ flexGrow: 1 }}>
                 <AppBar position="static">
                     <Toolbar>
-                        <MenuIcon
-                            aria-label="menu"
-                            aria-controls={open ? 'basic-menu' : undefined}
-                            aria-haspopup="true"
-                            aria-expanded={open ? 'true' : undefined}
-                            onClick={handleClick} />
-                        <Menu
-                            id="basic-menu"
-                            anchorEl={anchorEl}
-                            open={open}
-                            onClose={handleClose}
-                            MenuListProps={{
-                                'aria-labelledby': 'basic-button',
-                            }}
-                        >
-                            <MenuItem onClick={handleClose}>News</MenuItem>
-                            <MenuItem onClick={handleClose}>Schedule</MenuItem>
-                            <MenuItem onClick={handleClose}>Class</MenuItem>
-                        </Menu>
+                        <span className="menu-icon">
+                            <MenuIcon
+                                aria-label="menu"
+                                aria-controls={open ? 'basic-menu' : undefined}
+                                aria-haspopup="true"
+                                aria-expanded={open ? 'true' : undefined}
+                                onClick={handleClick} />
+                            <Menu
+                                id="basic-menu"
+                                anchorEl={anchorEl}
+                                open={open}
+                                onClose={handleClose}
+                                MenuListProps={{
+                                    'aria-labelledby': 'basic-button',
+                                }}
+                            >
+                                <MenuItem onClick={handleClose}>
+                                    <Link to={'/'}>
+                                        Home
+                                    </Link>
+                                </MenuItem>
+                                <MenuItem onClick={handleClose}>
+                                    <Link to={'/schedule'}>
+                                        Schedule
+                                    </Link>
+                                </MenuItem>
+                                <MenuItem onClick={handleClose}>Class</MenuItem>
+                            </Menu>
+                        </span>
                         <Button color="inherit">
                             <span className="login-text">
                                 <Link to={'/login'}>

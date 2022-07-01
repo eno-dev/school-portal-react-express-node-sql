@@ -18,31 +18,29 @@ import HomeScreen from "./pages/homepage/components/HomeScreen";
 
 function App() {
   const loggedInState = useSelector((state) => state.auth.isLoggedIn)
-
   return (
     <BrowserRouter>
       <Routes>
-        {/* Public path - IGNORE layout - research */}
-        <Route path="/login" element={!loggedInState && <Login />} />
         {/* Homepage route */}
-        <Route path="/homepage" element={<Homepage />}>
+        <Route path="/" element={<Homepage />}>
           <Route path="" element={<HomeScreen />} />
           <Route path="schedule" element={<Schedule />} />
         </Route>
+        {/* Public path - IGNORE layout - research */}
+        <Route path="/login" element={!loggedInState && <Login />} />
 
-        <Route path="/" element={<Layout />}>
-
+        <Route path="/portal" element={<Layout />}>
           {/* Protected routes */}
           <Route element={<RequireAuth />}>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/userlist" element={<Dashboard />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/database" element={<Database />} />
-            <Route path="/grades" element={<Grades />} />
-            <Route path="/search" element={<Search />} />
-            <Route path="/notifications" element={<Notifications />} />
-            <Route path="/analytics" element={<Analytics />} />
-            <Route path="/attendance" element={<Attendance />} />
+            <Route path="" element={<Dashboard />} />
+            <Route path="userlist" element={<Dashboard />} />
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="database" element={<Database />} />
+            <Route path="grades" element={<Grades />} />
+            <Route path="search" element={<Search />} />
+            <Route path="notifications" element={<Notifications />} />
+            <Route path="analytics" element={<Analytics />} />
+            <Route path="attendance" element={<Attendance />} />
           </Route>
         </Route>
 

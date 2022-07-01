@@ -41,10 +41,12 @@ const postLogin = async (req, res, next) => {
                         sameSite: 'None',
                         maxAge: 24 * 60 * 60 * 1000
                     });
+                    const isLoggedIn = true;
                     // Send user and accessToken
                     res.json({
                         user,
-                        accessToken
+                        accessToken,
+                        isLoggedIn
                     });
                 } else {
                     res.send({ message: "Wrong username/password combination!" });

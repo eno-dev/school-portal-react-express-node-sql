@@ -34,18 +34,50 @@
         top: 0;
     }
 
-    // Login button
-    .MuiButton-root .login-text a {
-        color: white;
-        text-decoration: none;
-    }
+    // ****************************
+    //           Navbar
+    // ****************************
 
+    // Toolbar
     .MuiToolbar-root {
         justify-content: space-between;
 
-        // .MuiButton-root {
-        //     border: 1px dashed;
-        // }
+        .menu-icon {
+            display: flex;
+            width: max-content;
+            height: max-content;
+
+            .MuiSvgIcon-root {
+                cursor: pointer;
+                font-size: xx-large;
+                // padding: 6px 8px;
+
+                &:active {
+                    border-radius: 4px;
+                    background-color: red;
+                    background-color: rgba(0, 0, 0, 0.04);
+                }
+
+            }
+
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.04);
+                border-radius: 4px;
+                // background-color: red;
+            }
+
+        }
+
+
+        // Login button
+        .MuiButton-root {
+            .login-text a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+
 
     }
 
@@ -65,7 +97,11 @@
             }
         }
     }
+}
 
-
-
+body .MuiPaper-root {
+    ul li a {
+        text-decoration: none;
+        color: inherit;
+    }
 }
