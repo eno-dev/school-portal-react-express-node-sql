@@ -1,6 +1,6 @@
 import jwtDecode from "jwt-decode";
 import { useSelector } from "react-redux"
-import { selectCurrentUser } from "../../features/auth/authSlice"
+import { selectCurrentUser } from "../../../features/auth/authSlice"
 import Classes from "./components/Classes"
 import Announcements from "./components/Announcements"
 const Index = () => {

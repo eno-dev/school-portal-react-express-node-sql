@@ -9,13 +9,24 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 import LinearProgress from '@mui/material/LinearProgress';
-import { useState, useEffect } from 'react';
-import { FormControlUnstyledContext } from '@mui/base';
+import { useState, useEffect, useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux'
+import { setNavHeight } from '../../../features/navbar-height/navHeightSlice.js'
+import { toggleOn, toggleOff } from '../../../features/sidebar-home-toggle/sidebarHomeSlice'
+
 
 const Navbar = () => {
-
+    const dispatch = useDispatch();
     const [progress, setProgress] = useState(0);
+    const ref = useRef(null);
 
+    // Navbar height
+    useEffect(() => {
+        const height = ref.current.clientHeight
+        dispatch(setNavHeight({ height }))
+    }, []);
+
+    // Page scroll progress
     useEffect(() => {
         let computeProgress = () => {
             // The scrollTop gives length of window that has been scrolled
@@ -36,58 +47,49 @@ const Navbar = () => {
         return () => window.removeEventListener("scroll", computeProgress);
     }, []);
 
-    const [anchorEl, setAnchorEl] = useState(null);
-    const open = Boolean(anchorEl);
+    const isLoggedInState = useSelector((state) => state.auth.isLoggedIn)
+    const sidebarToggleState = useSelector((state) => state.sidebarHomeToggle.active)
 
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
+    function toggleSidebar() {
+        if (!sidebarToggleState) {
+            dispatch(toggleOn())
+        }
+        else {
+            dispatch(toggleOff())
+        }
+    }
 
     return (
-        <div className="home-navbar">
+        <div className="home-navbar" ref={ref}>
             <Box sx={{ flexGrow: 1 }}>
                 <AppBar position="static">
                     <Toolbar>
                         <span className="menu-icon">
                             <MenuIcon
                                 aria-label="menu"
-                                aria-controls={open ? 'basic-menu' : undefined}
-                                aria-haspopup="true"
-                                aria-expanded={open ? 'true' : undefined}
-                                onClick={handleClick} />
-                            <Menu
-                                id="basic-menu"
-                                anchorEl={anchorEl}
-                                open={open}
-                                onClose={handleClose}
-                                MenuListProps={{
-                                    'aria-labelledby': 'basic-button',
-                                }}
-                            >
-                                <MenuItem onClick={handleClose}>
-                                    <Link to={'/'}>
-                                        Home
-                                    </Link>
-                                </MenuItem>
-                                <MenuItem onClick={handleClose}>
-                                    <Link to={'/schedule'}>
-                                        Schedule
-                                    </Link>
-                                </MenuItem>
-                                <MenuItem onClick={handleClose}>Class</MenuItem>
-                            </Menu>
+                                onClick={toggleSidebar} />
                         </span>
-                        <Button color="inherit">
+                        <span className="school-name">
+                            <h3>
+                                Ali Bin Abi Taleb School
+                            </h3>
+                        </span>
+                        {isLoggedInState ?
                             <span className="login-text">
+                                {/* <Button color="inherit"> */}
+                                <Link to={'/portal'}>
+                                    Portal
+                                </Link>
+                                {/* </Button> */}
+                            </span>
+                            : <span className="login-text">
+                                {/* <Button color="inherit"> */}
                                 <Link to={'/login'}>
                                     Login
                                 </Link>
-                            </span>
-                        </Button>
+                                {/* </Button> */}
+                            </span>}
+
                     </Toolbar>
                 </AppBar>
                 <LinearProgress variant="determinate" value={progress} />

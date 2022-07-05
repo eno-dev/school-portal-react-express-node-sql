@@ -1,9 +1,17 @@
+import './styles.scss'
 const HomeScreen = () => {
     return (
-        <div>
-            <h1>
-                Home Screen
-            </h1>
+        <div className="homeScreen">
+            <header id='home-header'>
+                <h1>
+                    Home Screen
+                </h1>
+            </header>
+            <section className="mission-msg">
+                <h2>
+                    Mission
+                </h2>
+            </section>
         </div>
     )
 }

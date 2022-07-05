@@ -1,0 +1,10 @@
+.schedule-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pdf-viewer {
+    width: 90vw;
+    height: 90vh;
+}

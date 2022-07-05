@@ -1082,11 +1082,12 @@ nav-link a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 }
 
 .homepage #school-name {
-  background-image: -webkit-gradient(linear, left top, right top, from(#2c3e50), to(#3498db));
-  background-image: linear-gradient(to right, #2c3e50, #3498db);
+  background-color: #2A9D8F;
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1096,7 +1097,7 @@ nav-link a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 200px;
+  height: 50px;
 }
 
 .homepage #school-name .schoolHeader {
@@ -1110,16 +1111,6 @@ nav-link a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.homepage .homepage-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 1000px;
 }
 
 .homepage footer {
@@ -1141,27 +1132,42 @@ nav-link a {
   top: 0;
 }
 
+.homepage .home-navbar .MuiLinearProgress-root {
+  background-color: #7AAEC2;
+}
+
+.homepage .home-navbar .MuiLinearProgress-root .MuiLinearProgress-bar {
+  background-color: #264653;
+}
+
 .homepage .MuiToolbar-root {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: #264653;
 }
 
 .homepage .MuiToolbar-root .menu-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  width: 10%;
 }
 
 .homepage .MuiToolbar-root .menu-icon .MuiSvgIcon-root {
   cursor: pointer;
   font-size: xx-large;
+}
+
+.homepage .MuiToolbar-root .menu-icon .MuiSvgIcon-root:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
 }
 
 .homepage .MuiToolbar-root .menu-icon .MuiSvgIcon-root:active {
@@ -1170,32 +1176,139 @@ nav-link a {
   background-color: rgba(0, 0, 0, 0.04);
 }
 
-.homepage .MuiToolbar-root .menu-icon:hover {
-  background-color: rgba(0, 0, 0, 0.04);
-  border-radius: 4px;
+.homepage .MuiToolbar-root .school-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
 }
 
-.homepage .MuiToolbar-root .MuiButton-root .login-text a {
+.homepage .MuiToolbar-root .school-name h3 {
+  margin: 0;
+}
+
+.homepage .MuiToolbar-root .login-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 10%;
+}
+
+.homepage .MuiToolbar-root .login-text a {
   color: white;
   text-decoration: none;
+  padding: 6px 4px;
+  border-radius: 6px;
 }
 
-.homepage #arrowUp {
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: 0;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+.homepage .MuiToolbar-root .login-text a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-.homepage #arrowUp .MuiSvgIcon-root {
-  font-size: 40px;
-  border-radius: 50%;
+.homepage .sidenav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  /* 100% Full-height */
+  width: 250px;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  left: 0;
+  background-color: #E8C468;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 17px;
+  /* Place content 60px from the top */
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
+  /* The navigation menu links */
 }
 
-.homepage #arrowUp .MuiSvgIcon-root:hover {
-  fill: #50c8e8;
-  background-color: #7671EA;
+.homepage .sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #0C1D31;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  /* When you mouse over the navigation links, change their color */
+}
+
+.homepage .sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.homepage .sidenav .closeBtnContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Position and style the close button (top right corner) */
+}
+
+.homepage .sidenav .closeBtnContainer .closebtn {
+  top: 0;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  height: 30px;
+  width: 30px;
+  font-size: 36px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.homepage .sidenav .closeBtnContainer .closebtn:hover {
+  color: #f1f1f1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.homepage .sidenav.close {
+  width: 0px;
+}
+
+.homepage .sidenav.close a {
+  display: none;
+}
+
+.homepage #main {
+  -webkit-transition: margin-left .5s;
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+.homepage .homeScreen .mission-msg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body .MuiPaper-root ul li a {

@@ -1,9 +1,9 @@
 import { useRef, useState, useEffect } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import { setCredentials } from '../../features/auth/authSlice'
-import { useLoginMutation } from '../../features/auth/authApiSlice'
-import LoadingScreen from '../../components/loading/LoadingScreen';
+import { setCredentials } from '../../../features/auth/authSlice'
+import { useLoginMutation } from '../../../features/auth/authApiSlice'
+import LoadingScreen from '../../../components/loading/LoadingScreen';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';

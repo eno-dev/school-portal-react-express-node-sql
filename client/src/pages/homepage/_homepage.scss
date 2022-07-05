@@ -3,23 +3,18 @@
     flex-direction: column;
 
     #school-name {
-        background-image: linear-gradient(to right, #2c3e50, #3498db);
+        background-color: #2A9D8F;
+        color: white;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 200px;
+        height: 50px;
 
         .schoolHeader {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-    }
-
-    .homepage-body {
-        display: flex;
-        justify-content: center;
-        height: 1000px;
     }
 
     footer {
@@ -32,6 +27,14 @@
         display: flex;
         position: sticky;
         top: 0;
+
+        .MuiLinearProgress-root {
+            background-color: #7AAEC2;
+
+            .MuiLinearProgress-bar {
+                background-color: #264653;
+            }
+        }
     }
 
     // ****************************
@@ -41,16 +44,22 @@
     // Toolbar
     .MuiToolbar-root {
         justify-content: space-between;
+        background-color: #264653;
 
         .menu-icon {
             display: flex;
-            width: max-content;
+            justify-content: center;
             height: max-content;
+            width: 10%;
 
             .MuiSvgIcon-root {
                 cursor: pointer;
                 font-size: xx-large;
-                // padding: 6px 8px;
+
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.04);
+                    border-radius: 4px;
+                }
 
                 &:active {
                     border-radius: 4px;
@@ -61,47 +70,135 @@
             }
 
 
-            &:hover {
-                background-color: rgba(0, 0, 0, 0.04);
-                border-radius: 4px;
-                // background-color: red;
+        }
+
+        .school-name {
+            display: flex;
+            justify-content: center;
+            width: 80%;
+
+            h3 {
+                margin: 0;
             }
+
 
         }
 
 
         // Login button
-        .MuiButton-root {
-            .login-text a {
+        .login-text {
+            display: flex;
+            justify-content: center;
+            width: 10%;
+
+            a {
                 color: white;
                 text-decoration: none;
+                padding: 6px 4px;
+                border-radius: 6px;
+
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.1);
+                }
             }
         }
 
 
     }
 
-    // Arrow up
-    #arrowUp {
-        position: sticky;
-        bottom: 0;
-        align-self: flex-end;
+    // ****************************
+    //           Sidebar
+    // ****************************
+    .sidenav {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        /* 100% Full-height */
+        width: 250px;
+        /* 0 width - change this with JavaScript */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Stay on top */
+        top: 0;
+        /* Stay at the top */
+        left: 0;
+        background-color: #E8C468;
+        /* Black*/
+        overflow-x: hidden;
+        /* Disable horizontal scroll */
+        padding-top: 17px;
+        /* Place content 60px from the top */
+        transition: 0.5s;
+        /* 0.5 second transition effect to slide in the sidenav */
 
-        .MuiSvgIcon-root {
-            font-size: 40px;
-            border-radius: 50%;
+        /* The navigation menu links */
+        a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #0C1D31;
+            display: block;
+            transition: 0.3s;
 
+            /* When you mouse over the navigation links, change their color */
             &:hover {
-                fill: #50c8e8;
-                background-color: #7671EA;
+                color: #f1f1f1;
             }
+        }
+
+        .closeBtnContainer {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+
+            /* Position and style the close button (top right corner) */
+            .closebtn {
+                top: 0;
+                justify-content: right;
+                height: 30px;
+                width: 30px;
+                font-size: 36px;
+                margin-right: 10px;
+                cursor: pointer;
+
+                &:hover {
+                    color: #f1f1f1;
+                    transition: 0.3s;
+                }
+            }
+        }
+
+    }
+
+    .sidenav.close {
+        width: 0px;
+
+        a {
+            display: none;
+        }
+    }
+
+    /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+    #main {
+        transition: margin-left .5s;
+        padding: 20px;
+    }
+
+    .homeScreen {
+        .mission-msg {
+            display: flex;
+            justify-content: center;
         }
     }
 }
+
+
 
 body .MuiPaper-root {
     ul li a {
         text-decoration: none;
         color: inherit;
     }
+
 }

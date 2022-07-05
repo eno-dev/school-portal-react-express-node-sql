@@ -14,6 +14,8 @@ import {
     REGISTER,
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
+import navHeightReducer from '../features/navbar-height/navHeightSlice';
+import sidebarHomeReducer from '../features/sidebar-home-toggle/sidebarHomeSlice';
 
 const persistConfig = {
     key: 'root',
@@ -26,7 +28,8 @@ const appReducer = combineReducers({
     auth: authReducer,
     toggle: toggleReducer,
     sidebar: sidebarReducer,
-
+    navHeight: navHeightReducer,
+    sidebarHomeToggle: sidebarHomeReducer
 })
 
 const persistedReducer = persistReducer(persistConfig, appReducer)

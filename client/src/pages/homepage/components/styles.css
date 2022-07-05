@@ -1,0 +1,30 @@
+.homepage-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 1000px;
+}
+
+/* // Arrow up */
+#arrowUp {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+#arrowUp .MuiSvgIcon-root {
+  font-size: 40px;
+  border-radius: 50%;
+}
+
+#arrowUp :hover {
+  background-color: grey;
+}
+/*# sourceMappingURL=styles.css.map */

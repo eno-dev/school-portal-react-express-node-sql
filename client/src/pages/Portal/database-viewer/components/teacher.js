@@ -5,8 +5,8 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import Alert from '@mui/material/Alert';
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { useGetUserByRoleQuery, useDeleteUserMutation } from "../../../features/users/usersApiSlice"
-import { setUserInfo } from '../../../features/secondary-sidebar/sidebarSlice'
+import { useGetUserByRoleQuery, useDeleteUserMutation } from "../../../../features/users/usersApiSlice"
+import { setUserInfo } from '../../../../features/secondary-sidebar/sidebarSlice'
 import LinearProgress from '@mui/material/LinearProgress';
 
 const Teacher = () => {
