@@ -4,13 +4,14 @@
     align-self: flex-end;
     transform: rotate(180deg);
 
+    :hover {
+        background-color: grey;
+    }
+
     :global .MuiSvgIcon-root {
         font-size: 40px;
         border-radius: 50%;
 
     }
 
-    :hover {
-        background-color: grey;
-    }
 }

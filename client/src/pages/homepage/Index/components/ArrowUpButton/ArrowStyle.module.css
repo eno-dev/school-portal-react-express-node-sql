@@ -8,12 +8,12 @@
           transform: rotate(180deg);
 }
 
+#arrowUp :hover {
+  background-color: grey;
+}
+
 #arrowUp :global .MuiSvgIcon-root {
   font-size: 40px;
   border-radius: 50%;
-}
-
-#arrowUp :hover {
-  background-color: grey;
 }
 /*# sourceMappingURL=ArrowStyle.module.css.map */

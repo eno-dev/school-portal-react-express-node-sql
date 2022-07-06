@@ -66,4 +66,8 @@
 .close a {
   display: none;
 }
+
+.close .closeBtnContainer {
+  display: none;
+}
 /*# sourceMappingURL=SidebarStyle.module.css.map */

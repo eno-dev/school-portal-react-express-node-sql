@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 import LinearProgress from '@mui/material/LinearProgress';
 import { useState, useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
-import { setNavHeight } from '../../../../features/navbar-height/navHeightSlice.js'
-import { toggleOn, toggleOff } from '../../../../features/sidebar-home-toggle/sidebarHomeSlice'
+import { setNavHeight } from '../../../../../features/navbar-height/navHeightSlice.js'
+import { toggleOn, toggleOff } from '../../../../../features/sidebar-home-toggle/sidebarHomeSlice'
 import Style from './NavStyle.module.scss'
 
 const Navbar = () => {
@@ -30,7 +30,7 @@ const Navbar = () => {
     useEffect(() => {
         const height = ref.current.clientHeight
         dispatch(setNavHeight({ height }))
-    }, []);
+    }, [dispatch]);
 
     // Page scroll progress
     useEffect(() => {

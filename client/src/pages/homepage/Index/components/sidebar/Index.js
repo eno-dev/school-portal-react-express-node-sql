@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux'
-import { toggleOn, toggleOff } from '../../../features/sidebar-home-toggle/sidebarHomeSlice'
+import { toggleOn, toggleOff } from '../../../../../features/sidebar-home-toggle/sidebarHomeSlice'
 import CloseIcon from '@mui/icons-material/Close';
 import SidebarLinks from './components/SidebarLinks';
 import Style from './SidebarStyle.module.scss';
@@ -18,7 +18,7 @@ const Index = () => {
     }
 
     return (
-        <div id="mySidenav" className={sidebarToggleState ? Style.open : Style.close} >
+        <div className={sidebarToggleState ? Style.open : Style.close} >
             <div className={Style.closeBtnContainer}>
                 <CloseIcon className={Style.closebtn} onClick={toggleSidebar} />
             </div>

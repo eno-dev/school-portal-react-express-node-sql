@@ -1082,13 +1082,6 @@ nav-link a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-}
-
-.homepage #main {
-  -webkit-transition: margin-left .5s;
-  transition: margin-left .5s;
-  padding: 20px;
 }
 
 /* Selecting all pages */

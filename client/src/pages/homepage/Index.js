@@ -1,9 +1,9 @@
-import Header from "./components/Header/Header"
-import Body from "./components/Body/Body"
-import Footer from "./components/Footer/Footer"
-import Navbar from "./components/Navbar/Navbar"
-import ArrowUpButton from "./components/ArrowUpButton/ArrowUpButton"
-import Sidebar from "./sidebar/Index"
+import Header from "./Index/components/Header/Header"
+import Body from "./Index/components/Body/Body"
+import Footer from "./Index/components/Footer/Footer"
+import Navbar from "./Index/components/Navbar/Navbar"
+import ArrowUpButton from "./Index/components/ArrowUpButton/ArrowUpButton"
+import Sidebar from "./Index/components/sidebar/Index"
 
 const Index = () => {
     return (
