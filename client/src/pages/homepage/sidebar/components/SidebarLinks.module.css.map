@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACI,MADE,CACF,CAAC,CAAC;EACE,OAAO,EAAE,gBAAgB;EACzB,eAAe,EAAE,IAAI;EACrB,SAAS,EAAE,IAAI;EACf,KAAK,EAAE,OAAO;EACd,OAAO,EAAE,KAAK;EACd,UAAU,EAAE,IAAI;EAEhB,kEAAkE;CAIrE;;AAbL,AAUQ,MAVF,CACF,CAAC,AASI,MAAM,CAAC;EACJ,KAAK,EAAE,OAAO;CACjB",
+    "sources": [
+        "SidebarLinks.module.scss"
+    ],
+    "names": [],
+    "file": "SidebarLinks.module.css"
+}

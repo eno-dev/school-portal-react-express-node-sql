@@ -1,0 +1,71 @@
+.navbar {
+    background-color: blue;
+    display: flex;
+    position: sticky;
+    top: 0;
+
+    .linearProgressRoot :global {
+        background-color: #7AAEC2;
+
+        .MuiLinearProgress-bar {
+            background-color: #264653;
+        }
+    }
+}
+
+// Toolbar
+.toolbar {
+    justify-content: space-between;
+    background-color: #264653;
+
+    .menuIcon {
+        display: flex;
+        justify-content: center;
+        height: max-content;
+        width: 10%;
+
+        :global .MuiSvgIcon-root {
+            cursor: pointer;
+            font-size: xx-large;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.04);
+                border-radius: 4px;
+            }
+
+            &:active {
+                border-radius: 4px;
+                background-color: red;
+                background-color: rgba(0, 0, 0, 0.04);
+            }
+
+        }
+    }
+
+    .schoolName {
+        display: flex;
+        justify-content: center;
+        width: 80%;
+
+        h3 {
+            margin: 0;
+        }
+    }
+
+    .loginText {
+        display: flex;
+        justify-content: center;
+        width: 10%;
+
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 6px 4px;
+            border-radius: 6px;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+}

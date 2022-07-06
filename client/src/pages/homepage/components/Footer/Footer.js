@@ -1,6 +1,8 @@
+import FooterStyle from './FooterStyle.module.scss'
+
 const Footer = () => {
     return (
-        <footer>
+        <footer className={FooterStyle.homeFooter}>
             <p>This is the footer</p>
         </footer>
     )

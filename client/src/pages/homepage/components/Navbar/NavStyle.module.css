@@ -1,0 +1,89 @@
+.navbar {
+  background-color: blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.navbar .linearProgressRoot :global {
+  background-color: #7AAEC2;
+}
+
+.navbar .linearProgressRoot :global .MuiLinearProgress-bar {
+  background-color: #264653;
+}
+
+.toolbar {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #264653;
+}
+
+.toolbar .menuIcon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: 10%;
+}
+
+.toolbar .menuIcon :global .MuiSvgIcon-root {
+  cursor: pointer;
+  font-size: xx-large;
+}
+
+.toolbar .menuIcon :global .MuiSvgIcon-root:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+}
+
+.toolbar .menuIcon :global .MuiSvgIcon-root:active {
+  border-radius: 4px;
+  background-color: red;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.toolbar .schoolName {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+}
+
+.toolbar .schoolName h3 {
+  margin: 0;
+}
+
+.toolbar .loginText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 10%;
+}
+
+.toolbar .loginText a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 4px;
+  border-radius: 6px;
+}
+
+.toolbar .loginText a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+/*# sourceMappingURL=NavStyle.module.css.map */

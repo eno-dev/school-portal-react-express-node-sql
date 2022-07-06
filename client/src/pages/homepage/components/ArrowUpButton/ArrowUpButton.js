@@ -1,9 +1,9 @@
-import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import './styles.scss'
+import ArrowStyle from './ArrowStyle.module.scss'
+
 const ArrowUpButton = () => {
     return (
-        <span id='arrowUp'>
+        <span id={ArrowStyle.arrowUp}>
             <KeyboardArrowDownIcon onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
         </span>
     )

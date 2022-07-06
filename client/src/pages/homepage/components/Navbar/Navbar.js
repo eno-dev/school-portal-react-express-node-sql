@@ -1,24 +1,30 @@
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 import LinearProgress from '@mui/material/LinearProgress';
 import { useState, useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
-import { setNavHeight } from '../../../features/navbar-height/navHeightSlice.js'
-import { toggleOn, toggleOff } from '../../../features/sidebar-home-toggle/sidebarHomeSlice'
-
+import { setNavHeight } from '../../../../features/navbar-height/navHeightSlice.js'
+import { toggleOn, toggleOff } from '../../../../features/sidebar-home-toggle/sidebarHomeSlice'
+import Style from './NavStyle.module.scss'
 
 const Navbar = () => {
     const dispatch = useDispatch();
     const [progress, setProgress] = useState(0);
     const ref = useRef(null);
+    const isLoggedInState = useSelector((state) => state.auth.isLoggedIn)
+    const sidebarToggleState = useSelector((state) => state.sidebarHomeToggle.active)
+
+    function toggleSidebar() {
+        if (!sidebarToggleState) {
+            dispatch(toggleOn())
+        }
+        else {
+            dispatch(toggleOff())
+        }
+    }
 
     // Navbar height
     useEffect(() => {
@@ -47,52 +53,34 @@ const Navbar = () => {
         return () => window.removeEventListener("scroll", computeProgress);
     }, []);
 
-    const isLoggedInState = useSelector((state) => state.auth.isLoggedIn)
-    const sidebarToggleState = useSelector((state) => state.sidebarHomeToggle.active)
-
-    function toggleSidebar() {
-        if (!sidebarToggleState) {
-            dispatch(toggleOn())
-        }
-        else {
-            dispatch(toggleOff())
-        }
-    }
-
     return (
-        <div className="home-navbar" ref={ref}>
-            <Box sx={{ flexGrow: 1 }}>
+        <div className={Style.navbar} ref={ref}>
+            <Box sx={{ flexGrow: 1 }} >
                 <AppBar position="static">
-                    <Toolbar>
-                        <span className="menu-icon">
+                    <Toolbar className={Style.toolbar}>
+                        <span className={Style.menuIcon}>
                             <MenuIcon
                                 aria-label="menu"
                                 onClick={toggleSidebar} />
                         </span>
-                        <span className="school-name">
+                        <span className={Style.schoolName}>
                             <h3>
                                 Ali Bin Abi Taleb School
                             </h3>
                         </span>
-                        {isLoggedInState ?
-                            <span className="login-text">
-                                {/* <Button color="inherit"> */}
+                        <span className={Style.loginText}>
+                            {isLoggedInState ?
                                 <Link to={'/portal'}>
                                     Portal
                                 </Link>
-                                {/* </Button> */}
-                            </span>
-                            : <span className="login-text">
-                                {/* <Button color="inherit"> */}
+                                :
                                 <Link to={'/login'}>
                                     Login
-                                </Link>
-                                {/* </Button> */}
-                            </span>}
-
+                                </Link>}
+                        </span>
                     </Toolbar>
                 </AppBar>
-                <LinearProgress variant="determinate" value={progress} />
+                <LinearProgress className={Style.linearProgressRoot} variant="determinate" value={progress} />
             </Box>
         </div>
     )

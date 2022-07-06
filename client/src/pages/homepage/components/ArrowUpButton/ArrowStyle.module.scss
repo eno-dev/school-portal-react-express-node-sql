@@ -1,17 +1,10 @@
-.homepage-body {
-    display: flex;
-    justify-content: center;
-    height: 1000px;
-}
-
-/* // Arrow up */
 #arrowUp {
     position: sticky;
     bottom: 0;
     align-self: flex-end;
     transform: rotate(180deg);
 
-    .MuiSvgIcon-root {
+    :global .MuiSvgIcon-root {
         font-size: 40px;
         border-radius: 50%;
 

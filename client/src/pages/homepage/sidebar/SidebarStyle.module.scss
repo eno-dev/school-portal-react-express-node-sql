@@ -1,0 +1,54 @@
+.open {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* 100% Full-height */
+    width: 250px;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: #E8C468;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 17px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+
+    .closeBtnContainer {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+
+        /* Position and style the close button (top right corner) */
+        .closebtn {
+            top: 0;
+            justify-content: right;
+            height: 30px;
+            width: 30px;
+            font-size: 36px;
+            margin-right: 10px;
+            cursor: pointer;
+
+            &:hover {
+                color: #f1f1f1;
+                transition: 0.3s;
+            }
+        }
+    }
+
+}
+
+.close {
+    width: 0px;
+
+    a {
+        display: none;
+    }
+}

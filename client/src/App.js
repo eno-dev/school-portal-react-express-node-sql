@@ -15,7 +15,7 @@ import RequireAuth from "./features/auth/RequireAuth";
 import { useSelector } from 'react-redux'
 import Schedule from "./pages/homepage/schedule/Index";
 import ContactUs from "./pages/homepage/contact-us/Index";
-import HomeScreen from "./pages/homepage/components/HomeScreen";
+import HomeScreen from "./pages/homepage/components/HomeScreen/HomeScreen";
 import AboutUs from "./pages/homepage/about-us/Index";
 import ParentsCarers from "./pages/homepage/parents-carers/Index";
 // import Students from "./pages/homepage/students";

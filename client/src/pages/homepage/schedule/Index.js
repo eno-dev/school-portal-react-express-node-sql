@@ -2,7 +2,7 @@ import myPDF from '/Users/enosaliu/VS Code Project/school-comms-react-express-no
 import { useRef } from 'react'
 import { useSelector } from 'react-redux'
 import { selectNavHeight } from '../../../features/navbar-height/navHeightSlice.js'
-import './styles.css'
+import ScheduleStyle from './styles.module.scss'
 
 const Index = () => {
     const pdfRef = useRef()
@@ -15,14 +15,14 @@ const Index = () => {
     }
 
     return (
-        <div className='schedule-body'>
+        <div className={ScheduleStyle.scheduleBody}>
             <header>
                 <h1>
                     Schedule
                 </h1>
             </header>
 
-            <div className="pdf-viewer">
+            <div className={ScheduleStyle.pdfViewer}>
                 <button onClick={focus}>Focus</button>
                 <embed
                     ref={pdfRef}

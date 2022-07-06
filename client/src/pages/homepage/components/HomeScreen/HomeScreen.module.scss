@@ -1,0 +1,16 @@
+.homeScreen {
+    #homeHeader {
+        display: flex;
+        justify-content: center;
+    }
+
+    .missionMessage {
+        display: flex;
+        flex-direction: column;
+
+        h2,
+        p {
+            text-align: center;
+        }
+    }
+}
