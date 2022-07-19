@@ -20,5 +20,9 @@
 .homeScreen .missionMessage h2,
 .homeScreen .missionMessage p {
   text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 50%;
 }
 /*# sourceMappingURL=HomeScreen.module.css.map */

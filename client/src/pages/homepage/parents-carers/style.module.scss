@@ -1,0 +1,22 @@
+.parentsCarersContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    h1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    h2 {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .whatsAppLinks {
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}

@@ -63,11 +63,18 @@ const Navbar = () => {
                                 aria-label="menu"
                                 onClick={toggleSidebar} />
                         </span>
-                        <span className={Style.schoolName}>
-                            <h3>
-                                Ali Bin Abi Taleb School
-                            </h3>
-                        </span>
+                        <div className={Style.schoolName}>
+                            <span className={Style.arbName}>
+                                <h3>
+                                    مدرسة علي بن أبي طالب
+                                </h3>
+                            </span>
+                            <span className={Style.engName}>
+                                <h3>
+                                    Ali Bin Abi Taleb School
+                                </h3>
+                            </span>
+                        </div>
                         <span className={Style.loginText}>
                             {isLoggedInState ?
                                 <Link to={'/portal'}>

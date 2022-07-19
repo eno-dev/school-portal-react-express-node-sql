@@ -1,4 +1,3 @@
-import React from 'react'
 import ProfileBar from './profile-bar'
 import { useSelector } from 'react-redux'
 

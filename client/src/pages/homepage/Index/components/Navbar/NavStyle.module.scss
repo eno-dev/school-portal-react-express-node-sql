@@ -44,12 +44,31 @@
 
     .schoolName {
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-content: center;
         width: 80%;
+        text-align: center;
 
-        h3 {
+        // School Names
+        >* {
+            display: flex;
+            justify-content: center;
+
+            >* {
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+        }
+
+        .engName {
             margin: 0;
         }
+
+        .arbName {
+            margin: 0;
+        }
+
     }
 
     .loginText {

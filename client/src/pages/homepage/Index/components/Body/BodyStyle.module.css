@@ -5,6 +5,10 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 1000px;
+  min-height: 75vh;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 20px 14px;
 }
 /*# sourceMappingURL=BodyStyle.module.css.map */
