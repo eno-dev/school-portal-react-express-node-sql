@@ -52,7 +52,7 @@
   outline: 2px solid black;
 }
 
-.cards .cardsContainer :hover {
+.cards .cardLink:hover {
   border-radius: 5px;
   background-color: #25D366;
   color: white;
