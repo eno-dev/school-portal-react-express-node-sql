@@ -17,6 +17,7 @@
 .toolbar {
     justify-content: space-between;
     background-color: #264653;
+    height: 115px;
 
     .menuIcon {
         display: flex;
@@ -47,7 +48,7 @@
         flex-direction: column;
         justify-content: center;
         align-content: center;
-        width: 80%;
+        width: 20%;
         text-align: center;
 
         // School Names
@@ -63,10 +64,18 @@
 
         .engName {
             margin: 0;
+
+            h5 {
+                font-weight: 350;
+            }
         }
 
         .arbName {
             margin: 0;
+
+            h5 {
+                font-size: 1.7rem;
+            }
         }
 
     }
@@ -81,10 +90,44 @@
             text-decoration: none;
             padding: 6px 4px;
             border-radius: 6px;
+            font-size: 1.3em;
 
             &:hover {
                 background-color: rgba(0, 0, 0, 0.1);
             }
+        }
+    }
+
+    .menu {
+        margin-right: 16px;
+
+        .menuLinks {
+            display: flex;
+            flex-direction: row;
+            // gap: 30px;
+
+            a:hover {
+                background-color: #E8C468;
+                border-radius: 5px;
+                color: black;
+            }
+
+            h1 {
+                margin-bottom: 0;
+                padding: 0;
+            }
+
+            >* {
+                display: flex;
+                height: 60px;
+                align-items: center;
+                padding: 10px 14px;
+                text-decoration: none;
+                color: white;
+                font-size: 1.1rem;
+                transition: ease-in 0.2s;
+            }
+
         }
     }
 }

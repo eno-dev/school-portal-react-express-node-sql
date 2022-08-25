@@ -2,13 +2,37 @@
     background-color: #2A9D8F;
     color: white;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     height: 50px;
+    padding: 0px 50px;
 
     .header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        .menu {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 0;
+                list-style: none;
+
+                li {
+                    // display: flex;
+                    // align-items: center;
+                    margin-right: 40px;
+                }
+
+                li a {
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    color: white;
+
+                }
+            }
+        }
     }
 }

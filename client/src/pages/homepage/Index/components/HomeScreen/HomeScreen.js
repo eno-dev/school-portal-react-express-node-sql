@@ -1,8 +1,10 @@
 import HomeScreenStyle from './HomeScreen.module.scss'
+import SchoolPic from './next-school_new.jpg'
 
 const HomeScreen = () => {
     return (
         <div className={HomeScreenStyle.homeScreen}>
+            <img src={SchoolPic} alt="" />
             <header id={HomeScreenStyle.homeHeader}>
                 <h1>
                     Home Screen

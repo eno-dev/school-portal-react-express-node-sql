@@ -1,7 +1,6 @@
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 import LinearProgress from '@mui/material/LinearProgress';
 import { useState, useEffect, useRef } from 'react';
@@ -58,24 +57,65 @@ const Navbar = () => {
             <Box sx={{ flexGrow: 1 }} >
                 <AppBar position="static">
                     <Toolbar className={Style.toolbar}>
-                        <span className={Style.menuIcon}>
+                        {/* <span className={Style.menuIcon}>
                             <MenuIcon
                                 aria-label="menu"
                                 onClick={toggleSidebar} />
-                        </span>
+                        </span> */}
                         <div className={Style.schoolName}>
                             <span className={Style.arbName}>
-                                <h3>
+                                <h5>
                                     مدرسة علي بن أبي طالب
-                                </h3>
+                                </h5>
                             </span>
                             <span className={Style.engName}>
-                                <h3>
+                                <h5>
                                     Ali Bin Abi Taleb School
-                                </h3>
+                                </h5>
                             </span>
                         </div>
-                        <span className={Style.loginText}>
+                        <div className={Style.menu}>
+                            {/* <ul>
+                                <li>
+
+                                </li>
+                            </ul> */}
+                            <div className={Style.menuLinks}>
+                                <Link to=''>
+                                    About Us
+                                </Link>
+                                <h1>
+                                    |
+                                </h1>
+                                <Link to=''>
+                                    Announcements
+                                </Link>
+                                <h1>
+                                    |
+                                </h1>
+                                <Link to=''>
+                                    Students Section
+                                </Link>
+                                <h1>
+                                    |
+                                </h1>
+                                <Link to=''>
+                                    Parents Section
+                                </Link>
+                                <h1>
+                                    |
+                                </h1>
+                                {isLoggedInState ?
+                                    <Link to={'/portal'}>
+                                        Portal
+                                    </Link>
+                                    :
+                                    <Link to={'/login'}>
+                                        Login
+                                    </Link>}
+                            </div>
+                        </div>
+                        {/* <span className={Style.loginText}>
                             {isLoggedInState ?
                                 <Link to={'/portal'}>
                                     Portal
@@ -84,7 +124,7 @@ const Navbar = () => {
                                 <Link to={'/login'}>
                                     Login
                                 </Link>}
-                        </span>
+                        </span> */}
                     </Toolbar>
                 </AppBar>
                 <LinearProgress className={Style.linearProgressRoot} variant="determinate" value={progress} />

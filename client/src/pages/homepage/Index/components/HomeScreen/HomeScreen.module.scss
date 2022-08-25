@@ -1,4 +1,8 @@
 .homeScreen {
+    img {
+        max-width: 100%;
+    }
+
     #homeHeader {
         display: flex;
         justify-content: center;
