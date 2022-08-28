@@ -1,5 +1,60 @@
 .homeFooter {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
+    background-color: #F1F1F2;
+
+    // justify-content: center;
+    // align-items: center;
+    .sections {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        justify-content: space-between;
+        padding: 20px 16px;
+
+        h5 {
+            margin-bottom: 15px;
+        }
+
+        .connectedSection {
+            display: flex;
+            flex-direction: column;
+
+            // padding: 10px 14px;
+
+            .links {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+
+            img {
+                width: 200px;
+                height: auto;
+            }
+        }
+
+        .contactSection {
+            // margin-right: 200px;
+            justify-content: center;
+
+            // padding: 10px 14px;
+
+            a {
+                display: flex;
+                flex-direction: column;
+                text-decoration: none;
+                // align-items: center;
+                color: black;
+                margin-bottom: 10px;
+            }
+        }
+    }
 }

@@ -1,16 +1,21 @@
-import HomeScreenStyle from './HomeScreen.module.scss'
+import Style from './HomeScreen.module.scss'
 import SchoolPic from './next-school_new.jpg'
 
 const HomeScreen = () => {
     return (
-        <div className={HomeScreenStyle.homeScreen}>
-            <img src={SchoolPic} alt="" />
-            <header id={HomeScreenStyle.homeHeader}>
+        <div className={Style.homeScreen}>
+            <div className={Style.mainImage}>
+                <img src={SchoolPic} alt="" />
+                <h1>
+                    TEXT
+                </h1>
+            </div>
+            <header id={Style.homeHeader}>
                 <h1>
                     Home Screen
                 </h1>
             </header>
-            <section className={HomeScreenStyle.missionMessage}>
+            <section className={Style.missionMessage}>
                 <h2>
                     Mission
                 </h2>
