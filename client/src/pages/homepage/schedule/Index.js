@@ -1,4 +1,4 @@
-import myPDF from '/Users/enosaliu/VS Code Project/school-comms-react-express-node-sql/client/src/assets/pdf/StudentsT3.pdf#zoom=FitW'
+import myPDF from 'client/src/assets/pdf/StudentsT3.pdf#zoom=FitW'
 import { useRef } from 'react'
 import { useSelector } from 'react-redux'
 import { selectNavHeight } from '../../../features/navbar-height/navHeightSlice.js'
