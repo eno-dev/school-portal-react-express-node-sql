@@ -21,6 +21,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #264653;
+  height: 115px;
 }
 
 .toolbar .menuIcon {
@@ -65,7 +66,7 @@
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  width: 80%;
+  width: 20%;
   text-align: center;
 }
 
@@ -87,8 +88,16 @@
   margin: 0;
 }
 
+.toolbar .schoolName .engName h5 {
+  font-weight: 350;
+}
+
 .toolbar .schoolName .arbName {
   margin: 0;
+}
+
+.toolbar .schoolName .arbName h5 {
+  font-size: 1.7rem;
 }
 
 .toolbar .loginText {
@@ -106,9 +115,50 @@
   text-decoration: none;
   padding: 6px 4px;
   border-radius: 6px;
+  font-size: 1.3em;
 }
 
 .toolbar .loginText a:hover {
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.toolbar .menu {
+  margin-right: 16px;
+}
+
+.toolbar .menu .menuLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.toolbar .menu .menuLinks a:hover {
+  border-bottom: 2px solid #E8C468;
+  color: #E8C468;
+}
+
+.toolbar .menu .menuLinks h1 {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.toolbar .menu .menuLinks > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 /*# sourceMappingURL=NavStyle.module.css.map */

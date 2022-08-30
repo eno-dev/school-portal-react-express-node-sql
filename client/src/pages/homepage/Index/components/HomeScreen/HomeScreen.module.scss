@@ -1,18 +1,18 @@
 .homeScreen {
     .mainImage {
-        position: relative;
+        // position: relative;
 
         img {
             max-width: 100%;
         }
 
-        h1 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: red;
-        }
+        // h1 {
+        //     position: absolute;
+        //     top: 50%;
+        //     left: 50%;
+        //     transform: translate(-50%, -50%);
+        //     color: red;
+        // }
     }
 
     #homeHeader {

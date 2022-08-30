@@ -1,3 +1,7 @@
+.homeScreen .mainImage img {
+  max-width: 100%;
+}
+
 .homeScreen #homeHeader {
   display: -webkit-box;
   display: -ms-flexbox;

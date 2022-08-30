@@ -6,9 +6,9 @@ const HomeScreen = () => {
         <div className={Style.homeScreen}>
             <div className={Style.mainImage}>
                 <img src={SchoolPic} alt="" />
-                <h1>
+                {/* <h1>
                     TEXT
-                </h1>
+                </h1> */}
             </div>
             <header id={Style.homeHeader}>
                 <h1>
