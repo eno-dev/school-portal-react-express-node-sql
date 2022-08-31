@@ -1,9 +1,11 @@
 .homeScreen {
+
     .mainImage {
         // position: relative;
 
         img {
             max-width: 100%;
+            padding: 0 0;
         }
 
         // h1 {
@@ -15,20 +17,58 @@
         // }
     }
 
-    #homeHeader {
-        display: flex;
-        justify-content: center;
-    }
+    body {
+        margin: 2em 6em;
 
-    .missionMessage {
-        display: flex;
-        flex-direction: column;
+        .welcomeMessage {
+            display: flex;
+            flex-direction: column;
 
-        h2,
-        p {
-            text-align: center;
-            align-self: center;
-            width: 50%;
+            .body {
+                display: flex;
+                flex-direction: row;
+                gap: 3em;
+
+
+                .message {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                }
+            }
+
+            img {
+                width: 400px;
+            }
+        }
+
+        .missionMessage {
+            display: flex;
+            flex-direction: column;
+
+            h2,
+            p {
+                text-align: center;
+                align-self: center;
+                width: 50%;
+            }
+        }
+
+        .schoolNews {
+            .news {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+
+                .newsContainer {
+                    width: 400px;
+
+                    h5 {
+                        margin-top: 0.3em;
+                    }
+                }
+            }
         }
     }
 }

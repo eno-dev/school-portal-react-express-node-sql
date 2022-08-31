@@ -1,17 +1,13 @@
 .homeScreen .mainImage img {
   max-width: 100%;
+  padding: 0 0;
 }
 
-.homeScreen #homeHeader {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.homeScreen body {
+  margin: 2em 6em;
 }
 
-.homeScreen .missionMessage {
+.homeScreen body .welcomeMessage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,12 +17,70 @@
           flex-direction: column;
 }
 
-.homeScreen .missionMessage h2,
-.homeScreen .missionMessage p {
+.homeScreen body .welcomeMessage .body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 3em;
+}
+
+.homeScreen body .welcomeMessage .body .message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.homeScreen body .welcomeMessage img {
+  width: 400px;
+}
+
+.homeScreen body .missionMessage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.homeScreen body .missionMessage h2,
+.homeScreen body .missionMessage p {
   text-align: center;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   width: 50%;
+}
+
+.homeScreen body .schoolNews .news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.homeScreen body .schoolNews .news .newsContainer {
+  width: 400px;
+}
+
+.homeScreen body .schoolNews .news .newsContainer h5 {
+  margin-top: 0.3em;
 }
 /*# sourceMappingURL=HomeScreen.module.css.map */
