@@ -20,6 +20,10 @@
     body {
         margin: 2em 6em;
 
+        >* {
+            margin-bottom: 2em;
+        }
+
         .welcomeMessage {
             display: flex;
             flex-direction: column;
@@ -55,6 +59,12 @@
         }
 
         .schoolNews {
+
+            // Margin below school heading below heading
+            h2 {
+                margin-bottom: 0.5em;
+            }
+
             .news {
                 display: flex;
                 flex-direction: row;

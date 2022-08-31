@@ -7,6 +7,10 @@
   margin: 2em 6em;
 }
 
+.homeScreen body > * {
+  margin-bottom: 2em;
+}
+
 .homeScreen body .welcomeMessage {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -61,6 +65,10 @@
       -ms-grid-row-align: center;
       align-self: center;
   width: 50%;
+}
+
+.homeScreen body .schoolNews h2 {
+  margin-bottom: 0.5em;
 }
 
 .homeScreen body .schoolNews .news {
