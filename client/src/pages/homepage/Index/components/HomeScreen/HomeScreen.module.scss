@@ -20,6 +20,10 @@
     body {
         margin: 2em 6em;
 
+        img {
+            border-radius: 8px;
+        }
+
         >* {
             margin-bottom: 2em;
         }

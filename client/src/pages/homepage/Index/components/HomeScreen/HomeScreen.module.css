@@ -7,6 +7,10 @@
   margin: 2em 6em;
 }
 
+.homeScreen body img {
+  border-radius: 8px;
+}
+
 .homeScreen body > * {
   margin-bottom: 2em;
 }

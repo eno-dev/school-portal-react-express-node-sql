@@ -53,7 +53,12 @@
   background-color: rgba(0, 0, 0, 0.04);
 }
 
-.toolbar .schoolName {
+.toolbar a {
+  text-decoration: none;
+  color: white;
+}
+
+.toolbar a .schoolName {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,35 +73,39 @@
       align-content: center;
   width: 20%;
   text-align: center;
+  padding-left: 14px;
 }
 
-.toolbar .schoolName > * {
+.toolbar a .schoolName > * {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
-.toolbar .schoolName > * > * {
+.toolbar a .schoolName > * > * {
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
-.toolbar .schoolName .engName {
+.toolbar a .schoolName .engName {
   margin: 0;
 }
 
-.toolbar .schoolName .engName h5 {
+.toolbar a .schoolName .engName h5 {
   font-weight: 350;
 }
 
-.toolbar .schoolName .arbName {
+.toolbar a .schoolName .arbName {
   margin: 0;
 }
 
-.toolbar .schoolName .arbName h5 {
+.toolbar a .schoolName .arbName h5 {
   font-size: 1.7rem;
 }
 

@@ -43,41 +43,48 @@
         }
     }
 
-    .schoolName {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        width: 20%;
-        text-align: center;
+    a {
+        text-decoration: none;
+        color: white;
 
-        // School Names
-        >* {
+        .schoolName {
             display: flex;
+            flex-direction: column;
             justify-content: center;
+            align-content: center;
+            width: 20%;
+            text-align: center;
+            padding-left: 14px;
 
+            // School Names
             >* {
-                margin-top: 5px;
-                margin-bottom: 5px;
+                display: flex;
+                justify-content: center;
+                width: max-content;
+
+                >* {
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                }
             }
-        }
 
-        .engName {
-            margin: 0;
+            .engName {
+                margin: 0;
 
-            h5 {
-                font-weight: 350;
+                h5 {
+                    font-weight: 350;
+                }
             }
-        }
 
-        .arbName {
-            margin: 0;
+            .arbName {
+                margin: 0;
 
-            h5 {
-                font-size: 1.7rem;
+                h5 {
+                    font-size: 1.7rem;
+                }
             }
-        }
 
+        }
     }
 
     .loginText {

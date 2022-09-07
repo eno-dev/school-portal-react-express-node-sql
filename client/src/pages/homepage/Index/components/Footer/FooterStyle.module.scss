@@ -17,11 +17,9 @@
             margin-bottom: 15px;
         }
 
-        .connectedSection {
+        .network {
             display: flex;
             flex-direction: column;
-
-            // padding: 10px 14px;
 
             .links {
                 display: flex;
@@ -41,7 +39,30 @@
             }
         }
 
-        .contactSection {
+        .connected {
+            display: flex;
+            flex-direction: column;
+
+            .links {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+
+            img {
+                width: 200px;
+                height: auto;
+            }
+        }
+
+        // Selecting all elements after connected
+        .connected~* {
             // margin-right: 200px;
             justify-content: center;
 
@@ -55,9 +76,16 @@
                 color: black;
                 margin-bottom: 10px;
 
-                svg {
-                    margin-right: 10px;
-                }
+            }
+        }
+
+        .ourSchool {}
+
+        .explore {}
+
+        .contact {
+            svg {
+                margin-right: 10px;
             }
         }
     }

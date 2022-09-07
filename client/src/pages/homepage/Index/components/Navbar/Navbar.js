@@ -62,18 +62,20 @@ const Navbar = () => {
                                 aria-label="menu"
                                 onClick={toggleSidebar} />
                         </span> */}
-                        <div className={Style.schoolName}>
-                            <span className={Style.arbName}>
-                                <h5>
-                                    مدرسة علي بن أبي طالب
-                                </h5>
-                            </span>
-                            <span className={Style.engName}>
-                                <h5>
-                                    Ali Bin Abi Taleb School
-                                </h5>
-                            </span>
-                        </div>
+                        <Link to='/'>
+                            <div className={Style.schoolName}>
+                                <span className={Style.arbName}>
+                                    <h5>
+                                        مدرسة علي بن أبي طالب
+                                    </h5>
+                                </span>
+                                <span className={Style.engName}>
+                                    <h5>
+                                        Ali Bin Abi Taleb School
+                                    </h5>
+                                </span>
+                            </div>
+                        </Link>
                         <div className={Style.menu}>
                             {/* <ul>
                                 <li>
@@ -81,7 +83,7 @@ const Navbar = () => {
                                 </li>
                             </ul> */}
                             <div className={Style.menuLinks}>
-                                <Link to=''>
+                                <Link to='about-us'>
                                     About Us
                                 </Link>
                                 <h1>
@@ -93,13 +95,13 @@ const Navbar = () => {
                                 <h1>
                                     |
                                 </h1>
-                                <Link to=''>
+                                <Link to='students'>
                                     Students Section
                                 </Link>
                                 <h1>
                                     |
                                 </h1>
-                                <Link to=''>
+                                <Link to='parents-carers'>
                                     Parents Section
                                 </Link>
                                 <h1>

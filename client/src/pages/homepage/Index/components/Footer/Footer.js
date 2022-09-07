@@ -14,12 +14,12 @@ const Footer = () => {
     return (
         <footer className={Style.homeFooter}>
             <div className={Style.sections}>
-                <div className={Style.connectedSection}>
+                <div className={Style.network}>
                     <h5>Our Network</h5>
                     <img src={ESELogo}></img>
                     <img src={MOELogo}></img>
                 </div>
-                <div className={Style.connectedSection}>
+                <div className={Style.connected}>
                     <h5>
                         Get Connected
                     </h5>
@@ -32,15 +32,15 @@ const Footer = () => {
                     {/* <img src={ESELogo}></img>
                     <img src={MOELogo}></img> */}
                 </div>
-                <div className={Style.contactSection}>
+                <div className={Style.ourSchool}>
                     <h5>
                         Our School
                     </h5>
                     <Link to=''>About Us</Link>
                     <Link to=''>Our Mission</Link>
-                    <Link to=''>Link</Link>
+                    <Link to=''>Activities</Link>
                 </div>
-                <div className={Style.contactSection}>
+                <div className={Style.explore}>
                     <h5>
                         Explore
                     </h5>
@@ -48,14 +48,14 @@ const Footer = () => {
                     <Link to=''>Extra Curricular Activities</Link>
                     <Link to=''>School Calendar</Link>
                 </div>
-                <div className={Style.contactSection}>
+                <div className={Style.contact}>
                     <h5>
                         Ali Bin Abi Taleb School
                     </h5>
 
-                    <Link to=''><SchoolIcon />Msaibeekh, Al Ain, United Arab Emirates</Link>
-                    <Link to=''><EmailIcon />1399@adec.ac.ae</Link>
-                    <Link to=''><PhoneIcon />+97137832988</Link>
+                    <a href='https://goo.gl/maps/73woDJLV3vJc8yLj6'><SchoolIcon />Al Foah, Al Ain, United Arab Emirates</a>
+                    <a href=''><EmailIcon />1399@adec.ac.ae</a>
+                    <a href=''><PhoneIcon />+97137832988</a>
                 </div>
             </div>
             {/* <p>Eno Saliu - 2022 - Copyright</p> */}

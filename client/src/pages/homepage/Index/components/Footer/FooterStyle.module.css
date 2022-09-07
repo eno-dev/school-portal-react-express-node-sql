@@ -31,7 +31,7 @@
   margin-bottom: 15px;
 }
 
-.homeFooter .sections .connectedSection {
+.homeFooter .sections .network {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,7 +41,7 @@
           flex-direction: column;
 }
 
-.homeFooter .sections .connectedSection .links {
+.homeFooter .sections .network .links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,23 +55,57 @@
   margin-bottom: 20px;
 }
 
-.homeFooter .sections .connectedSection .links a {
+.homeFooter .sections .network .links a {
   text-decoration: none;
   color: black;
 }
 
-.homeFooter .sections .connectedSection img {
+.homeFooter .sections .network img {
   width: 200px;
   height: auto;
 }
 
-.homeFooter .sections .contactSection {
+.homeFooter .sections .connected {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.homeFooter .sections .connected .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.homeFooter .sections .connected .links a {
+  text-decoration: none;
+  color: black;
+}
+
+.homeFooter .sections .connected img {
+  width: 200px;
+  height: auto;
+}
+
+.homeFooter .sections .connected ~ * {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.homeFooter .sections .contactSection a {
+.homeFooter .sections .connected ~ * a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,7 +118,7 @@
   margin-bottom: 10px;
 }
 
-.homeFooter .sections .contactSection a svg {
+.homeFooter .sections .contact svg {
   margin-right: 10px;
 }
 /*# sourceMappingURL=FooterStyle.module.css.map */
