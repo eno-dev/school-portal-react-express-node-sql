@@ -77,15 +77,23 @@ const Navbar = () => {
                             </div>
                         </Link>
                         <div className={Style.menu}>
-                            {/* <ul>
-                                <li>
-
-                                </li>
-                            </ul> */}
                             <div className={Style.menuLinks}>
-                                <Link to='about-us'>
-                                    About Us
-                                </Link>
+                                <div className={Style.aboutUsDropdown}>
+                                    <div className={Style.menuHeading}>
+                                        About Us
+                                    </div>
+                                    <div className={Style.dropdownContent}>
+                                        <Link to='about-us'>
+                                            About Us
+                                        </Link>
+                                        <Link to='about-us'>
+                                            Mission Statement
+                                        </Link>
+                                        <Link to='about-us'>
+                                            Principle Message
+                                        </Link>
+                                    </div>
+                                </div>
                                 <h1>
                                     |
                                 </h1>
@@ -131,7 +139,7 @@ const Navbar = () => {
                 </AppBar>
                 <LinearProgress className={Style.linearProgressRoot} variant="determinate" value={progress} />
             </Box>
-        </div>
+        </div >
     )
 }
 

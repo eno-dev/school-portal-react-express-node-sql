@@ -3,19 +3,19 @@
   padding: 0 0;
 }
 
-.homeScreen body {
+.homeScreen .mainContent {
   margin: 2em 6em;
 }
 
-.homeScreen body img {
+.homeScreen .mainContent img {
   border-radius: 8px;
 }
 
-.homeScreen body > * {
+.homeScreen .mainContent > * {
   margin-bottom: 2em;
 }
 
-.homeScreen body .welcomeMessage {
+.homeScreen .mainContent .welcomeMessage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,7 +25,7 @@
           flex-direction: column;
 }
 
-.homeScreen body .welcomeMessage .body {
+.homeScreen .mainContent .welcomeMessage .messageBody {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,7 +36,7 @@
   gap: 3em;
 }
 
-.homeScreen body .welcomeMessage .body .message {
+.homeScreen .mainContent .welcomeMessage .messageBody .message {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,11 +48,11 @@
       justify-content: space-around;
 }
 
-.homeScreen body .welcomeMessage img {
+.homeScreen .mainContent .welcomeMessage img {
   width: 400px;
 }
 
-.homeScreen body .missionMessage {
+.homeScreen .mainContent .missionMessage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,8 +62,8 @@
           flex-direction: column;
 }
 
-.homeScreen body .missionMessage h2,
-.homeScreen body .missionMessage p {
+.homeScreen .mainContent .missionMessage h2,
+.homeScreen .mainContent .missionMessage p {
   text-align: center;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -71,11 +71,11 @@
   width: 50%;
 }
 
-.homeScreen body .schoolNews h2 {
+.homeScreen .mainContent .schoolNews h2 {
   margin-bottom: 0.5em;
 }
 
-.homeScreen body .schoolNews .news {
+.homeScreen .mainContent .schoolNews .news {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,11 +88,11 @@
           justify-content: space-between;
 }
 
-.homeScreen body .schoolNews .news .newsContainer {
+.homeScreen .mainContent .schoolNews .news .newsContainer {
   width: 400px;
 }
 
-.homeScreen body .schoolNews .news .newsContainer h5 {
+.homeScreen .mainContent .schoolNews .news .newsContainer h5 {
   margin-top: 0.3em;
 }
 /*# sourceMappingURL=HomeScreen.module.css.map */

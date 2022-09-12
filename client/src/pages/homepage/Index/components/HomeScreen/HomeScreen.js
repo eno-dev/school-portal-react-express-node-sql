@@ -12,9 +12,9 @@ const HomeScreen = () => {
                     TEXT
                 </h1> */}
             </div>
-            <body>
+            <div className={Style.mainContent}>
                 <section className={Style.welcomeMessage}>
-                    <div className={Style.body}>
+                    <div className={Style.messageBody}>
                         <div className={Style.message}>
                             <header>
                                 <h1>
@@ -75,8 +75,8 @@ const HomeScreen = () => {
                         </div>
                     </div>
                 </div>
-            </body>
-        </div>
+            </div>
+        </div >
     )
 }
 

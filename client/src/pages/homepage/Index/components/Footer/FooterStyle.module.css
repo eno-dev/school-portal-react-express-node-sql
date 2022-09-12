@@ -118,6 +118,14 @@
   margin-bottom: 10px;
 }
 
+.homeFooter .sections .ourSchool {
+  color: black;
+}
+
+.homeFooter .sections .explore {
+  color: black;
+}
+
 .homeFooter .sections .contact svg {
   margin-right: 10px;
 }

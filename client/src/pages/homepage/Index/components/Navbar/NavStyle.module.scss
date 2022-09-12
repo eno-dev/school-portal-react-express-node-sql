@@ -111,14 +111,51 @@
         .menuLinks {
             display: flex;
             flex-direction: row;
-            // gap: 30px;
 
-            a:hover {
-                // background-color: #E8C468;
-                // border-radius: 5px;
-                // color: black;
-                border-bottom: 2px solid #E8C468;
+            // Show dropdown
+            .aboutUsDropdown:hover .dropdownContent {
+                display: block;
+
+            }
+
+            .aboutUsDropdown:hover>.menuHeading {
+                display: block;
+                // border-bottom: 2px solid #E8C468;
                 color: #E8C468;
+
+            }
+
+            .aboutUsDropdown {
+                position: relative;
+                // display: inline-block;
+                display: flex;
+
+                .dropdownContent {
+                    display: none;
+                    position: absolute;
+                    background-color: #f1f1f1;
+                    min-width: 200px;
+                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                    z-index: 1;
+                    top: 3rem;
+                    position: absolute;
+
+                    a {
+                        color: black;
+                        padding: 12px 16px;
+                        text-decoration: none;
+                        display: block;
+
+                        &:hover {
+                            background-color: #7AAEC2;
+                            box-shadow: 10px 0px #EAC671 inset;
+                        }
+                    }
+                }
+            }
+
+            .menuHeading {
+                cursor: pointer;
             }
 
             h1 {
