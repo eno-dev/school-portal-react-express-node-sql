@@ -24,10 +24,18 @@ const Footer = () => {
                         Get Connected
                     </h5>
                     <div className={Style.links}>
-                        <Link to=''><InstagramIcon /></Link>
-                        <Link to=''><TwitterIcon /></Link>
-                        <Link to=''><FacebookIcon /></Link>
-                        <Link to=''><YouTubeIcon /></Link>
+                        <div className={Style.instagram}>
+                            <Link to=''><InstagramIcon /></Link>
+                        </div>
+                        <div className={Style.twitter}>
+                            <Link to=''><TwitterIcon /></Link>
+                        </div>
+                        <div className={Style.facebook}>
+                            <Link to=''><FacebookIcon /></Link>
+                        </div>
+                        <div className={Style.youtube}>
+                            <Link to=''><YouTubeIcon /></Link>
+                        </div>
                     </div>
                     {/* <img src={ESELogo}></img>
                     <img src={MOELogo}></img> */}

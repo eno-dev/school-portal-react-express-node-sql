@@ -145,23 +145,14 @@
           flex-direction: row;
 }
 
-.toolbar .menu .menuLinks .aboutUsDropdown:hover .dropdownContent {
-  display: block;
-}
-
-.toolbar .menu .menuLinks .aboutUsDropdown:hover > .menuHeading {
-  display: block;
-  color: #E8C468;
-}
-
-.toolbar .menu .menuLinks .aboutUsDropdown {
+.toolbar .menu .menuLinks > * {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.toolbar .menu .menuLinks .aboutUsDropdown .dropdownContent {
+.toolbar .menu .menuLinks > * .dropdownContent {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
@@ -173,17 +164,33 @@
   position: absolute;
 }
 
-.toolbar .menu .menuLinks .aboutUsDropdown .dropdownContent a {
+.toolbar .menu .menuLinks > * .dropdownContent a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
-.toolbar .menu .menuLinks .aboutUsDropdown .dropdownContent a:hover {
+.toolbar .menu .menuLinks > * .dropdownContent a:hover {
   background-color: #7AAEC2;
   -webkit-box-shadow: 10px 0px #EAC671 inset;
           box-shadow: 10px 0px #EAC671 inset;
+}
+
+.toolbar .menu .menuLinks > *:hover .dropdownContent {
+  display: block;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.toolbar .menu .menuLinks > *:hover > .menuHeading {
+  display: block;
+  color: #E8C468;
+}
+
+.toolbar .menu .menuLinks > *:hover > a {
+  display: block;
+  color: #E8C468;
 }
 
 .toolbar .menu .menuLinks .menuHeading {
@@ -206,7 +213,7 @@
   padding: 10px 14px;
   text-decoration: none;
   color: white;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
