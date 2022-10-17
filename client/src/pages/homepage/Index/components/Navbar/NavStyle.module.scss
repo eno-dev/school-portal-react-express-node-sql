@@ -112,9 +112,22 @@
             display: flex;
             flex-direction: row;
 
-            // Select the nav links 
-            >* {
+            // Show dropdown
+            .aboutUsDropdown:hover .dropdownContent {
+                display: block;
+
+            }
+
+            .aboutUsDropdown:hover>.menuHeading {
+                display: block;
+                // border-bottom: 2px solid #E8C468;
+                color: #E8C468;
+
+            }
+
+            .aboutUsDropdown {
                 position: relative;
+                // display: inline-block;
                 display: flex;
 
                 .dropdownContent {
@@ -127,7 +140,6 @@
                     top: 3rem;
                     position: absolute;
 
-                    // Text styling
                     a {
                         color: black;
                         padding: 12px 16px;
@@ -140,23 +152,6 @@
                         }
                     }
                 }
-
-                // Show dropdown
-                &:hover .dropdownContent {
-                    display: block;
-                    transition: 1s;
-                }
-
-                &:hover>.menuHeading {
-                    display: block;
-                    color: #E8C468;
-                }
-
-                &:hover>a {
-                    display: block;
-                    color: #E8C468;
-                }
-
             }
 
             .menuHeading {
@@ -175,7 +170,7 @@
                 padding: 10px 14px;
                 text-decoration: none;
                 color: white;
-                font-size: 1.2rem;
+                font-size: 1.1rem;
                 transition: 0.2s ease-in-out;
             }
 

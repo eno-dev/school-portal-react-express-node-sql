@@ -94,49 +94,24 @@ const Navbar = () => {
                                         </Link>
                                     </div>
                                 </div>
-                                {/* Seperator */}
                                 <h1>
                                     |
                                 </h1>
-                                <div className={Style.annoDropdown}>
-                                    <div className={Style.menuHeading}>
-                                        News & Events
-                                    </div>
-                                    <div className={Style.dropdownContent}>
-                                        <Link to='about-us'>
-                                            Latest News
-                                        </Link>
-                                        <Link to='about-us'>
-                                            Photo Gallery
-                                        </Link>
-                                        <Link to='about-us'>
-                                            Term Dates
-                                        </Link>
-                                        <Link to='about-us'>
-                                            Announcement
-                                        </Link>
-                                    </div>
-                                </div>
+                                <Link to=''>
+                                    Announcements
+                                </Link>
                                 <h1>
                                     |
                                 </h1>
-                                <div className={Style.studentDropdown}>
-                                    <div className={Style.menuHeading}>
-
-                                    </div>
-                                    <Link to='students'>
-                                        Students Section
-                                    </Link>
-                                </div>
+                                <Link to='students'>
+                                    Students Section
+                                </Link>
                                 <h1>
                                     |
                                 </h1>
-                                <div className={Style.parentDropdown}>
-                                    <div className={Style.menuHeading}></div>
-                                    <Link to='parents-carers'>
-                                        Parents Section
-                                    </Link>
-                                </div>
+                                <Link to='parents-carers'>
+                                    Parents Section
+                                </Link>
                                 <h1>
                                     |
                                 </h1>

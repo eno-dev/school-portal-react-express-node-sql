@@ -49,30 +49,6 @@
                 justify-content: space-between;
                 margin-bottom: 20px;
 
-                .facebook a {
-                    &:hover {
-                        color: #4267B2
-                    }
-                }
-
-                .twitter a {
-                    &:hover {
-                        color: #1DA1F2
-                    }
-                }
-
-                .youtube a {
-                    &:hover {
-                        color: red;
-                    }
-                }
-
-                .instagram a {
-                    &:hover {
-                        color: #125688;
-                    }
-                }
-
                 a {
                     text-decoration: none;
                     color: black;
@@ -87,14 +63,19 @@
 
         // Selecting all elements after connected
         .connected~* {
+            // margin-right: 200px;
             justify-content: center;
+
+            // padding: 10px 14px;
 
             a {
                 display: flex;
                 flex-direction: row;
                 text-decoration: none;
+                // align-items: center;
                 color: black;
                 margin-bottom: 10px;
+
             }
         }
 

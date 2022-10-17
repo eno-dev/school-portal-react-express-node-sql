@@ -89,22 +89,6 @@
   margin-bottom: 20px;
 }
 
-.homeFooter .sections .connected .links .facebook a:hover {
-  color: #4267B2;
-}
-
-.homeFooter .sections .connected .links .twitter a:hover {
-  color: #1DA1F2;
-}
-
-.homeFooter .sections .connected .links .youtube a:hover {
-  color: red;
-}
-
-.homeFooter .sections .connected .links .instagram a:hover {
-  color: #125688;
-}
-
 .homeFooter .sections .connected .links a {
   text-decoration: none;
   color: black;
