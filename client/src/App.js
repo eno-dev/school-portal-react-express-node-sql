@@ -18,7 +18,7 @@ import ContactUs from "./pages/homepage/contact-us/Index";
 import HomeScreen from "./pages/homepage/Index/components/HomeScreen/HomeScreen";
 import AboutUs from "./pages/homepage/about-us/Index";
 import ParentsCarers from "./pages/homepage/parents-carers/Index";
-
+// import Students from "./pages/homepage/students";
 
 function App() {
   const loggedInState = useSelector((state) => state.auth.isLoggedIn)
