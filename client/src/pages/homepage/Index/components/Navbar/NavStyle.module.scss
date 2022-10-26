@@ -3,6 +3,7 @@
     display: flex;
     position: sticky;
     top: 0;
+    z-index: 1;
 
     .linearProgressRoot :global {
         background-color: #7AAEC2;
@@ -118,9 +119,9 @@
 
             }
 
-            .aboutUsDropdown:hover>.menuHeading {
+            .aboutUsDropdown:hover>.menuHeading,
+            .aboutUsDropdown:hover>a {
                 display: block;
-                // border-bottom: 2px solid #E8C468;
                 color: #E8C468;
 
             }

@@ -33,7 +33,7 @@ const Navbar = () => {
 
     // Page scroll progress
     useEffect(() => {
-        let computeProgress = () => {
+        const computeProgress = () => {
             // The scrollTop gives length of window that has been scrolled
             const scrolled = document.documentElement.scrollTop;
             // scrollHeight gives total length of the window and 
@@ -57,11 +57,6 @@ const Navbar = () => {
             <Box sx={{ flexGrow: 1 }} >
                 <AppBar position="static">
                     <Toolbar className={Style.toolbar}>
-                        {/* <span className={Style.menuIcon}>
-                            <MenuIcon
-                                aria-label="menu"
-                                onClick={toggleSidebar} />
-                        </span> */}
                         <Link to='/'>
                             <div className={Style.schoolName}>
                                 <span className={Style.arbName}>
@@ -97,21 +92,38 @@ const Navbar = () => {
                                 <h1>
                                     |
                                 </h1>
-                                <Link to=''>
-                                    Announcements
-                                </Link>
+                                <div className={Style.aboutUsDropdown}>
+                                    <Link to='newsandevents'>
+                                        News & Events
+                                    </Link>
+                                    <div className={Style.dropdownContent}>
+                                        <Link to='gallery'>
+                                            Gallery
+                                        </Link>
+                                        <Link to='about-us'>
+                                            Mission Statement
+                                        </Link>
+                                        <Link to='about-us'>
+                                            Principle Message
+                                        </Link>
+                                    </div>
+                                </div>
                                 <h1>
                                     |
                                 </h1>
-                                <Link to='students'>
-                                    Students Section
-                                </Link>
+                                <div className={Style.aboutUsDropdown}>
+                                    <Link to='students'>
+                                        Students Section
+                                    </Link>
+                                </div>
                                 <h1>
                                     |
                                 </h1>
-                                <Link to='parents-carers'>
-                                    Parents Section
-                                </Link>
+                                <div className={Style.aboutUsDropdown}>
+                                    <Link to='parents-carers'>
+                                        Parents Section
+                                    </Link>
+                                </div>
                                 <h1>
                                     |
                                 </h1>
@@ -125,16 +137,6 @@ const Navbar = () => {
                                     </Link>}
                             </div>
                         </div>
-                        {/* <span className={Style.loginText}>
-                            {isLoggedInState ?
-                                <Link to={'/portal'}>
-                                    Portal
-                                </Link>
-                                :
-                                <Link to={'/login'}>
-                                    Login
-                                </Link>}
-                        </span> */}
                     </Toolbar>
                 </AppBar>
                 <LinearProgress className={Style.linearProgressRoot} variant="determinate" value={progress} />

@@ -18,7 +18,9 @@ import ContactUs from "./pages/homepage/contact-us/Index";
 import HomeScreen from "./pages/homepage/Index/components/HomeScreen/HomeScreen";
 import AboutUs from "./pages/homepage/about-us/Index";
 import ParentsCarers from "./pages/homepage/parents-carers/Index";
-// import Students from "./pages/homepage/students";
+import NewsAndEvents from "./pages/homepage/news-events/Index";
+import Gallery from "./pages/homepage/news-events/gallery/Index";
+
 
 function App() {
   const loggedInState = useSelector((state) => state.auth.isLoggedIn)
@@ -29,6 +31,8 @@ function App() {
         <Route path="/" element={<Homepage />}>
           <Route path="" element={<HomeScreen />} />
           <Route path="about-us" element={<AboutUs />} />
+          <Route path="newsandevents" element={<NewsAndEvents />} />
+          <Route path="gallery" element={<Gallery />} />
           <Route path="parents-carers" element={<ParentsCarers />} />
           <Route path="students" element={<Schedule />} />
           <Route path="schedule" element={<Schedule />} />

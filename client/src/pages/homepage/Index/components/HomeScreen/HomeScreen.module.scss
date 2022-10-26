@@ -1,20 +1,13 @@
 .homeScreen {
+    overflow: hidden;
 
     .mainImage {
-        // position: relative;
+
 
         img {
             max-width: 100%;
             padding: 0 0;
         }
-
-        // h1 {
-        //     position: absolute;
-        //     top: 50%;
-        //     left: 50%;
-        //     transform: translate(-50%, -50%);
-        //     color: red;
-        // }
     }
 
     .mainContent {
