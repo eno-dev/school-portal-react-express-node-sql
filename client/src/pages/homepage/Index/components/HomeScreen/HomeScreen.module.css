@@ -1,10 +1,14 @@
+.homeScreen {
+  overflow: hidden;
+}
+
 .homeScreen .mainImage img {
   max-width: 100%;
   padding: 0 0;
 }
 
 .homeScreen .mainContent {
-  margin: 2em 6em;
+  margin: 2em 5em;
 }
 
 .homeScreen .mainContent img {
@@ -86,10 +90,14 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .homeScreen .mainContent .schoolNews .news .newsContainer {
-  width: 400px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
 }
 
 .homeScreen .mainContent .schoolNews .news .newsContainer h5 {

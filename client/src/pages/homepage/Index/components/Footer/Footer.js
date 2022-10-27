@@ -24,13 +24,11 @@ const Footer = () => {
                         Get Connected
                     </h5>
                     <div className={Style.links}>
-                        <Link to=''><InstagramIcon /></Link>
-                        <Link to=''><TwitterIcon /></Link>
-                        <Link to=''><FacebookIcon /></Link>
-                        <Link to=''><YouTubeIcon /></Link>
+                        <a href='' className={Style.instaIcon}><InstagramIcon /></a>
+                        <a href='' className={Style.twitterIcon}><TwitterIcon /></a>
+                        <a href='' className={Style.facebookIcon}><FacebookIcon /></a>
+                        <a href='' className={Style.youtubeIcon}><YouTubeIcon /></a>
                     </div>
-                    {/* <img src={ESELogo}></img>
-                    <img src={MOELogo}></img> */}
                 </div>
                 <div className={Style.ourSchool}>
                     <h5>
@@ -54,8 +52,8 @@ const Footer = () => {
                     </h5>
 
                     <a href='https://goo.gl/maps/73woDJLV3vJc8yLj6'><SchoolIcon />Al Foah, Al Ain, United Arab Emirates</a>
-                    <a href=''><EmailIcon />1399@adec.ac.ae</a>
-                    <a href=''><PhoneIcon />+97137832988</a>
+                    <a href='mailto: 1399@adec.ac.ae'><EmailIcon />1399@adec.ac.ae</a>
+                    <a href='tel:+97137832988'><PhoneIcon />+97137832988</a>
                 </div>
             </div>
             {/* <p>Eno Saliu - 2022 - Copyright</p> */}

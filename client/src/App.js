@@ -20,7 +20,10 @@ import AboutUs from "./pages/homepage/about-us/Index";
 import ParentsCarers from "./pages/homepage/parents-carers/Index";
 import NewsAndEvents from "./pages/homepage/news-events/Index";
 import Gallery from "./pages/homepage/news-events/gallery/Index";
-
+import Expo2020 from "./pages/homepage/news-events/gallery/expo2020/Index"
+import JuiJitsu from "./pages/homepage/news-events/gallery/Jiu-Jitsu/Index"
+import FlagDay from "./pages/homepage/news-events/gallery/FlagDay/Index"
+import GalleryIndex from "./pages/homepage/news-events/gallery/Gallery"
 
 function App() {
   const loggedInState = useSelector((state) => state.auth.isLoggedIn)
@@ -32,7 +35,12 @@ function App() {
           <Route path="" element={<HomeScreen />} />
           <Route path="about-us" element={<AboutUs />} />
           <Route path="newsandevents" element={<NewsAndEvents />} />
-          <Route path="gallery" element={<Gallery />} />
+          <Route path="gallery" element={<Gallery />} >
+            <Route path="" element={< GalleryIndex />} />
+            <Route path="expo2020" element={< Expo2020 />} />
+            <Route path="juijitsu" element={< JuiJitsu />} />
+            <Route path="flagday" element={< FlagDay />} />
+          </Route>
           <Route path="parents-carers" element={<ParentsCarers />} />
           <Route path="students" element={<Schedule />} />
           <Route path="schedule" element={<Schedule />} />

@@ -4,14 +4,14 @@
     justify-content: center;
     background-color: #F1F1F2;
 
-    // justify-content: center;
-    // align-items: center;
+
     .sections {
         display: flex;
         flex-direction: row;
         width: 85%;
         justify-content: space-between;
         padding: 20px 16px;
+        flex-wrap: wrap;
 
         h5 {
             margin-bottom: 15px;
@@ -31,6 +31,7 @@
                     text-decoration: none;
                     color: black;
                 }
+
             }
 
             img {
@@ -72,7 +73,6 @@
                 display: flex;
                 flex-direction: row;
                 text-decoration: none;
-                // align-items: center;
                 color: black;
                 margin-bottom: 10px;
 
@@ -93,4 +93,20 @@
             }
         }
     }
+}
+
+.instaIcon svg:hover {
+    fill: #5851db;
+}
+
+.twitterIcon svg:hover {
+    fill: #00acee;
+}
+
+.facebookIcon svg:hover {
+    fill: #3b5998;
+}
+
+.youtubeIcon svg:hover {
+    fill: #FF0000;
 }

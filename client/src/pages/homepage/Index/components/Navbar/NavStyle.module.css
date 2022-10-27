@@ -6,6 +6,7 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 .navbar .linearProgressRoot :global {
@@ -149,7 +150,8 @@
   display: block;
 }
 
-.toolbar .menu .menuLinks .aboutUsDropdown:hover > .menuHeading {
+.toolbar .menu .menuLinks .aboutUsDropdown:hover > .menuHeading,
+.toolbar .menu .menuLinks .aboutUsDropdown:hover > a {
   display: block;
   color: #E8C468;
 }

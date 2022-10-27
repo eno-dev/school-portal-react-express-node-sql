@@ -25,6 +25,8 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 20px 16px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .homeFooter .sections h5 {
@@ -128,5 +130,21 @@
 
 .homeFooter .sections .contact svg {
   margin-right: 10px;
+}
+
+.instaIcon svg:hover {
+  fill: #5851db;
+}
+
+.twitterIcon svg:hover {
+  fill: #00acee;
+}
+
+.facebookIcon svg:hover {
+  fill: #3b5998;
+}
+
+.youtubeIcon svg:hover {
+  fill: #FF0000;
 }
 /*# sourceMappingURL=FooterStyle.module.css.map */

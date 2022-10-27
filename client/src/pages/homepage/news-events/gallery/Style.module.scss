@@ -2,29 +2,43 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: auto;
-    align-items: center;
+    margin: 40px;
 
-    img {
-        max-width: 100%;
-        height: auto;
+    .heading {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3rem;
     }
-}
 
+    h1 {
+        margin-top: 25px;
+    }
 
-.images {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: masonry;
-    align-tracks: start; // A new masonry only property
-    justify-tracks: start; // A new masonry only property
-    grid-gap: 0.1rem;
-    margin: 20px;
+    .images {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: masonry;
+        align-tracks: start; // A new masonry only property
+        justify-tracks: start; // A new masonry only property
+        grid-gap: 3rem;
 
-    img:hover {
-        cursor: pointer;
-        transition: 0.4s;
-        opacity: 0.4;
-        background-color: rgba(0, 0, 0, 0.5)
+        .imageContainer {
+            height: 420px;
+        }
+
+        img {
+            max-width: 100%;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        img:hover {
+            cursor: pointer;
+            transition: 0.4s;
+            opacity: 0.4;
+            background-color: rgba(0, 0, 0, 0.5)
+        }
     }
 }

@@ -1,0 +1,38 @@
+.galleryTitle {
+    align-self: flex-start;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: masonry;
+    align-tracks: start; // A new masonry only property
+    justify-tracks: start; // A new masonry only property
+    grid-gap: 0.1rem;
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    img:hover {
+        cursor: pointer;
+        transition: 0.4s;
+        opacity: 0.4;
+        background-color: rgba(0, 0, 0, 0.5)
+    }
+}
+
+.breadcrumbs {
+    li+li:before {
+        padding: 8px;
+        color: black;
+        content: "/";
+    }
+
+    ul {
+        padding-left: 0;
+        display: flex;
+        list-style: none;
+    }
+}
