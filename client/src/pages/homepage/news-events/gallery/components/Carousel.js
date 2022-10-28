@@ -3,7 +3,7 @@ import Style from '../Jiu-Jitsu/Style.module.scss'
 const Carousel = ({ obj, gallery }) => {
 
     const getImagePath = (imageName, galleryName) => {
-        return require(`../../../../../assets/img/${galleryName}/${imageName}`)
+        return require(`assets/img/${galleryName}/${imageName}`)
     }
 
     return (
