@@ -22,8 +22,7 @@ const HomeScreen = () => {
                                 </h1>
                             </header>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dignissimos omnis minima nemo praesentium illo, placeat minus voluptate? Facilis cumque nobis quibusdam iste repudiandae unde qui aut excepturi accusamus expedita.
-                                Ipsa culpa ab corrupti. Eos nam quod exercitationem atque quas rerum molestiae, dolores obcaecati quisquam tempore magni non assumenda hic quia provident, mollitia quae numquam quidem quaerat enim consectetur animi!
+                                Welcome to Ali Bin Abi Taleb school! We believe education is the way to enlighten our future in a technological and societal sense. Here, at our school, the greatest minds are cultivated to be role models and the thinkers on society, propelling the country to new heights. Innovation and ideas are embraced, and made into reality by our brilliant students.
                             </p>
                         </div>
                         <img src={SchoolPrinciple} alt="" />

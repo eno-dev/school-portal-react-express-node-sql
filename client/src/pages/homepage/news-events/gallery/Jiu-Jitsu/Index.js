@@ -1,7 +1,7 @@
 import { jiuImg } from "./imageList"
 import Style from './Style.module.scss'
 import { useState } from "react"
-import Carousel from "../Carousel"
+import Carousel from "../components/Carousel"
 
 const Index = () => {
     const [galleryOpen, setGalleryOpen] = useState(false)
@@ -13,7 +13,7 @@ const Index = () => {
                     Jiu-Jitsu
                 </h4>
             </div>
-            <Carousel obj={jiuImg} gallery={'juijitsu'} />
+            <Carousel obj={jiuImg} gallery={'jui-jitsu'} />
         </div>
     )
 }

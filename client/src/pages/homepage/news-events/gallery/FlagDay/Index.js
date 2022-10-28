@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import { flagDayImg } from "./imageList"
 import Style from './Style.module.scss'
-import Carousel from '../Carousel'
+import Carousel from '../components/Carousel'
 
 const Index = () => {
     return (
