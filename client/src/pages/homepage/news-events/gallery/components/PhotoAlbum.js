@@ -1,6 +1,6 @@
 import Style from '../Jiu-Jitsu/Style.module.scss'
 
-const Carousel = ({ obj, gallery }) => {
+const PhotoAlbum = ({ obj, gallery }) => {
 
     const getImagePath = (imageName, galleryName) => {
         return require(`assets/img/${galleryName}/${imageName}`)
@@ -17,4 +17,4 @@ const Carousel = ({ obj, gallery }) => {
     )
 }
 
-export default Carousel
+export default PhotoAlbum

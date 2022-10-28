@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import { flagDayImg } from "./imageList"
 import Style from './Style.module.scss'
-import Carousel from '../components/Carousel'
+import PhotoAlbum from '../components/PhotoAlbum'
 
 const Index = () => {
     return (
@@ -21,7 +21,7 @@ const Index = () => {
                     Flag Day
                 </h4>
             </div>
-            <Carousel obj={flagDayImg} gallery={'flagday'} />
+            <PhotoAlbum obj={flagDayImg} gallery={'flagday'} />
         </div>
     )
 }

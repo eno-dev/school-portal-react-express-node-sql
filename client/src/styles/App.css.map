@@ -5,7 +5,7 @@
         "App.scss",
         "sass/abstracts/_variables.scss",
         "sass/components/_buttons.scss",
-        "sass/components/_carousel.scss",
+        "sass/components/_PhotoAlbum.scss",
         "sass/components/_loading.scss",
         "sass/core/_reset.scss",
         "sass/layout/_footer.scss",

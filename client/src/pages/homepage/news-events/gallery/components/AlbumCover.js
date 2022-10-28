@@ -1,7 +1,7 @@
 import Style from '../Style.module.scss'
 import { NavLink } from 'react-router-dom'
 
-const GalleryCover = ({ imagesObj, gallery, heading, link }) => {
+const AlbumCover = ({ imagesObj, gallery, heading, link }) => {
 
     const getImagePath = (imageName, galleryName) => {
         return require(`assets/img/${galleryName}/${imageName}`)
@@ -27,4 +27,4 @@ const GalleryCover = ({ imagesObj, gallery, heading, link }) => {
     )
 }
 
-export default GalleryCover
+export default AlbumCover

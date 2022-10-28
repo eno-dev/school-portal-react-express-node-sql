@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import { img } from './expoimages'
 import Style from './Style.module.scss'
-import Carousel from '../components/Carousel'
+import PhotoAlbum from '../components/PhotoAlbum'
 
 const Index = () => {
     return (
@@ -21,7 +21,7 @@ const Index = () => {
                     Expo 2020
                 </h4>
             </div>
-            <Carousel obj={img} gallery={'expo2020'} />
+            <PhotoAlbum obj={img} gallery={'expo2020'} />
         </div>
     )
 }
