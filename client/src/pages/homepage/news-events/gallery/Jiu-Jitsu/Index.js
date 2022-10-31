@@ -1,4 +1,3 @@
-import { jiuImg } from "./imageList"
 import { useState } from "react"
 import PhotoAlbum from "../components/PhotoAlbum"
 
@@ -7,7 +6,7 @@ const Index = () => {
 
     return (
         <div>
-            <PhotoAlbum obj={jiuImg} gallery={'jui-jitsu'} heading={'Jiu Jitsu'} />
+            <PhotoAlbum gallery={'jui-jitsu'} heading={'Jiu Jitsu'} />
         </div>
     )
 }

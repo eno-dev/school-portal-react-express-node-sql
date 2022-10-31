@@ -1,7 +1,7 @@
-import Style from '../Style.module.scss'
+import Style from '../galleyPage/Style.module.scss'
 import { NavLink } from 'react-router-dom'
-import GetImagePath from './hooks/GetImagePath'
-import { GetFiles } from './hooks/GetFiles'
+import GetImagePath from '../hooks/GetImagePath'
+import { GetFiles } from '../hooks/GetFiles'
 
 const AlbumCover = ({ gallery, heading, link }) => {
     const { data, loading, error } = GetFiles(gallery)

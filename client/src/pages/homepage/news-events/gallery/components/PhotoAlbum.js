@@ -1,6 +1,6 @@
 import Style from '../Jiu-Jitsu/Style.module.scss'
-import { GetFiles } from './hooks/GetFiles'
-import GetImagePath from './hooks/GetImagePath'
+import { GetFiles } from '../hooks/GetFiles'
+import GetImagePath from '../hooks/GetImagePath'
 
 const PhotoAlbum = ({ gallery, heading }) => {
     const { data, loading, error } = GetFiles(gallery)

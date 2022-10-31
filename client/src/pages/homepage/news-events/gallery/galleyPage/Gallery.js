@@ -1,5 +1,5 @@
-import Style from "./Style.module.scss"
-import AlbumCover from "./components/AlbumCover"
+import AlbumCover from "../components/AlbumCover"
+import Style from './Style.module.scss'
 
 const Gallery = () => {
     return (

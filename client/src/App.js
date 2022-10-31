@@ -23,7 +23,7 @@ import Gallery from "./pages/homepage/news-events/gallery/Index";
 import Expo2020 from "./pages/homepage/news-events/gallery/expo2020/Index"
 import JuiJitsu from "./pages/homepage/news-events/gallery/Jiu-Jitsu/Index"
 import FlagDay from "./pages/homepage/news-events/gallery/FlagDay/Index"
-import GalleryIndex from "./pages/homepage/news-events/gallery/Gallery"
+import GalleryIndex from "./pages/homepage/news-events/gallery/galleyPage/Gallery"
 
 function App() {
   const loggedInState = useSelector((state) => state.auth.isLoggedIn)
