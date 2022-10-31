@@ -21,7 +21,7 @@ app.use('/api/auth', logoutRoute)
 // You can either use verifyJWT above the routes to select all 
 // or within the routes to select seperately 
 // app.use(verifyJWT);
-app.use('/api/users/', verifyJWT, userRoute)
+app.use('/api/users/', userRoute)
 
 if (process.env.NODE_ENV === 'production') {
     // Serve any static files

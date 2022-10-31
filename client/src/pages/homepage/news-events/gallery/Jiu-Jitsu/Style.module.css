@@ -27,18 +27,4 @@
   opacity: 0.4;
   background-color: rgba(0, 0, 0, 0.5);
 }
-
-.breadcrumbs li + li:before {
-  padding: 8px;
-  color: black;
-  content: "/";
-}
-
-.breadcrumbs ul {
-  padding-left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-}
 /*# sourceMappingURL=Style.module.css.map */

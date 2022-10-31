@@ -1,12 +1,10 @@
 import Style from '../Style.module.scss'
 import { NavLink } from 'react-router-dom'
+import GetImagePath from './hooks/GetImagePath'
+import { GetFiles } from './hooks/GetFiles'
 
-const AlbumCover = ({ imagesObj, gallery, heading, link }) => {
-
-    const getImagePath = (imageName, galleryName) => {
-        return require(`assets/img/${galleryName}/${imageName}`)
-    }
-
+const AlbumCover = ({ gallery, heading, link }) => {
+    const { data, loading, error } = GetFiles(gallery)
     return (
         <div className={Style.albumCover}>
             <div className={Style.albumHeading}>
@@ -15,11 +13,11 @@ const AlbumCover = ({ imagesObj, gallery, heading, link }) => {
                 </h3>
             </div>
             <div className={Style.imageContainer}>
-                {
-                    imagesObj.slice(0, 1).map(img =>
+                {!loading &&
+                    data.slice(1, 2).map(img =>
                         <div className={Style.image} key={img.id}>
                             <NavLink to={link}>
-                                <img src={getImagePath(img.image, gallery)} alt="" />
+                                <img src={GetImagePath(img.image, gallery)} alt="" />
                             </NavLink>
                         </div>)}
             </div>

@@ -3,14 +3,10 @@
         "baseUrl": "src"
     },
     "paths": {
-        "@models/*": [
-            "./models/*"
-        ],
-        "@colors/*": [
-            "./utils/colors/*"
-        ],
-        "@datetime/*": [
-            "./utils/datetime/*"
+        "@img/*": [
+            "assets/img/*"
         ]
-    }
+    },
+    "include": ["src"],
+    "exclude": ["node_modules"]
 }

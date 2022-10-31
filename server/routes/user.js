@@ -8,5 +8,6 @@ router.post('/role/:id', usersController.getUserByRole)
 router.post('/create', usersController.createUser)
 router.put('/update/:id', usersController.updateUser)
 router.delete('/delete/:id', usersController.deleteUser)
+router.get('/createJson/:name', usersController.writeToJSON)
 
 module.exports = router;
