@@ -9,6 +9,7 @@ require('./server/middleware/express')(app);
 // route variables
 const authRoute = require('./server/routes/auth')
 const userRoute = require('./server/routes/user')
+const galleryRoute = require('./server/routes/gallery')
 const refreshRoute = require('./server/routes/refresh')
 const logoutRoute = require('./server/routes/logout')
 
@@ -18,10 +19,11 @@ app.use('/api/auth', authRoute)
 app.use('/api/auth', refreshRoute)
 // Logs user out and removes JWT cookie
 app.use('/api/auth', logoutRoute)
+app.use('/api/gallery', galleryRoute)
 // You can either use verifyJWT above the routes to select all 
 // or within the routes to select seperately 
 // app.use(verifyJWT);
-app.use('/api/users/', userRoute)
+app.use('/api/users/', verifyJWT, userRoute)
 
 if (process.env.NODE_ENV === 'production') {
     // Serve any static files

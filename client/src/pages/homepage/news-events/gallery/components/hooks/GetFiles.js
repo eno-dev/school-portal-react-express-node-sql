@@ -10,7 +10,7 @@ export const GetFiles = (gallery) => {
     const fetchData = async () => {
         try {
             const response = await axios.get(
-                `http://localhost:3001/api/users/createJson/${gallery}`,
+                `http://localhost:3001/api/gallery/getFileNames/${gallery}`,
                 {
                     params:
                         { name: gallery }
