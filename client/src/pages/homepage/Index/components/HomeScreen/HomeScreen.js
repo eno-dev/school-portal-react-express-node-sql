@@ -2,15 +2,14 @@ import Style from './HomeScreen.module.scss'
 import SchoolPic from './next-school_new.jpg'
 import SchoolPrinciple from './random-principle.png'
 import SchoolNewsPictures from './school-news.jpg'
+import Gardening from './gardening.jpg'
+import Divider from 'components/divider/Index'
 
 const HomeScreen = () => {
     return (
         <div className={Style.homeScreen}>
             <div className={Style.mainImage}>
                 <img src={SchoolPic} alt="" />
-                {/* <h1>
-                    TEXT
-                </h1> */}
             </div>
             <div className={Style.mainContent}>
                 <section className={Style.welcomeMessage}>
@@ -28,6 +27,7 @@ const HomeScreen = () => {
                         <img src={SchoolPrinciple} alt="" />
                     </div>
                 </section>
+                <Divider />
                 <div className={Style.schoolNews}>
                     <h2>
                         Latest News & Events
@@ -48,11 +48,11 @@ const HomeScreen = () => {
                         </div>
                         <div className={Style.newsContainer}>
                             <div className={Style.image}>
-                                <img src={SchoolNewsPictures} alt="" />
+                                <img src={Gardening} alt="" />
                             </div>
                             <div className={Style.text}>
                                 <h5>
-                                    Radio Station
+                                    Gardening
                                 </h5>
                                 <p>
                                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi nostrum blanditiis, nisi

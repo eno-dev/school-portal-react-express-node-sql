@@ -35,7 +35,7 @@
                 .message {
                     display: flex;
                     flex-direction: column;
-                    justify-content: space-around;
+                    justify-content: space-evenly;
                 }
             }
 
@@ -72,6 +72,12 @@
 
                 .newsContainer {
                     width: min-content;
+
+                    img {
+                        width: 400px;
+                        height: 266px;
+                        object-fit: cover;
+                    }
 
                     h5 {
                         margin-top: 0.3em;

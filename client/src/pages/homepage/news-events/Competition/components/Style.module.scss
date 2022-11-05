@@ -1,0 +1,25 @@
+.content {
+    margin-bottom: 50px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.imgContainer {
+    display: flex;
+
+    a {
+        img {
+            height: 100%;
+            object-fit: cover;
+            border-radius: 6px;
+            width: 400px;
+        }
+    }
+}
+
+.info {
+    padding: 20px 28px;
+}

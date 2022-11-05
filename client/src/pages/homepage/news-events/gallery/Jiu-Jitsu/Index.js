@@ -1,5 +1,5 @@
 import { useState } from "react"
-import PhotoAlbum from "../components/PhotoAlbum"
+import PhotoAlbum from "../components/PhotoAlbumb/PhotoAlbum"
 
 const Index = () => {
     const [galleryOpen, setGalleryOpen] = useState(false)

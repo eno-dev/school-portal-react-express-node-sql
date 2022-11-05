@@ -48,8 +48,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .homeScreen .mainContent .welcomeMessage img {
@@ -98,6 +99,13 @@
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
+}
+
+.homeScreen .mainContent .schoolNews .news .newsContainer img {
+  width: 400px;
+  height: 266px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .homeScreen .mainContent .schoolNews .news .newsContainer h5 {

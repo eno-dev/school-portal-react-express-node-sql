@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { setNavHeight } from '../../../../../features/navbar-height/navHeightSlice.js'
 import { toggleOn, toggleOff } from '../../../../../features/sidebar-home-toggle/sidebarHomeSlice'
 import Style from './NavStyle.module.scss'
+import NavLinks from './NavLinks.js';
 
 const Navbar = () => {
     const dispatch = useDispatch();
@@ -25,11 +26,11 @@ const Navbar = () => {
         }
     }
 
-    // Navbar height
-    useEffect(() => {
-        const height = ref.current.clientHeight
-        dispatch(setNavHeight({ height }))
-    }, [dispatch]);
+    // // Navbar height
+    // useEffect(() => {
+    //     const height = ref.current.clientHeight
+    //     dispatch(setNavHeight({ height }))
+    // }, []);
 
     // Page scroll progress
     useEffect(() => {
@@ -44,7 +45,8 @@ const Navbar = () => {
 
             setProgress(parseInt(progress));
         }
-
+        const height = ref.current.clientHeight
+        dispatch(setNavHeight({ height }))
         // Adding event listener on mounting
         window.addEventListener("scroll", computeProgress);
 
@@ -78,15 +80,10 @@ const Navbar = () => {
                                         About Us
                                     </div>
                                     <div className={Style.dropdownContent}>
-                                        <Link to='about-us'>
-                                            About Us
-                                        </Link>
-                                        <Link to='about-us'>
-                                            Mission Statement
-                                        </Link>
-                                        <Link to='about-us'>
-                                            Principle Message
-                                        </Link>
+                                        <NavLinks link={'about-us'} heading={'About Us'} />
+                                        <NavLinks link={'about-us'} heading={'Mission Statement'} />
+                                        <NavLinks link={'about-us'} heading={'Principle Message'} />
+                                        <NavLinks link={'about-us'} heading={' Meet Our Team'} />
                                     </div>
                                 </div>
                                 <h1>
@@ -97,14 +94,11 @@ const Navbar = () => {
                                         News & Events
                                     </Link>
                                     <div className={Style.dropdownContent}>
+                                        <Link to='competitions'>
+                                            Competitions
+                                        </Link>
                                         <Link to='gallery'>
                                             Gallery
-                                        </Link>
-                                        <Link to='about-us'>
-                                            Mission Statement
-                                        </Link>
-                                        <Link to='about-us'>
-                                            Principle Message
                                         </Link>
                                     </div>
                                 </div>
@@ -115,6 +109,11 @@ const Navbar = () => {
                                     <Link to='students'>
                                         Students Section
                                     </Link>
+                                    <div className={Style.dropdownContent}>
+                                        <Link to='students'>
+                                            Schedule
+                                        </Link>
+                                    </div>
                                 </div>
                                 <h1>
                                     |
