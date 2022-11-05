@@ -1,0 +1,22 @@
+.albumCover {
+
+    .image {
+        height: 420px;
+
+        img {
+            max-width: 100%;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        img:hover {
+            cursor: pointer;
+            transition: 0.4s;
+            filter: brightness(70%);
+            background-color: rgba(0, 0, 0, 0.5)
+        }
+    }
+
+}

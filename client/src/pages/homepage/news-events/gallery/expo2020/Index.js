@@ -1,4 +1,4 @@
-import PhotoAlbum from '../components/PhotoAlbum'
+import PhotoAlbum from '../components/PhotoAlbumb/PhotoAlbum'
 
 const Index = () => {
     return (
