@@ -1,22 +1,7 @@
 .divider {
   border: 0;
-  height: 1px;
-  width: 20%;
-  position: relative;
-  margin: 30px auto;
-  background: #39D1B4;
-}
-
-.divider:before {
-  content: "";
-  width: 6px;
-  height: 6px;
-  background: #39D1B4;
-  display: inline-block;
-  border: 2px solid #39D1B4;
-  position: absolute;
-  top: -5px;
-  left: 50%;
-  margin: 0 0 0 -3px;
+  border-top: 2px solid black;
+  margin-left: 30%;
+  margin-right: 30%;
 }
 /*# sourceMappingURL=Style.module.css.map */

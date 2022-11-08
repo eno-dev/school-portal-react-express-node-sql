@@ -56,10 +56,6 @@ function Index() {
     const handleUserInput = (e) => setUserName(e.target.value)
     const handlePasswordInput = (e) => setPassword(e.target.value)
 
-    // if (isLoggedIn) {
-    //     console.log('SWEAR')
-    // }
-
     const content = isLoading ? <LoadingScreen /> : (
         <div className="login">
             <div className="login_items">

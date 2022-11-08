@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export const GetImageById = (galleryId) => {
+export const GetCompContent = () => {
 
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -10,7 +10,7 @@ export const GetImageById = (galleryId) => {
     const fetchData = async () => {
         try {
             const response = await axios.get(
-                `http://localhost:1337/api/galleries/${galleryId}?populate=*`,
+                `http://localhost:1337/api/competitions?populate=*`,
             )
             setData(response.data);
             setError(null);

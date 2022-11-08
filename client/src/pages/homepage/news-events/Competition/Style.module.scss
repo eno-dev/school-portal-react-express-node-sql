@@ -4,8 +4,44 @@
     padding: 14px 20px;
     width: 100%;
 
-    .heading {
+
+    .contentContainer {
+        margin-bottom: 40px;
+    }
+
+    .pageHeading {
         display: flex;
         justify-content: center;
+        margin: 32px 0px;
+    }
+
+    .heading {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 16px;
+    }
+
+    .imgContainer {
+        width: 400px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    }
+
+    .mainContent {
+        display: flex;
+        height: 280px;
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 20px;
+        width: 70%;
+        overflow: auto;
     }
 }

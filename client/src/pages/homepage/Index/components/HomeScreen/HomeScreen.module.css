@@ -75,40 +75,4 @@
       align-self: center;
   width: 50%;
 }
-
-.homeScreen .mainContent .schoolNews h2 {
-  margin-bottom: 0.5em;
-}
-
-.homeScreen .mainContent .schoolNews .news {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.homeScreen .mainContent .schoolNews .news .newsContainer {
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-}
-
-.homeScreen .mainContent .schoolNews .news .newsContainer img {
-  width: 400px;
-  height: 266px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.homeScreen .mainContent .schoolNews .news .newsContainer h5 {
-  margin-top: 0.3em;
-}
 /*# sourceMappingURL=HomeScreen.module.css.map */

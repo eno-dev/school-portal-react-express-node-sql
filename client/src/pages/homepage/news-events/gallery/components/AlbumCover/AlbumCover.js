@@ -4,7 +4,6 @@ import { GetStrapiImages } from '../../hooks/GetStrapiImages'
 
 const AlbumCover = () => {
     const { data, loading, error } = GetStrapiImages()
-    const websiteSrc = `http://localhost:1337`
 
     return (
         <>
@@ -15,12 +14,11 @@ const AlbumCover = () => {
                             <h3>
                                 {img.attributes.Heading}
                             </h3>
-                            {console.log(img.attributes.Images.data[0])}
                         </div>
                         <div className={Style.imageContainer}>
                             <div className={Style.image}>
                                 <Link to={`${img.id}`}>
-                                    <img src={`${websiteSrc}${img.attributes.Images.data[0].attributes.url}`} alt="" />
+                                    <img src={`${process.env.REACT_APP_URL}${img.attributes.Images.data[0].attributes.url}`} alt="" />
                                 </Link>
                             </div>
                         </div>

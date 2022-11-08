@@ -1,9 +1,8 @@
 import Style from './HomeScreen.module.scss'
 import SchoolPic from './next-school_new.jpg'
 import SchoolPrinciple from './random-principle.png'
-import SchoolNewsPictures from './school-news.jpg'
-import Gardening from './gardening.jpg'
 import Divider from 'components/divider/Index'
+import NewsAndEvents from './components/schoolNews/Index'
 
 const HomeScreen = () => {
     return (
@@ -27,53 +26,8 @@ const HomeScreen = () => {
                         <img src={SchoolPrinciple} alt="" />
                     </div>
                 </section>
+                <NewsAndEvents />
                 <Divider />
-                <div className={Style.schoolNews}>
-                    <h2>
-                        Latest News & Events
-                    </h2>
-                    <div className={Style.news}>
-                        <div className={Style.newsContainer}>
-                            <div className={Style.image}>
-                                <img src={SchoolNewsPictures} alt="" />
-                            </div>
-                            <div className={Style.text}>
-                                <h5>
-                                    Student Success
-                                </h5>
-                                <p>
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi nostrum blanditiis, nisi
-                                </p>
-                            </div>
-                        </div>
-                        <div className={Style.newsContainer}>
-                            <div className={Style.image}>
-                                <img src={Gardening} alt="" />
-                            </div>
-                            <div className={Style.text}>
-                                <h5>
-                                    Gardening
-                                </h5>
-                                <p>
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi nostrum blanditiis, nisi
-                                </p>
-                            </div>
-                        </div>
-                        <div className={Style.newsContainer}>
-                            <div className={Style.image}>
-                                <img src={SchoolNewsPictures} alt="" />
-                            </div>
-                            <div className={Style.text}>
-                                <h5>
-                                    School Trip
-                                </h5>
-                                <p>
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi nostrum blanditiis, nisi
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div >
     )

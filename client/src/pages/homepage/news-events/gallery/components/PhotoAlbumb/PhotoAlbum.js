@@ -7,20 +7,20 @@ const PhotoAlbum = () => {
 
     const { data, loading, error } = GetImageById(id)
 
-    const websiteSrc = `http://localhost:1337`
-
     return (
         <div className={Style.galleryContent}>
             <div className={Style.galleryTitle}>
                 <h3>
+                    {!loading && data.data.attributes.Heading}
                 </h3>
             </div>
             <div className={Style.images}>
                 {!loading &&
                     data.data.attributes.Images.data.map(img =>
                         <div className={Style.imageContainer} key={img.id}>
-                            <img src={`${websiteSrc}${img.attributes.url}`} alt="" />
-                        </div>)}
+                            <img src={`${process.env.REACT_APP_URL}${img.attributes.url}`} alt="" />
+                        </div>
+                    )}
             </div>
         </div>
 

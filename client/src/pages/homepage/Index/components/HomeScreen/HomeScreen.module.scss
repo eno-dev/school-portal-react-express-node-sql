@@ -55,35 +55,5 @@
                 width: 50%;
             }
         }
-
-        .schoolNews {
-
-            // Margin below school heading below heading
-            h2 {
-                margin-bottom: 0.5em;
-            }
-
-            .news {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                flex-wrap: wrap;
-
-
-                .newsContainer {
-                    width: min-content;
-
-                    img {
-                        width: 400px;
-                        height: 266px;
-                        object-fit: cover;
-                    }
-
-                    h5 {
-                        margin-top: 0.3em;
-                    }
-                }
-            }
-        }
     }
 }

@@ -11,7 +11,6 @@ const Index = () => {
 
     function focus() {
         const total = pdfRef.current.offsetTop - navHeight
-        console.log(total)
         window.scrollTo(0, total);
     }
 

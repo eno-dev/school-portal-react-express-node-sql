@@ -1,21 +1,40 @@
 import Style from './Style.module.scss'
-import EYSC from './img/EYSC.PNG'
-import Competition from './components/Competition'
+import { GetCompContent } from './hooks/GetCompContent'
+import ReactMarkdown from 'react-markdown'
 
 const Index = () => {
+    const { data, loading, error } = GetCompContent()
+
     return (
         <div className={Style.container}>
-            <div className={Style.heading}>
-                <h1>
-                    Competition
-                </h1>
+            <div className={Style.pageHeading}>
+                <h1>Competitons</h1>
             </div>
-            <Competition img={EYSC} heading={'EYSC'}
-                info={'The fifth edition of the Emirates Young Scientist Competition will be held in February 2023 in Dubai. The event is set to attract both students and teachers with its attractive environment that fosters a passion for science, technology, innovation and entrepreneurship. The Emirates Young Scientist Competition brings together leading international experts and institutions in science, technology, innovation, and entrepreneurship. This offers participants the opportunity to learn, share knowledge, discuss ideas and work together to achieve tangible results backed up by scientific research, science and technology, yet instil creativity and innovation throughout the process. Dates: 1st - 5th of February 2023. Location: Dubai Festival Arena Registration Deadline: Monday 5th of December 2022 at midnight'} />
+            {!loading &&
+                data.data.map(obj =>
+                    <div className={Style.contentContainer} key={obj.id}>
+                        <div className={Style.heading}>
+                            <h3>
+                                {obj.attributes.Heading}
+                            </h3>
+                        </div>
+                        <div className={Style.mainContent}>
+                            <div className={Style.imgContainer}>
+                                <img src={`${process.env.REACT_APP_URL}${obj.attributes.Picture.data[0].attributes.url}`} alt="" />
+                            </div>
+                            <div className={Style.description}>
+                                <ReactMarkdown>
+                                    {obj.attributes.Description}
+                                </ReactMarkdown>
+                                <a href={obj.attributes.Link} target="_blank">Read More</a>
+                            </div>
+                        </div>
+                    </div>
 
-            <Competition img={EYSC} heading={'EYSC'}
-                info={'The fifth edition of the Emirates Young Scientist Competition will be held in February 2023 in Dubai. The event is set to attract both students and teachers with its attractive environment that fosters a passion for science, technology, innovation and entrepreneurship. The Emirates Young Scientist Competition brings together leading international experts and institutions in science, technology, innovation, and entrepreneurship. This offers participants the opportunity to learn, share knowledge, discuss ideas and work together to achieve tangible results backed up by scientific research, science and technology, yet instil creativity and innovation throughout the process. Dates: 1st - 5th of February 2023. Location: Dubai Festival Arena Registration Deadline: Monday 5th of December 2022 at midnight'} />
-        </div>
+                )
+            }
+
+        </div >
     )
 }
 
