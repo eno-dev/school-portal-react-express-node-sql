@@ -13,7 +13,7 @@ import Login from "./pages/Portal/login/index"
 import ErrPageNotFound from "./pages/404/errPageNotFound";
 import RequireAuth from "./features/auth/RequireAuth";
 import { useSelector } from 'react-redux'
-import Schedule from "./pages/homepage/schedule/Index";
+import Schedule from "./pages/homepage/students/schedule/Index";
 import ContactUs from "./pages/homepage/contact-us/Index";
 import HomeScreen from "./pages/homepage/Index/components/HomeScreen/HomeScreen";
 import AboutUs from "./pages/homepage/about-us/Index";
@@ -40,13 +40,14 @@ function App() {
           <Route path="gallery" element={<Gallery />} >
             <Route path="" element={< GalleryIndex />} />
             <Route path=":id" element={< PhotoAlbum />} />
-
-            {/* <Route path="expo2020" element={< Expo2020 />} />
-            <Route path="juijitsu" element={< JuiJitsu />} />
-            <Route path="flagday" element={< FlagDay />} /> */}
           </Route>
           <Route path="parents-carers" element={<ParentsCarers />} />
-          <Route path="students" element={<Schedule />} />
+          <Route path="students" element={<Schedule />} >
+            <Route path="schedule" element={<Schedule />} />
+            <Route path="studymaterial" element={<Schedule />} >
+              <Route path=":id" element={<Schedule />} />
+            </Route>
+          </Route>
           <Route path="schedule" element={<Schedule />} />
           <Route path="contact-us" element={<ContactUs />} />
         </Route>

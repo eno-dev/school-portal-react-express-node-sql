@@ -81,9 +81,6 @@ const Navbar = () => {
                                     </div>
                                     <div className={Style.dropdownContent}>
                                         <NavLinks link={'about-us'} heading={'About Us'} />
-                                        {/* <NavLinks link={'about-us'} heading={'Mission Statement'} />
-                                        <NavLinks link={'about-us'} heading={'Principle Message'} />
-                                        <NavLinks link={'about-us'} heading={' Meet Our Team'} /> */}
                                     </div>
                                 </div>
                                 <h1>
@@ -93,9 +90,6 @@ const Navbar = () => {
                                     <div className={Style.menuHeading}>
                                         News & Events
                                     </div>
-                                    {/* <Link to='newsandevents'>
-                                        News & Events
-                                    </Link> */}
                                     <div className={Style.dropdownContent}>
                                         <Link to='competitions'>
                                             Competitions
@@ -113,8 +107,11 @@ const Navbar = () => {
                                         Students Section
                                     </Link>
                                     <div className={Style.dropdownContent}>
-                                        <Link to='students'>
+                                        <Link to='students/schedule'>
                                             Schedule
+                                        </Link>
+                                        <Link to='students/studymaterial'>
+                                            Study Material
                                         </Link>
                                     </div>
                                 </div>

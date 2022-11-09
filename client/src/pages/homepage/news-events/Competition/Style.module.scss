@@ -1,24 +1,23 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    padding: 14px 20px;
-    width: 100%;
-
+    // display: flex;
+    // flex-direction: column;
+    // padding: 14px 20px;
+    // width: 100%;
 
     .contentContainer {
         margin-bottom: 40px;
     }
 
-    .pageHeading {
-        display: flex;
-        justify-content: center;
-        margin: 32px 0px;
-    }
+    // .pageHeading {
+    //     display: flex;
+    //     justify-content: center;
+    //     margin: 32px 0px;
+    // }
 
     .heading {
         display: flex;
         justify-content: flex-start;
-        margin-bottom: 16px;
+        // margin-bottom: 10px;
     }
 
     .imgContainer {

@@ -9,5 +9,12 @@
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  width: 100%;
+  padding: 14px 20px;
+}
+
+.homepageBody h1 {
+  text-align: center;
+  margin: 26px 0;
 }
 /*# sourceMappingURL=BodyStyle.module.css.map */

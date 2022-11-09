@@ -26,8 +26,8 @@ const HomeScreen = () => {
                         <img src={SchoolPrinciple} alt="" />
                     </div>
                 </section>
-                <NewsAndEvents />
                 <Divider />
+                <NewsAndEvents />
             </div>
         </div >
     )

@@ -3,4 +3,12 @@
     justify-content: center;
     min-height: 75vh;
     height: max-content;
+    width: 100%;
+    // flex-direction: column;
+    padding: 14px 20px;
+
+    h1 {
+        text-align: center;
+        margin: 26px 0;
+    }
 }

@@ -1,6 +1,4 @@
 import Style from './Style.module.scss'
-import SchoolNewsPictures from '../../school-news.jpg'
-import Gardening from '../../gardening.jpg'
 import { GetNewsStories } from '../../hooks/GetNewsStories'
 
 const Index = () => {
@@ -15,7 +13,7 @@ const Index = () => {
             <div className={Style.news}>
                 {!loading &&
                     data.data.map(obj =>
-                        <div className={Style.newsContainer}>
+                        <div className={Style.newsContainer} key={obj.id}>
                             <div className={Style.image}>
                                 <img src={`${process.env.REACT_APP_URL}${obj.attributes.Picture.data.attributes.url}`} alt="" />
                             </div>
@@ -31,7 +29,6 @@ const Index = () => {
                     )
                 }
             </div>
-
         </div>
     )
 }
