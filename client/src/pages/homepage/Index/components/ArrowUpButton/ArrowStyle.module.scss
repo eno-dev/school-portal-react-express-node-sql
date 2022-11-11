@@ -1,11 +1,12 @@
 #arrowUp {
     position: sticky;
     bottom: 0;
-    align-self: flex-end;
+    display: flex;
     transform: rotate(180deg);
 
     :hover {
         background-color: grey;
+        color: white;
     }
 
     :global .MuiSvgIcon-root {

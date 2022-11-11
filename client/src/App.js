@@ -15,7 +15,7 @@ import RequireAuth from "./features/auth/RequireAuth";
 import { useSelector } from 'react-redux'
 import Schedule from "./pages/homepage/students/schedule/Index";
 import ContactUs from "./pages/homepage/contact-us/Index";
-import HomeScreen from "./pages/homepage/Index/components/HomeScreen/HomeScreen";
+import HomeScreen from "./pages/homepage/Index/components/HomeScreen/Index";
 import AboutUs from "./pages/homepage/about-us/Index";
 import ParentsCarers from "./pages/homepage/parents-carers/Index";
 import NewsAndEvents from "./pages/homepage/news-events/Index";
@@ -23,6 +23,8 @@ import Gallery from "./pages/homepage/news-events/gallery/Index";
 import GalleryIndex from "./pages/homepage/news-events/gallery/galleyPage/Gallery"
 import Competition from "./pages/homepage/news-events/Competition/Index"
 import PhotoAlbum from "pages/homepage/news-events/gallery/components/PhotoAlbumb/PhotoAlbum";
+import Students from "./pages/homepage/students/StudyMaterial/Index"
+import Material from "./pages/homepage/students/StudyMaterial/material/Index"
 
 function App() {
   const loggedInState = useSelector((state) => state.auth.isLoggedIn)
@@ -31,8 +33,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         {/* Homepage route */}
+        <Route path="/" element={<HomeScreen />} />
         <Route path="/" element={<Homepage />}>
-          <Route path="" element={<HomeScreen />} />
           <Route path="about-us" element={<AboutUs />} />
           <Route path="competition" element={<NewsAndEvents />} />
           <Route path="newsandevents" element={<NewsAndEvents />} />
@@ -42,11 +44,10 @@ function App() {
             <Route path=":id" element={< PhotoAlbum />} />
           </Route>
           <Route path="parents-carers" element={<ParentsCarers />} />
-          <Route path="students" element={<Schedule />} >
+          <Route path="students">
             <Route path="schedule" element={<Schedule />} />
-            <Route path="studymaterial" element={<Schedule />} >
-              <Route path=":id" element={<Schedule />} />
-            </Route>
+            <Route path="studymaterial" element={<Students />} />
+            <Route path="studymaterial/:grade/:subject" element={<Material />} />
           </Route>
           <Route path="schedule" element={<Schedule />} />
           <Route path="contact-us" element={<ContactUs />} />

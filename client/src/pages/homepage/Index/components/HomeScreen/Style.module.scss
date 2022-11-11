@@ -9,7 +9,6 @@
     }
 
     .mainContent {
-        // overflow: hidden;
         margin: 2em 5em;
 
         img {
@@ -18,28 +17,6 @@
 
         >* {
             margin-bottom: 2em;
-        }
-
-        .welcomeMessage {
-            display: flex;
-            flex-direction: column;
-
-            .messageBody {
-                display: flex;
-                flex-direction: row;
-                gap: 3em;
-
-
-                .message {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
-                }
-            }
-
-            img {
-                width: 400px;
-            }
         }
 
         .missionMessage {
@@ -54,8 +31,4 @@
             }
         }
     }
-}
-
-.homeScreen:has(div) {
-    padding: 0;
 }

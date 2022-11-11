@@ -1,0 +1,40 @@
+.homeScreen {
+  overflow: hidden;
+}
+
+.homeScreen .mainImage img {
+  max-width: 100%;
+  padding: 0 0;
+}
+
+.homeScreen .mainContent {
+  margin: 2em 5em;
+}
+
+.homeScreen .mainContent img {
+  border-radius: 8px;
+}
+
+.homeScreen .mainContent > * {
+  margin-bottom: 2em;
+}
+
+.homeScreen .mainContent .missionMessage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.homeScreen .mainContent .missionMessage h2,
+.homeScreen .mainContent .missionMessage p {
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 50%;
+}
+/*# sourceMappingURL=Style.module.css.map */

@@ -1,0 +1,21 @@
+.welcomeMessage {
+    display: flex;
+    flex-direction: column;
+
+    .messageBody {
+        display: flex;
+        flex-direction: row;
+        gap: 3em;
+
+
+        .message {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+    }
+
+    img {
+        width: 400px;
+    }
+}
