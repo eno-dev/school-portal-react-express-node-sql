@@ -1,16 +1,13 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export const GetLearningMaterials = () => {
+export const GetLearningMaterials = (grade, url) => {
 
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-
-
     const fetchData = async () => {
-
         const qs = require('qs');
         const query = qs.stringify({
             filters: {
@@ -18,24 +15,23 @@ export const GetLearningMaterials = () => {
                     {
                         grade: {
                             Name: {
-                                $eq: '12',
+                                $eq: `${grade}`,
                             }
                         },
                     },
                     {
                         subject: {
-                            Name: {
-                                $eq: 'Mathematics',
+                            url: {
+                                $eq: `${url}`,
                             }
                         },
                     },
                 ]
             },
+            populate: '*',
         }, {
             encodeValuesOnly: true, // prettify URL
         });
-
-        console.log('This is the query: ', query)
 
         try {
             const response = await axios.get(

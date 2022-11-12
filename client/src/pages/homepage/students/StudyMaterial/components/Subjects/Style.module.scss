@@ -3,6 +3,9 @@
     width: 100%;
     flex-wrap: wrap;
     gap: 20px;
+    border: 2px solid lightgray;
+    padding: 30px;
+    background-color: #FBFBFB;
 }
 
 .link {
@@ -18,15 +21,16 @@
     justify-content: center;
     height: 200px;
     width: 200px;
-    border: 2px solid black;
+    border: 2px solid lightgray;
     border-radius: 5px;
     text-align: center;
     align-items: center;
     padding: 10px;
+    background-color: white;
 
     &:hover {
         cursor: pointer;
-        background-color: lightsalmon;
+        background-color: #E8C468;
         color: white;
     }
 

@@ -22,6 +22,11 @@ const Index = ({ grade, setGrade, gradeById, setGradeById }) => {
 
     return (
         <div className={Style.gradeContainer}>
+            <div className={Style.pickmsg}>
+                <p>
+                    Pick your grade:
+                </p>
+            </div>
             <Box sx={{ minWidth: 100 }}>
                 <FormControl fullWidth>
                     <InputLabel id="demo-simple-select-label">Grade</InputLabel>

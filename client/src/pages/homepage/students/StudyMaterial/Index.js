@@ -5,15 +5,17 @@ import { useEffect, useState } from 'react'
 
 const Index = () => {
     const [grade, setGrade] = useState('')
-    const [gradeById, setGradeById] = useState()
+    const [gradeById, setGradeById] = useState(null)
 
     return (
-        <div>
+        <div className={Style.container}>
             <h1>
                 Study Material
             </h1>
             <Grades grade={grade} setGrade={setGrade} gradeById={gradeById} setGradeById={setGradeById} />
-            <Subjects gradeById={gradeById} />
+            {gradeById !== null &&
+                <Subjects gradeById={gradeById} />
+            }
         </div>
     )
 }
