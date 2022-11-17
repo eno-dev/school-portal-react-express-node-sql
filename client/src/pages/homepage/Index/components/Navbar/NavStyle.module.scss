@@ -1,3 +1,5 @@
+@use "../../../../../styles/sass/abstracts/mixins"as *;
+
 .navbar {
     background-color: blue;
     display: flex;
@@ -106,27 +108,38 @@
         }
     }
 
+    .menuIcon {
+        @include for-desktop-up {
+            display: none;
+        }
+    }
+
+
     .menu {
         margin-right: 16px;
+
+        @include for-smaller-desktop-down {
+            display: none;
+        }
 
         .menuLinks {
             display: flex;
             flex-direction: row;
 
             // Show dropdown
-            .aboutUsDropdown:hover .dropdownContent {
+            .dropdownContainer:hover .dropdownContent {
                 display: block;
 
             }
 
-            .aboutUsDropdown:hover>.menuHeading,
-            .aboutUsDropdown:hover>a {
+            .dropdownContainer:hover>.menuHeading,
+            .dropdownContainer:hover>a {
                 display: block;
                 color: #E8C468;
 
             }
 
-            .aboutUsDropdown {
+            .dropdownContainer {
                 position: relative;
                 // display: inline-block;
                 display: flex;
@@ -171,10 +184,39 @@
                 padding: 10px 14px;
                 text-decoration: none;
                 color: white;
-                font-size: 1.2rem;
+                font-size: 1.3rem;
                 transition: 0.2s ease-in-out;
             }
 
+        }
+    }
+}
+
+.overlay {
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100%;
+
+    .overlayIcon {
+        cursor: pointer;
+    }
+
+    .menu {
+        display: flex;
+        gap: 10px;
+
+        .dropdownContent {
+            display: none;
+        }
+    }
+
+    .menuLinks>* {
+        padding: 20px;
+
+        >* {
+            font-size: larger;
+            text-decoration: none;
+            color: inherit;
         }
     }
 }

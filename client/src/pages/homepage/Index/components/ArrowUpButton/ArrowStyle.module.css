@@ -2,20 +2,14 @@
   position: -webkit-sticky;
   position: sticky;
   bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
-
 #arrowUp :hover {
   background-color: grey;
   color: white;
 }
-
 #arrowUp :global .MuiSvgIcon-root {
   font-size: 40px;
   border-radius: 50%;
-}
-/*# sourceMappingURL=ArrowStyle.module.css.map */
+}/*# sourceMappingURL=ArrowStyle.module.css.map */

@@ -1,11 +1,6 @@
 .open {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   height: 100%;
   /* 100% Full-height */
   width: 250px;
@@ -23,51 +18,35 @@
   /* Disable horizontal scroll */
   padding-top: 17px;
   /* Place content 60px from the top */
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   /* 0.5 second transition effect to slide in the sidenav */
 }
-
 .open .closeBtnContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: right;
+  align-items: center;
   /* Position and style the close button (top right corner) */
 }
-
 .open .closeBtnContainer .closebtn {
   top: 0;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+  justify-content: right;
   height: 30px;
   width: 30px;
   font-size: 36px;
   margin-right: 10px;
   cursor: pointer;
 }
-
 .open .closeBtnContainer .closebtn:hover {
   color: #f1f1f1;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .close {
   width: 0px;
 }
-
 .close a {
   display: none;
 }
-
 .close .closeBtnContainer {
   display: none;
-}
-/*# sourceMappingURL=SidebarStyle.module.css.map */
+}/*# sourceMappingURL=SidebarStyle.module.css.map */

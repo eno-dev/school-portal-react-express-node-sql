@@ -1,125 +1,85 @@
 .navbar {
   background-color: blue;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1;
 }
-
 .navbar .linearProgressRoot :global {
   background-color: #7AAEC2;
 }
-
 .navbar .linearProgressRoot :global .MuiLinearProgress-bar {
   background-color: #264653;
 }
 
 .toolbar {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   background-color: #264653;
   height: 115px;
 }
-
 .toolbar .menuIcon {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   width: 10%;
 }
-
 .toolbar .menuIcon :global .MuiSvgIcon-root {
   cursor: pointer;
   font-size: xx-large;
 }
-
 .toolbar .menuIcon :global .MuiSvgIcon-root:hover {
   background-color: rgba(0, 0, 0, 0.04);
   border-radius: 4px;
 }
-
 .toolbar .menuIcon :global .MuiSvgIcon-root:active {
   border-radius: 4px;
   background-color: red;
   background-color: rgba(0, 0, 0, 0.04);
 }
-
 .toolbar a {
   text-decoration: none;
   color: white;
 }
-
 .toolbar a .schoolName {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
   width: 20%;
   text-align: center;
   padding-left: 14px;
 }
-
 .toolbar a .schoolName > * {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
-
 .toolbar a .schoolName > * > * {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-
 .toolbar a .schoolName .engName {
   margin: 0;
 }
-
 .toolbar a .schoolName .engName h5 {
   font-weight: 350;
 }
-
 .toolbar a .schoolName .arbName {
   margin: 0;
 }
-
 .toolbar a .schoolName .arbName h5 {
   font-size: 1.7rem;
 }
-
 .toolbar .loginText {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: 10%;
 }
-
 .toolbar .loginText a {
   color: white;
   text-decoration: none;
@@ -127,89 +87,96 @@
   border-radius: 6px;
   font-size: 1.3em;
 }
-
 .toolbar .loginText a:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
-
+@media (min-width: 1200px) {
+  .toolbar .menuIcon {
+    display: none;
+  }
+}
 .toolbar .menu {
   margin-right: 16px;
 }
-
-.toolbar .menu .menuLinks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+@media (max-width: 1200px) {
+  .toolbar .menu {
+    display: none;
+  }
 }
-
-.toolbar .menu .menuLinks .aboutUsDropdown:hover .dropdownContent {
+.toolbar .menu .menuLinks {
+  display: flex;
+  flex-direction: row;
+}
+.toolbar .menu .menuLinks .dropdownContainer:hover .dropdownContent {
   display: block;
 }
-
-.toolbar .menu .menuLinks .aboutUsDropdown:hover > .menuHeading,
-.toolbar .menu .menuLinks .aboutUsDropdown:hover > a {
+.toolbar .menu .menuLinks .dropdownContainer:hover > .menuHeading,
+.toolbar .menu .menuLinks .dropdownContainer:hover > a {
   display: block;
   color: #E8C468;
 }
-
-.toolbar .menu .menuLinks .aboutUsDropdown {
+.toolbar .menu .menuLinks .dropdownContainer {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
-.toolbar .menu .menuLinks .aboutUsDropdown .dropdownContent {
+.toolbar .menu .menuLinks .dropdownContainer .dropdownContent {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
   min-width: 200px;
-  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   top: 3rem;
   position: absolute;
 }
-
-.toolbar .menu .menuLinks .aboutUsDropdown .dropdownContent a {
+.toolbar .menu .menuLinks .dropdownContainer .dropdownContent a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
-
-.toolbar .menu .menuLinks .aboutUsDropdown .dropdownContent a:hover {
+.toolbar .menu .menuLinks .dropdownContainer .dropdownContent a:hover {
   background-color: #7AAEC2;
-  -webkit-box-shadow: 10px 0px #EAC671 inset;
-          box-shadow: 10px 0px #EAC671 inset;
+  box-shadow: 10px 0px #EAC671 inset;
 }
-
 .toolbar .menu .menuLinks .menuHeading {
   cursor: pointer;
 }
-
 .toolbar .menu .menuLinks h1 {
   margin-bottom: 0;
   padding: 0;
 }
-
 .toolbar .menu .menuLinks > * {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 60px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 10px 14px;
   text-decoration: none;
   color: white;
-  font-size: 1.2rem;
-  -webkit-transition: 0.2s ease-in-out;
+  font-size: 1.3rem;
   transition: 0.2s ease-in-out;
 }
-/*# sourceMappingURL=NavStyle.module.css.map */
+
+.overlay {
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 100%;
+}
+.overlay .overlayIcon {
+  cursor: pointer;
+}
+.overlay .menu {
+  display: flex;
+  gap: 10px;
+}
+.overlay .menu .dropdownContent {
+  display: none;
+}
+.overlay .menuLinks > * {
+  padding: 20px;
+}
+.overlay .menuLinks > * > * {
+  font-size: larger;
+  text-decoration: none;
+  color: inherit;
+}/*# sourceMappingURL=NavStyle.module.css.map */

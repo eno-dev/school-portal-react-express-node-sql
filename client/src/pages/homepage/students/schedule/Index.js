@@ -2,7 +2,7 @@ import myPDF from 'assets/pdf/StudentsT3.pdf'
 // #zoom=FitW
 import { useRef } from 'react'
 import { useSelector } from 'react-redux'
-import { selectNavHeight } from '../../../../features/navbar-height/navHeightSlice.js'
+import { selectNavHeight } from 'features/navbar-height/navHeightSlice.js'
 import ScheduleStyle from './styles.module.scss'
 
 const Index = () => {

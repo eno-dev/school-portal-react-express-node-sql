@@ -1,21 +1,15 @@
 .homepageBody {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
   min-height: 75vh;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   width: 100%;
-  padding: 14px 20px;
+  padding: 30px 150px;
   z-index: 0;
 }
-
 .homepageBody h1 {
   text-align: center;
-  margin: 26px 0;
-}
-/*# sourceMappingURL=BodyStyle.module.css.map */
+  margin: 0;
+}/*# sourceMappingURL=BodyStyle.module.css.map */

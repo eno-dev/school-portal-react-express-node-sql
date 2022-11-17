@@ -1,0 +1,38 @@
+.container {
+    nav {
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    .breadcrumbActive div {
+        color: #E8C468;
+    }
+
+    .breadcrumbNotActive div {
+
+        :hover {
+            color: #E8C468;
+        }
+    }
+
+    .breadcrumbActive,
+    .breadcrumbNotActive {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .breadcrumbActive div,
+    .breadcrumbNotActive div,
+    .seperator {
+        padding: 10px;
+        border-radius: 2px;
+    }
+}
+
+.noBreadExtension {
+    text-transform: capitalize;
+}
+
+.breadExtension {
+    text-transform: capitalize;
+}

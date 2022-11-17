@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,QAAQ,CAAC;EACL,QAAQ,EAAE,MAAM;EAChB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,cAAc;CAa5B;;AAjBD,AAMI,QANI,CAMJ,MAAM,CAAC;EACH,gBAAgB,EAAE,IAAI;EACtB,KAAK,EAAE,KAAK;CACf;;AATL,AAWI,QAXI,CAWJ,OAAO,CAAC,gBAAgB,CAAC;EACrB,SAAS,EAAE,IAAI;EACf,aAAa,EAAE,GAAG;CAErB",
-    "sources": [
-        "ArrowStyle.module.scss"
-    ],
-    "names": [],
-    "file": "ArrowStyle.module.css"
-}
+{"version":3,"sources":["ArrowStyle.module.scss","ArrowStyle.module.css"],"names":[],"mappings":"AAAA;EACI,wBAAA;EAAA,gBAAA;EACA,SAAA;EACA,aAAA;EACA,yBAAA;ACCJ;ADCI;EACI,sBAAA;EACA,YAAA;ACCR;ADEI;EACI,eAAA;EACA,kBAAA;ACAR","file":"ArrowStyle.module.css"}

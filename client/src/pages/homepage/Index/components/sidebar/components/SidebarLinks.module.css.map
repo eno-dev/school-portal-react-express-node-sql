@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AACI,MADE,CACF,CAAC,CAAC;EACE,OAAO,EAAE,gBAAgB;EACzB,eAAe,EAAE,IAAI;EACrB,SAAS,EAAE,IAAI;EACf,KAAK,EAAE,OAAO;EACd,OAAO,EAAE,KAAK;EACd,UAAU,EAAE,IAAI;EAEhB,kEAAkE;CAIrE;;AAbL,AAUQ,MAVF,CACF,CAAC,AASI,MAAM,CAAC;EACJ,KAAK,EAAE,OAAO;CACjB",
-    "sources": [
-        "SidebarLinks.module.scss"
-    ],
-    "names": [],
-    "file": "SidebarLinks.module.css"
-}
+{"version":3,"sources":["SidebarLinks.module.scss","SidebarLinks.module.css"],"names":[],"mappings":"AACI;EACI,yBAAA;EACA,qBAAA;EACA,eAAA;EACA,cAAA;EACA,cAAA;EACA,gBAAA;EAEA,iEAAA;ACDR;ADEQ;EACI,cAAA;ACAZ","file":"SidebarLinks.module.css"}

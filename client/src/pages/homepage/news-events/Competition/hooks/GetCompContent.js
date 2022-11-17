@@ -26,9 +26,5 @@ export const GetCompContent = () => {
         fetchData()
     }, [loading])
 
-
-
     return { data, loading, error }
 }
-
-

@@ -1,56 +1,49 @@
 #headerContainer {
   background-color: #2A9D8F;
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-end;
+  align-items: center;
   height: 50px;
   padding: 0px 50px;
 }
-
 #headerContainer .header .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
 }
-
-#headerContainer .header .menu ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#headerContainer .header .menu .menuList {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   margin-bottom: 0;
   list-style: none;
 }
-
-#headerContainer .header .menu ul li {
+#headerContainer .header .menu .menuList .listItems {
   margin-right: 40px;
 }
-
-#headerContainer .header .menu ul li a {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#headerContainer .header .menu .menuList .listItems .headerItems {
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-decoration: none;
   color: white;
 }
-/*# sourceMappingURL=HeaderStyle.module.css.map */
+
+.quickLinks {
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.dropdownContent {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdownContent:hover {
+  background-color: #2A9D8F;
+  color: black;
+}/*# sourceMappingURL=HeaderStyle.module.css.map */

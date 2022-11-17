@@ -1,12 +1,8 @@
 .images {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  -ms-grid-rows: masonry;
-      grid-template-rows: masonry;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: masonry;
   align-tracks: start;
   justify-tracks: start;
   grid-gap: 3rem;
-}
-/*# sourceMappingURL=Style.module.css.map */
+}/*# sourceMappingURL=Style.module.css.map */

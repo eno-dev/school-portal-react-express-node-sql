@@ -1,0 +1,23 @@
+.nodata > * {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+.container > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+.container > * p,
+.container > * h4 {
+  margin: 0;
+}
+.container > * object {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=Style.module.css.map */

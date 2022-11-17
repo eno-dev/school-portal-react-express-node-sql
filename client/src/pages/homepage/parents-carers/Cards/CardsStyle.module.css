@@ -1,48 +1,22 @@
 .cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: flex-start;
+  flex-direction: column;
   margin: 0 auto;
   max-width: 750px;
 }
-
 .cards .cardsContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
 }
-
 .cards .cardsContainer .cardLink {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100px;
   height: 100px;
   border-radius: 5px;
@@ -51,11 +25,9 @@
   background-color: #25D366;
   outline: 2px solid black;
 }
-
 .cards .cardLink:hover {
   border-radius: 5px;
   background-color: #25D366;
   color: white;
   outline: 2px solid white;
-}
-/*# sourceMappingURL=CardsStyle.module.css.map */
+}/*# sourceMappingURL=CardsStyle.module.css.map */

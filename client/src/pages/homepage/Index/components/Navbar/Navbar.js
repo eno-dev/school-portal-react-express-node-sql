@@ -5,10 +5,12 @@ import { Link } from 'react-router-dom';
 import LinearProgress from '@mui/material/LinearProgress';
 import { useState, useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
-import { setNavHeight } from '../../../../../features/navbar-height/navHeightSlice.js'
-import { toggleOn, toggleOff } from '../../../../../features/sidebar-home-toggle/sidebarHomeSlice'
+import { setNavHeight } from 'features/navbar-height/navHeightSlice.js'
+import { toggleOn, toggleOff } from 'features/sidebar-home-toggle/sidebarHomeSlice'
 import Style from './NavStyle.module.scss'
 import NavLinks from './NavLinks.js';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 const Navbar = () => {
     const dispatch = useDispatch();
@@ -25,12 +27,13 @@ const Navbar = () => {
             dispatch(toggleOff())
         }
     }
+    const [sidebar, setSidebar] = useState(false)
 
-    // // Navbar height
-    // useEffect(() => {
-    //     const height = ref.current.clientHeight
-    //     dispatch(setNavHeight({ height }))
-    // }, []);
+    const sidebarToggle = () => {
+        sidebar ? setSidebar(false) : setSidebar(true)
+    }
+
+    console.log(sidebar)
 
     // Page scroll progress
     useEffect(() => {
@@ -75,7 +78,7 @@ const Navbar = () => {
                         </Link>
                         <div className={Style.menu}>
                             <div className={Style.menuLinks}>
-                                <div className={Style.aboutUsDropdown}>
+                                <div className={Style.dropdownContainer}>
                                     <div className={Style.menuHeading}>
                                         About Us
                                     </div>
@@ -86,7 +89,7 @@ const Navbar = () => {
                                 <h1>
                                     |
                                 </h1>
-                                <div className={Style.aboutUsDropdown}>
+                                <div className={Style.dropdownContainer}>
                                     <div className={Style.menuHeading}>
                                         News & Events
                                     </div>
@@ -102,7 +105,7 @@ const Navbar = () => {
                                 <h1>
                                     |
                                 </h1>
-                                <div className={Style.aboutUsDropdown}>
+                                <div className={Style.dropdownContainer}>
                                     <Link to='students'>
                                         Students Section
                                     </Link>
@@ -110,7 +113,7 @@ const Navbar = () => {
                                         <Link to='students/schedule'>
                                             Schedule
                                         </Link>
-                                        <Link to='students/studymaterial'>
+                                        <Link to='students/study-material'>
                                             Study Material
                                         </Link>
                                     </div>
@@ -118,7 +121,7 @@ const Navbar = () => {
                                 <h1>
                                     |
                                 </h1>
-                                <div className={Style.aboutUsDropdown}>
+                                <div className={Style.dropdownContainer}>
                                     <Link to='parents-carers'>
                                         Parents Section
                                     </Link>
@@ -136,9 +139,78 @@ const Navbar = () => {
                                     </Link>}
                             </div>
                         </div>
+                        <div className={Style.menuIcon}>
+                            <MenuIcon onClick={sidebarToggle} />
+                        </div>
+
                     </Toolbar>
                 </AppBar>
                 <LinearProgress className={Style.linearProgressRoot} variant="determinate" value={progress} />
+                {sidebar &&
+                    <div className={Style.overlay}>
+                        <div className={Style.overlayIcon}>
+                            <CloseIcon onClick={() => {
+                                setSidebar(false)
+                            }} />
+                        </div>
+                        <div className={Style.menu}>
+                            <div className={Style.menuLinks}>
+                                <div className={Style.dropdownContainer}>
+                                    <div className={Style.menuHeading}>
+                                        About Us
+                                    </div>
+                                    <div className={Style.dropdownContent}>
+                                        <NavLinks link={'about-us'} heading={'About Us'} />
+                                    </div>
+                                </div>
+                                <div className={Style.dropdownContainer}>
+                                    <div className={Style.menuHeading}>
+                                        News & Events
+                                    </div>
+                                    <div className={Style.dropdownContent}>
+                                        <Link to='competitions'>
+                                            Competitions
+                                        </Link>
+                                        <Link to='gallery'>
+                                            Gallery
+                                        </Link>
+                                    </div>
+                                </div>
+                                <div className={Style.dropdownContainer}>
+                                    <Link to='students'>
+                                        Students Section
+                                    </Link>
+                                    <div className={Style.dropdownContent}>
+                                        <Link to='students/schedule'>
+                                            Schedule
+                                        </Link>
+                                        <Link to='students/study-material'>
+                                            Study Material
+                                        </Link>
+                                    </div>
+                                </div>
+                                <div className={Style.dropdownContainer}>
+                                    <Link to='parents-carers'>
+                                        Parents Section
+                                    </Link>
+                                </div>
+                                {isLoggedInState ?
+                                    <div className={Style.menuItem}>
+                                        <Link to={'/portal'}>
+                                            Portal
+                                        </Link>
+                                    </div>
+                                    :
+                                    <div className={Style.menuItem}>
+                                        <Link to={'/login'}>
+                                            Login
+                                        </Link>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
             </Box>
         </div >
     )

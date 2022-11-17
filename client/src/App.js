@@ -46,8 +46,8 @@ function App() {
           <Route path="parents-carers" element={<ParentsCarers />} />
           <Route path="students">
             <Route path="schedule" element={<Schedule />} />
-            <Route path="studymaterial" element={<Students />} />
-            <Route path="studymaterial/:grade/:subject" element={<Material />} />
+            <Route path="study-material" element={<Students />} />
+            <Route path="study-material/:grade/:subject" element={<Material />} />
           </Route>
           <Route path="schedule" element={<Schedule />} />
           <Route path="contact-us" element={<ContactUs />} />

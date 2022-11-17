@@ -1,133 +1,72 @@
 .homeFooter {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  justify-content: center;
   background-color: #F1F1F2;
 }
-
 .homeFooter .sections {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   width: 85%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 20px 16px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-
 .homeFooter .sections h5 {
   margin-bottom: 15px;
 }
-
 .homeFooter .sections .network {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 .homeFooter .sections .network .links {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
   margin-bottom: 20px;
 }
-
 .homeFooter .sections .network .links a {
   text-decoration: none;
   color: black;
 }
-
 .homeFooter .sections .network img {
   width: 200px;
   height: auto;
 }
-
 .homeFooter .sections .connected {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 .homeFooter .sections .connected .links {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
   margin-bottom: 20px;
 }
-
 .homeFooter .sections .connected .links a {
   text-decoration: none;
   color: black;
 }
-
 .homeFooter .sections .connected img {
   width: 200px;
   height: auto;
 }
-
 .homeFooter .sections .connected ~ * {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .homeFooter .sections .connected ~ * a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   text-decoration: none;
   color: black;
   margin-bottom: 10px;
 }
-
 .homeFooter .sections .ourSchool {
   color: black;
 }
-
 .homeFooter .sections .explore {
   color: black;
 }
-
 .homeFooter .sections .contact svg {
   margin-right: 10px;
 }
@@ -146,5 +85,4 @@
 
 .youtubeIcon svg:hover {
   fill: #FF0000;
-}
-/*# sourceMappingURL=FooterStyle.module.css.map */
+}/*# sourceMappingURL=FooterStyle.module.css.map */

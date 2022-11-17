@@ -1,12 +1,14 @@
 import Style from './Style.module.scss'
 import { GetCompContent } from './hooks/GetCompContent'
 import ReactMarkdown from 'react-markdown'
+import Divider from 'components/divider/Index'
 
 const Index = () => {
     const { data, loading, error } = GetCompContent()
 
     return (
         <div className={Style.container}>
+
             <div className={Style.pageHeading}>
                 <h1>Competitons</h1>
             </div>
@@ -26,7 +28,7 @@ const Index = () => {
                                 <ReactMarkdown>
                                     {obj.attributes.Description}
                                 </ReactMarkdown>
-                                <a href={obj.attributes.Link} target="_blank">Read More</a>
+                                <a href={obj.attributes.Link} target="_blank" rel="noreferrer">Read More</a>
                             </div>
                         </div>
                     </div>
