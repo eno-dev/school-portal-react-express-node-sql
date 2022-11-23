@@ -28,12 +28,33 @@ const Navbar = () => {
         }
     }
     const [sidebar, setSidebar] = useState(false)
+    const [accordian, setAccordian] = useState(false)
 
     const sidebarToggle = () => {
         sidebar ? setSidebar(false) : setSidebar(true)
     }
 
-    console.log(sidebar)
+    const data = [
+        { id: 1, menuHeading: 'About Us', links: [{ id: 1, heading: 'About Us', link: 'about-us' }] },
+        {
+            id: 2, menuHeading: 'News & Events', links: [{ id: 1, heading: 'Competitions', link: 'competitions' },
+            { id: 2, heading: 'Gallery', link: 'gallery' }]
+        },
+        {
+            id: 3, menuHeading: 'Students Section', links: [{ id: 1, heading: 'Schedule', link: 'students/schedule' }, {
+                id: 2, heading: 'Study Material', link: 'students/study-material'
+            }]
+        },
+        {
+            id: 4, menuHeading: 'Parents', links: []
+        },
+    ]
+
+    console.log(data)
+
+    const accordianToggle = () => {
+        sidebar ? setAccordian(false) : setAccordian(true)
+    }
 
     // Page scroll progress
     useEffect(() => {
@@ -78,7 +99,30 @@ const Navbar = () => {
                         </Link>
                         <div className={Style.menu}>
                             <div className={Style.menuLinks}>
-                                <div className={Style.dropdownContainer}>
+                                {data &&
+                                    data.map(obj =>
+                                        <div className={Style.dropdownContainer}>
+                                            <div className={Style.menuHeading}>
+                                                {obj.menuHeading}
+                                            </div>
+                                            <div className={Style.dropdownContent}>
+                                                {obj.links.map(obj =>
+                                                    <Link to={obj.link}>
+                                                        {obj.heading}
+                                                    </Link>
+                                                )}
+                                            </div>
+                                        </div>
+                                    )}
+                                {isLoggedInState ?
+                                    <Link to={'/portal'}>
+                                        Portal
+                                    </Link>
+                                    :
+                                    <Link to={'/login'}>
+                                        Login
+                                    </Link>}
+                                {/* <div className={Style.dropdownContainer}>
                                     <div className={Style.menuHeading}>
                                         About Us
                                     </div>
@@ -136,23 +180,22 @@ const Navbar = () => {
                                     :
                                     <Link to={'/login'}>
                                         Login
-                                    </Link>}
+                                    </Link>} */}
                             </div>
                         </div>
                         <div className={Style.menuIcon}>
                             <MenuIcon onClick={sidebarToggle} />
                         </div>
-
                     </Toolbar>
                 </AppBar>
                 <LinearProgress className={Style.linearProgressRoot} variant="determinate" value={progress} />
                 {sidebar &&
                     <div className={Style.overlay}>
-                        <div className={Style.overlayIcon}>
+                        {/* <div className={Style.overlayIcon}>
                             <CloseIcon onClick={() => {
                                 setSidebar(false)
                             }} />
-                        </div>
+                        </div> */}
                         <div className={Style.menu}>
                             <div className={Style.menuLinks}>
                                 <div className={Style.dropdownContainer}>
@@ -177,9 +220,11 @@ const Navbar = () => {
                                     </div>
                                 </div>
                                 <div className={Style.dropdownContainer}>
-                                    <Link to='students'>
-                                        Students Section
-                                    </Link>
+                                    <div className={Style.menuHeading}>
+                                        <Link to='students'>
+                                            Students Section
+                                        </Link>
+                                    </div>
                                     <div className={Style.dropdownContent}>
                                         <Link to='students/schedule'>
                                             Schedule
@@ -190,21 +235,27 @@ const Navbar = () => {
                                     </div>
                                 </div>
                                 <div className={Style.dropdownContainer}>
-                                    <Link to='parents-carers'>
-                                        Parents Section
-                                    </Link>
-                                </div>
-                                {isLoggedInState ?
-                                    <div className={Style.menuItem}>
-                                        <Link to={'/portal'}>
-                                            Portal
+                                    <div className={Style.menuHeading}>
+                                        <Link to='parents-carers'>
+                                            Parents Section
                                         </Link>
                                     </div>
+                                </div>
+                                {isLoggedInState ?
+                                    <div className={Style.menuHeading}>
+                                        <div className={Style.menuItem}>
+                                            <Link to={'/portal'}>
+                                                Portal
+                                            </Link>
+                                        </div>
+                                    </div>
                                     :
-                                    <div className={Style.menuItem}>
-                                        <Link to={'/login'}>
-                                            Login
-                                        </Link>
+                                    <div className={Style.menuHeading}>
+                                        <div className={Style.menuItem}>
+                                            <Link to={'/login'}>
+                                                Login
+                                            </Link>
+                                        </div>
                                     </div>
                                 }
                             </div>

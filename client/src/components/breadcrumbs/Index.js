@@ -30,7 +30,6 @@ const Index = () => {
                                 </>
                             }
                         </Link>
-                        {console.log(match, breadcrumb)}
                         {match.pathname === location.pathname ?
                             <>
                             </>

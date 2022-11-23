@@ -54,8 +54,15 @@ const Header = () => {
                                 <Link to={""} onClick={() => openLink()} className={Style.headerItems}>Quick Links</Link>
                                 {quickLink &&
                                     <div className={Style.quickLinks}>
-                                        <Link to={''} className={Style.dropdownContent}>LMS</Link>
-                                        <Link to={''} className={Style.dropdownContent}>AlManhal</Link>
+                                        <a href='https://lms.moe.gov.ae/' className={Style.dropdownContent}
+                                            target='_blank'
+                                            rel="noreferrer"
+                                        >LMS</a>
+                                        <a href='https://almanhal.moe.gov.ae/'
+                                            className={Style.dropdownContent}
+                                            target='_blank'
+                                            rel="noreferrer"
+                                        >AlManhal</a>
                                     </div>
                                 }
                             </div>

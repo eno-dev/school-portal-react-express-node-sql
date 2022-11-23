@@ -1,4 +1,8 @@
+$text-padding: 10px;
+
 .container {
+    margin-left: -$text-padding;
+
     nav {
         display: flex;
         margin-bottom: 10px;
@@ -24,15 +28,12 @@
     .breadcrumbActive div,
     .breadcrumbNotActive div,
     .seperator {
-        padding: 10px;
+        padding: $text-padding;
         border-radius: 2px;
     }
 }
 
-.noBreadExtension {
-    text-transform: capitalize;
-}
-
+.noBreadExtension,
 .breadExtension {
     text-transform: capitalize;
 }

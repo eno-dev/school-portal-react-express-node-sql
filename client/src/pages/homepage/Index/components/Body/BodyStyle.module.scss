@@ -1,15 +1,14 @@
 .homepageBody {
     display: flex;
     flex-direction: column;
-    // justify-content: center;
     min-height: 75vh;
     height: max-content;
     width: 100%;
-    padding: 30px 150px;
+    padding: 30px 10%;
     z-index: 0;
 
     h1 {
         text-align: center;
-        margin: 0;
+        margin-bottom: 30px;
     }
 }

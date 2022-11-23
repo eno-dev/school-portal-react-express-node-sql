@@ -6,10 +6,10 @@
   height: -moz-max-content;
   height: max-content;
   width: 100%;
-  padding: 30px 150px;
+  padding: 30px 10%;
   z-index: 0;
 }
 .homepageBody h1 {
   text-align: center;
-  margin: 0;
+  margin-bottom: 30px;
 }/*# sourceMappingURL=BodyStyle.module.css.map */

@@ -161,22 +161,78 @@
   position: absolute;
   background-color: #f1f1f1;
   min-width: 100%;
+  -webkit-animation: fadeInAnimation 0.3s;
+          animation: fadeInAnimation 0.3s;
+}
+@-webkit-keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .overlay .overlayIcon {
   cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 47px;
+}
+.overlay .overlayIcon :hover {
+  background-color: red;
 }
 .overlay .menu {
   display: flex;
-  gap: 10px;
+  justify-content: center;
 }
 .overlay .menu .dropdownContent {
   display: none;
 }
-.overlay .menuLinks > * {
-  padding: 20px;
+.overlay .menuLinks {
+  width: 100%;
+  margin-top: 30px;
 }
-.overlay .menuLinks > * > * {
-  font-size: larger;
+.overlay .menuLinks .dropdownContainer,
+.overlay .menuLinks .menuHeading {
+  cursor: pointer;
+}
+.overlay .menuLinks .dropdownContainer :hover,
+.overlay .menuLinks .menuHeading :hover {
+  background-color: #E8C468;
+}
+.overlay .menuLinks .dropdownContainer .menuHeading,
+.overlay .menuLinks .menuHeading .menuHeading {
+  padding: 10px;
+  font-size: x-large;
+  display: flex;
+  align-items: center;
+}
+.overlay .menuLinks .dropdownContainer .menuHeading a,
+.overlay .menuLinks .dropdownContainer a,
+.overlay .menuLinks .menuHeading .menuHeading a,
+.overlay .menuLinks .menuHeading a {
   text-decoration: none;
   color: inherit;
+}
+.overlay .menuLinks .menuItem {
+  display: flex;
+  justify-content: center;
+}
+.overlay .menuLinks .menuItem a {
+  padding: 10px;
+  font-size: x-large;
+}
+.overlay .menuLinks .menuHeading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 15px;
 }/*# sourceMappingURL=NavStyle.module.css.map */

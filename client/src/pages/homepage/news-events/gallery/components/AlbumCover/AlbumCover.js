@@ -15,13 +15,13 @@ const AlbumCover = () => {
                                 {img.attributes.Heading}
                             </h3>
                         </div>
-                        <div className={Style.imageContainer}>
-                            <div className={Style.image}>
-                                <Link to={`${img.id}`}>
-                                    <img src={`${process.env.REACT_APP_URL}${img.attributes.Images.data[0].attributes.url}`} alt="" />
-                                </Link>
-                            </div>
+                        {/* <div className={Style.imageContainer}> */}
+                        <div className={Style.image}>
+                            <Link to={`${img.id}`}>
+                                <img src={`${process.env.REACT_APP_URL}${img.attributes.Images.data[0].attributes.url}`} alt="" />
+                            </Link>
                         </div>
+                        {/* </div> */}
                     </div>
                 )}
         </>

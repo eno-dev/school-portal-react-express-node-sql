@@ -1,3 +1,5 @@
+@use "../../../../../../../styles/sass/abstracts/mixins"as *;
+
 .welcomeMessage {
     display: flex;
     flex-direction: column;
@@ -5,8 +7,12 @@
     .messageBody {
         display: flex;
         flex-direction: row;
-        gap: 3em;
 
+        @include for-smaller-desktop-down {
+            flex-direction: column;
+        }
+
+        gap: 3em;
 
         .message {
             display: flex;

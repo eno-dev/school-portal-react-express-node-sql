@@ -7,6 +7,11 @@
   flex-direction: row;
   gap: 3em;
 }
+@media (max-width: 1200px) {
+  .welcomeMessage .messageBody {
+    flex-direction: column;
+  }
+}
 .welcomeMessage .messageBody .message {
   display: flex;
   flex-direction: column;

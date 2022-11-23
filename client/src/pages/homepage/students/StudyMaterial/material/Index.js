@@ -17,9 +17,9 @@ const Index = () => {
         }
         console.log(filename)
     }
-    // if (data) {
-    //     console.log(data.data[0].attributes.Material.data[0].attributes.url)
-    // }
+    if (data) {
+        console.log(data)
+    }
 
     return (
         <div>
