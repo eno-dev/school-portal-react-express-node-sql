@@ -1,9 +1,9 @@
 import Style from './Style.module.scss'
 import { Link } from 'react-router-dom'
-import { GetStrapiImages } from '../../hooks/GetStrapiImages'
+import { GetData } from 'hooks/GetData'
 
 const AlbumCover = () => {
-    const { data, loading, error } = GetStrapiImages()
+    const { data, loading, error } = GetData('galleries')
 
     return (
         <>

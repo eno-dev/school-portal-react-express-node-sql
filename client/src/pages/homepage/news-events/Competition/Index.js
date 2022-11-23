@@ -1,10 +1,10 @@
 import Style from './Style.module.scss'
-import { GetCompContent } from './hooks/GetCompContent'
+import { GetData } from 'hooks/GetData'
 import ReactMarkdown from 'react-markdown'
 import Divider from 'components/divider/Index'
 
 const Index = () => {
-    const { data, loading, error } = GetCompContent()
+    const { data, loading, error } = GetData('competitions')
 
     return (
         <div className={Style.container}>

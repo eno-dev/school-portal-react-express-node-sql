@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export const GetNewsStories = () => {
+export const GetData = (title) => {
 
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -10,7 +10,7 @@ export const GetNewsStories = () => {
     const fetchData = async () => {
         try {
             const response = await axios.get(
-                `http://localhost:1337/api/news-stories?populate=*`,
+                `http://localhost:1337/api/${title}?populate=*`,
             )
             setData(response.data);
             setError(null);

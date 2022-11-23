@@ -1,9 +1,8 @@
 import Style from './Style.module.scss'
-import { GetNewsStories } from '../../hooks/GetNewsStories'
+import { GetData } from 'hooks/GetData'
 
 const Index = () => {
-
-    const { data, loading, error } = GetNewsStories()
+    const { data, loading, error } = GetData('news-stories')
 
     return (
         <div className={Style.schoolNews}>

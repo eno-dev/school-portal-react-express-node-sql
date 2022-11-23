@@ -1,5 +1,5 @@
 import Style from './Style.module.scss'
-import { GetGrades } from '../../hooks/GetGrades'
+import { GetData } from 'hooks/GetData';
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -8,7 +8,7 @@ import Select from '@mui/material/Select';
 import { GetGradesById } from '../../hooks/GetGradesById';
 
 const Index = ({ grade, setGrade, gradeById, setGradeById }) => {
-    const { data, loading, error } = GetGrades()
+    const { data, loading, error } = GetData('grades')
 
     const handleChange = (event) => {
         setGrade(event.target.value)
