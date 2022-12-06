@@ -19,4 +19,10 @@
 }
 .welcomeMessage img {
   width: 400px;
+  max-width: 100%;
+}
+@media (max-width: 1200px) {
+  .welcomeMessage img {
+    align-self: center;
+  }
 }/*# sourceMappingURL=Style.module.css.map */

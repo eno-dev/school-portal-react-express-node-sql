@@ -12,7 +12,7 @@ const Index = () => {
                         </h2>
                     </header>
                     <p>
-                        Welcome to Ali Bin Abi Taleb school! We believe education is the way to enlighten our future in a technological and societal sense. Here, at our school, the greatest minds are cultivated to be role models and the thinkers of society, propelling the country to new heights. Innovation and ideas are embraced, and made into reality by our brilliant students.
+                        Welcome to Ali Bin Abi Taleb School! We believe education is the way to enlighten our future in a technological and societal sense. Here, at our school, the greatest minds are cultivated to be role models and the thinkers of society, propelling the country to new heights. Innovation and ideas are embraced, and made into reality by our brilliant students.
                     </p>
                 </div>
                 <img src={SchoolPrinciple} alt="" />

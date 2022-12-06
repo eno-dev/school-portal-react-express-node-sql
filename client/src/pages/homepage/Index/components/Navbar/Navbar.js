@@ -50,8 +50,6 @@ const Navbar = () => {
         },
     ]
 
-    console.log(data)
-
     const accordianToggle = () => {
         sidebar ? setAccordian(false) : setAccordian(true)
     }
@@ -101,13 +99,13 @@ const Navbar = () => {
                             <div className={Style.menuLinks}>
                                 {data &&
                                     data.map(obj =>
-                                        <div className={Style.dropdownContainer}>
+                                        <div className={Style.dropdownContainer} key={obj.id}>
                                             <div className={Style.menuHeading}>
                                                 {obj.menuHeading}
                                             </div>
                                             <div className={Style.dropdownContent}>
                                                 {obj.links.map(obj =>
-                                                    <Link to={obj.link}>
+                                                    <Link to={obj.link} key={obj.id}>
                                                         {obj.heading}
                                                     </Link>
                                                 )}
@@ -122,65 +120,6 @@ const Navbar = () => {
                                     <Link to={'/login'}>
                                         Login
                                     </Link>}
-                                {/* <div className={Style.dropdownContainer}>
-                                    <div className={Style.menuHeading}>
-                                        About Us
-                                    </div>
-                                    <div className={Style.dropdownContent}>
-                                        <NavLinks link={'about-us'} heading={'About Us'} />
-                                    </div>
-                                </div>
-                                <h1>
-                                    |
-                                </h1>
-                                <div className={Style.dropdownContainer}>
-                                    <div className={Style.menuHeading}>
-                                        News & Events
-                                    </div>
-                                    <div className={Style.dropdownContent}>
-                                        <Link to='competitions'>
-                                            Competitions
-                                        </Link>
-                                        <Link to='gallery'>
-                                            Gallery
-                                        </Link>
-                                    </div>
-                                </div>
-                                <h1>
-                                    |
-                                </h1>
-                                <div className={Style.dropdownContainer}>
-                                    <Link to='students'>
-                                        Students Section
-                                    </Link>
-                                    <div className={Style.dropdownContent}>
-                                        <Link to='students/schedule'>
-                                            Schedule
-                                        </Link>
-                                        <Link to='students/study-material'>
-                                            Study Material
-                                        </Link>
-                                    </div>
-                                </div>
-                                <h1>
-                                    |
-                                </h1>
-                                <div className={Style.dropdownContainer}>
-                                    <Link to='parents-carers'>
-                                        Parents Section
-                                    </Link>
-                                </div>
-                                <h1>
-                                    |
-                                </h1>
-                                {isLoggedInState ?
-                                    <Link to={'/portal'}>
-                                        Portal
-                                    </Link>
-                                    :
-                                    <Link to={'/login'}>
-                                        Login
-                                    </Link>} */}
                             </div>
                         </div>
                         <div className={Style.menuIcon}>

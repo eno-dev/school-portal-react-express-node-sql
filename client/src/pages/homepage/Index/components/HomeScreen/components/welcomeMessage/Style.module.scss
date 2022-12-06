@@ -23,5 +23,10 @@
 
     img {
         width: 400px;
+        max-width: 100%;
+
+        @include for-smaller-desktop-down {
+            align-self: center;
+        }
     }
 }
