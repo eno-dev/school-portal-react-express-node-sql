@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "baseUrl": "src"
+    },
+    "paths": {
+        "@img/*": [
+            "assets/img/*"
+        ],
+        "@mediaQ/*": [
+            "src/styles/sass/abstracts/*"
+        ]
+
+    },
+    "include": ["src"],
+    "exclude": ["node_modules"]
+}

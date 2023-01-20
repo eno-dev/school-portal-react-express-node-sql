@@ -8,7 +8,8 @@
     "client": "cd client && npm start",
     "server": "cd server && nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx"
   },
   "engines": {
     "node": "16.14.0"
@@ -31,6 +32,8 @@
     "mysql": "^2.18.1"
   },
   "devDependencies": {
+    "eslint": "^8.32.0",
+    "eslint-plugin-react": "^7.32.1",
     "nodemon": "^2.0.16"
   }
 }
