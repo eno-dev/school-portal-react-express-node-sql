@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "grades",
+  "info": {
+    "singularName": "grade",
+    "pluralName": "grades",
+    "displayName": "Grade",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "subjects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::subject.subject",
+      "mappedBy": "grades"
+    },
+    "study_materials": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::study-material.study-material",
+      "mappedBy": "grades"
+    }
+  }
+}

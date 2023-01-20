@@ -1,0 +1,8 @@
+authtoken: 2KHIz5x4BItJq7S7PEBh3fsaW9c_25J9JrkcDm2uHBkgwjHMe
+tunnels:
+  anyTunnelName:
+    proto: http
+    addr: https://localhost:3000/
+    bind_tls: true
+    subdomain: my_cool_name
+    host_header: localhost

@@ -45,17 +45,16 @@ const Index = () => {
                                 {obj.attributes.Heading}
                             </h3>
                         </div>
-                        {/* <iframe src={`${process.env.REACT_APP_URL}${data.data[0].attributes.Material.data[0].attributes.url}`}
+                        <iframe src={`${process.env.REACT_APP_URL}${data.data[0].attributes.Material.data[0].attributes.url}`}
                             frameBorder="0"
                             height="100%"
                             width="100%">
-                        </iframe> */}
+                        </iframe>
                         <div className={Style.objectContainer}>
                             <object data={`${process.env.REACT_APP_URL}${data.data[0].attributes.Material.data[0].attributes.url}`}
                                 type="application/pdf" width="100%" height="100%">
                                 <p>Alternative text - include a link <a href={`${process.env.REACT_APP_URL}${data.data[1].attributes.Material.data[0].attributes.url}`} target='_blank' rel="noreferrer">to the PDF!</a></p>
                             </object>
-
                         </div>
                     </div>
 

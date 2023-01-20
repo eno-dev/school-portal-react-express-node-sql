@@ -1,6 +1,7 @@
 import Style from '../../Jiu-Jitsu/Style.module.scss'
 import { GetImageById } from '../../hooks/GetImageById'
 import { useParams } from 'react-router-dom'
+import { Image } from 'antd';
 
 const PhotoAlbum = () => {
     let { id } = useParams();
@@ -18,7 +19,9 @@ const PhotoAlbum = () => {
                 {!loading &&
                     data.data.attributes.Images.data.map(img =>
                         <div className={Style.imageContainer} key={img.id}>
-                            <img src={`${process.env.REACT_APP_URL}${img.attributes.url}`} alt="" />
+                            <Image
+                                src={`${process.env.REACT_APP_URL}${img.attributes.url}`}
+                                rootClassName={Style.imgPreview} />
                         </div>
                     )}
             </div>

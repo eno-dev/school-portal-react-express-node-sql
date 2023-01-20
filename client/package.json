@@ -14,8 +14,10 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
+    "antd": "^5.1.5",
     "axios": "^0.27.2",
     "dot-env": "^0.0.1",
+    "jest": "^27.5.1",
     "jwt-decode": "^3.1.2",
     "list-react-files": "^0.2.0",
     "qs": "^6.11.0",
@@ -56,5 +58,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^8.32.0",
+    "eslint-plugin-react": "^7.32.1"
   }
 }

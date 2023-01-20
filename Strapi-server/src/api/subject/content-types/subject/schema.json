@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subjects",
+  "info": {
+    "singularName": "subject",
+    "pluralName": "subjects",
+    "displayName": "Subject",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "grades": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::grade.grade",
+      "inversedBy": "subjects"
+    },
+    "url": {
+      "type": "string"
+    },
+    "study_materials": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::study-material.study-material",
+      "inversedBy": "subjects"
+    }
+  }
+}
