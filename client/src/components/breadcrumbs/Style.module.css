@@ -6,10 +6,10 @@
   margin-bottom: 10px;
 }
 .container .breadcrumbActive div {
-  color: #E8C468;
+  color: #e8c468;
 }
 .container .breadcrumbNotActive div :hover {
-  color: #E8C468;
+  color: #e8c468;
 }
 .container .breadcrumbActive,
 .container .breadcrumbNotActive {
@@ -26,4 +26,4 @@
 .noBreadExtension,
 .breadExtension {
   text-transform: capitalize;
-}/*# sourceMappingURL=Style.module.css.map */
+} /*# sourceMappingURL=Style.module.css.map */

@@ -1,59 +1,56 @@
 #headerContainer {
-    background-color: #2A9D8F;
-    color: white;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 50px;
-    padding: 0px 50px;
+  background-color: #2a9d8f;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50px;
+  padding: 0px 50px;
 
-    .header {
-        .menu {
+  .header {
+    .menu {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .menuList {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 0;
+        list-style: none;
+
+        .listItems {
+          margin-right: 40px;
+
+          .headerItems {
             display: flex;
-            flex-direction: row;
             align-items: center;
-
-
-            .menuList {
-                display: flex;
-                flex-direction: row;
-                margin-bottom: 0;
-                list-style: none;
-
-                .listItems {
-                    margin-right: 40px;
-
-                    .headerItems {
-                        display: flex;
-                        align-items: center;
-                        text-decoration: none;
-                        color: white;
-
-                    }
-                }
-            }
+            text-decoration: none;
+            color: white;
+          }
         }
+      }
     }
+  }
 }
 
 .quickLinks {
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
 
 .dropdownContent {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 
-    &:hover {
-        background-color: #2A9D8F;
-        color: black;
-    }
+  &:hover {
+    background-color: #2a9d8f;
+    color: black;
+  }
 }

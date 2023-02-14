@@ -1,18 +1,16 @@
 #arrowUp {
-    position: sticky;
-    bottom: 0;
-    display: flex;
-    transform: rotate(180deg);
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  transform: rotate(180deg);
 
-    :hover {
-        background-color: grey;
-        color: white;
-    }
+  :hover {
+    background-color: grey;
+    color: white;
+  }
 
-    :global .MuiSvgIcon-root {
-        font-size: 40px;
-        border-radius: 50%;
-
-    }
-
+  :global .MuiSvgIcon-root {
+    font-size: 40px;
+    border-radius: 50%;
+  }
 }

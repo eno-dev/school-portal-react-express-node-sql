@@ -1,130 +1,127 @@
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    /* Styles */
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */
 }
 
 /* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) {
-    /* Styles */
+@media only screen and (min-width: 321px) {
+  /* Styles */
 }
 
 /* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
-    /* Styles */
+@media only screen and (max-width: 320px) {
+  /* Styles */
 }
 
 /* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    /* Styles */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */
 }
 
 /* iPads (landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-    /* Styles */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */
 }
 
 /* iPads (portrait) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-    /* Styles */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Styles */
 }
 
 /* Desktops and laptops ----------- */
-@media only screen and (min-width : 1224px) {
-    /* Styles */
+@media only screen and (min-width: 1224px) {
+  /* Styles */
 }
 
 /* Large screens ----------- */
-@media only screen and (min-width : 1824px) {
-    /* Styles */
+@media only screen and (min-width: 1824px) {
+  /* Styles */
 }
 
 .login {
+  display: flex;
+  background: white;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+
+  header {
     display: flex;
-    background: white;
-    height: 100vh;
-    align-items: center;
     justify-content: center;
+    font-size: x-large;
     font-family: 'Open Sans', sans-serif;
+    margin-bottom: 10px;
+    // #B5C9EB
+  }
 
-    header {
-        display: flex;
-        justify-content: center;
-        font-size: x-large;
-        font-family: 'Open Sans', sans-serif;
-        margin-bottom: 10px;
-        // #B5C9EB
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .button {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+
+      input[type='submit'] {
+        flex: 1;
+        // width: 140px;
+        height: 45px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        font-weight: 500;
+        color: #000;
+        background-color: #fff;
+        border: none;
+        border-radius: 45px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;
+
+        &:hover {
+          background-color: #7671ea;
+          box-shadow: 0px 15px 20px rgba(157, 78, 221, 0.4);
+          color: #fff;
+          transform: translateY(-1px);
+        }
+      }
     }
 
-    form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        .button {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-
-            input[type=submit] {
-                flex: 1;
-                // width: 140px;
-                height: 45px;
-                font-family: 'Roboto', sans-serif;
-                font-size: 11px;
-                text-transform: uppercase;
-                letter-spacing: 2.5px;
-                font-weight: 500;
-                color: #000;
-                background-color: #fff;
-                border: none;
-                border-radius: 45px;
-                box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-                transition: all 0.3s ease 0s;
-                cursor: pointer;
-                outline: none;
-
-                &:hover {
-                    background-color: #7671EA;
-                    box-shadow: 0px 15px 20px rgba(157, 78, 221, 0.4);
-                    color: #fff;
-                    transform: translateY(-1px);
-                }
-            }
-        }
-
-        input[type=text],
-        input[type=password] {
-            background-color: white;
-        }
-
-        // .password {}
+    input[type='text'],
+    input[type='password'] {
+      background-color: white;
     }
+
+    // .password {}
+  }
 }
 
 .login_items {
-    display: flex;
-    flex-direction: column;
-    background-color: #EDF2FA;
+  display: flex;
+  flex-direction: column;
+  background-color: #edf2fa;
 
+  /* Smartphones (landscape) ----------- */
+  @media only screen and (min-width: 321px) {
+    /* Styles */
+    width: 350px;
+  }
 
-    /* Smartphones (landscape) ----------- */
-    @media only screen and (min-width : 321px) {
-        /* Styles */
-        width: 350px;
-    }
+  /* iPads (portrait and landscape) ----------- */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    /* Styles */
+    max-width: 400px;
+  }
 
-    /* iPads (portrait and landscape) ----------- */
-    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-        /* Styles */
-        max-width: 400px;
-    }
-
-    height: 400px;
-    margin: 7em auto;
-    border-radius: 1.5em;
-    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
-    justify-content: center;
-
+  height: 400px;
+  margin: 7em auto;
+  border-radius: 1.5em;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+  justify-content: center;
 }

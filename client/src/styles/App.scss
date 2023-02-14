@@ -5,33 +5,30 @@
 // Core
 @import './sass/core/reset';
 // Layout
-@import './sass/layout/footer', './sass/layout/grid', './sass/layout/header', './sass/layout/navigation', './sass/layout/rightcontent', './sass/layout/sidebar';
-//=========================== 
+@import './sass/layout/footer', './sass/layout/grid', './sass/layout/header', './sass/layout/navigation',
+  './sass/layout/rightcontent', './sass/layout/sidebar';
+//===========================
 //          Pages
-//=========================== 
-@import'../pages/Portal/analytics/analytics',
-'../pages/Portal/attendance/attendance',
-'../pages/Portal/dashboard/dashboard',
-'../pages/Portal/database-viewer/database-viewer',
-'../pages/Portal/login/login',
-'../pages/Portal/notifications/notifications',
-'../pages/Portal/search/search',
-'../pages/homepage/Index/homepage';
+//===========================
+@import '../pages/Portal/analytics/analytics', '../pages/Portal/attendance/attendance',
+  '../pages/Portal/dashboard/dashboard', '../pages/Portal/database-viewer/database-viewer',
+  '../pages/Portal/login/login', '../pages/Portal/notifications/notifications', '../pages/Portal/search/search',
+  '../pages/homepage/Index/homepage';
 
 // Sections
 
 /* Selecting all pages */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    min-height: max-content;
-    transition: $tran-05;
+  min-height: max-content;
+  transition: $tran-05;
 }
 
 .css-1xy1myn-MuiDataGrid-root .MuiDataGrid-row.Mui-selected {
-    background-color: $button-color;
+  background-color: $button-color;
 }

@@ -1,5 +1,5 @@
 #headerContainer {
-  background-color: #2A9D8F;
+  background-color: #2a9d8f;
   color: white;
   display: flex;
   justify-content: flex-end;
@@ -44,6 +44,6 @@
   display: block;
 }
 .dropdownContent:hover {
-  background-color: #2A9D8F;
+  background-color: #2a9d8f;
   color: black;
-}/*# sourceMappingURL=HeaderStyle.module.css.map */
+} /*# sourceMappingURL=HeaderStyle.module.css.map */

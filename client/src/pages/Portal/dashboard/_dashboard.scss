@@ -1,103 +1,95 @@
 .main_body {
+  // Welcome Heading
+  #welcome {
+    margin-bottom: calc(#{$margin-block-div}/ 1.7);
 
-    // Welcome Heading
-    #welcome {
-        margin-bottom: calc(#{$margin-block-div}/1.7);
-
-        // Hi message
-        h2 {
-            margin-bottom: 0.25rem;
-        }
-
-        // Welcome continued
-        h4 {
-            font-weight: 350;
-        }
+    // Hi message
+    h2 {
+      margin-bottom: 0.25rem;
     }
 
-    // Announcements
-    .announcements {
-        border-radius: $border-rad-medium;
-        background-color: $anno-color;
-        height: 35vh;
-        width: 100%;
-        min-height: 250px;
-        margin-bottom: calc(#{$margin-block-div});
-        padding: 12px;
+    // Welcome continued
+    h4 {
+      font-weight: 350;
+    }
+  }
 
-        @media only screen and (max-device-width : 768px) {
-            /* Styles */
-            display: flex;
-            justify-content: center;
-            padding: 10px;
+  // Announcements
+  .announcements {
+    border-radius: $border-rad-medium;
+    background-color: $anno-color;
+    height: 35vh;
+    width: 100%;
+    min-height: 250px;
+    margin-bottom: calc(#{$margin-block-div});
+    padding: 12px;
 
-        }
+    @media only screen and (max-device-width: 768px) {
+      /* Styles */
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+  }
+
+  // Class title
+  .class-title {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: calc(#{$margin-block-div}/ 1.7);
+
+    > * {
+      margin-bottom: 0;
     }
 
-    // Class title
-    .class-title {
+    #my-classes {
+      text-decoration: dashed;
+    }
+
+    #see-all {
+      cursor: pointer;
+    }
+  }
+
+  // Classes below table
+  .classes {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+
+    @media only screen and (max-device-width: 768px) {
+      /* Styles */
+      flex-direction: column;
+      row-gap: 2em;
+    }
+
+    // Screen is bigger
+    @media only screen and (min-device-width: 768px) {
+      /* Styles */
+      height: 200px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    // Classes
+    > * {
+      // Smaller screens
+      @media only screen and (max-device-width: 768px) {
+        /* Styles */
         display: flex;
+        height: 200px;
+        gap: 2px;
         width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: calc(#{$margin-block-div}/1.7);
+        justify-content: center;
+      }
 
-        >* {
-            margin-bottom: 0;
-        }
-
-        #my-classes {
-            text-decoration: dashed;
-        }
-
-        #see-all {
-            cursor: pointer;
-        }
+      width: 300px;
+      background-color: $sidebar-color;
+      text-align: center;
+      border-radius: $border-rad-medium;
+      padding-top: 12px;
     }
-
-    // Classes below table
-    .classes {
-        display: flex;
-        width: 100%;
-        height: 100vh;
-
-        @media only screen and (max-device-width : 768px) {
-            /* Styles */
-            flex-direction: column;
-            row-gap: 2em;
-
-        }
-
-        // Screen is bigger
-        @media only screen and (min-device-width : 768px) {
-            /* Styles */
-            height: 200px;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-
-
-        // Classes
-        >* {
-
-            // Smaller screens
-            @media only screen and (max-device-width : 768px) {
-                /* Styles */
-                display: flex;
-                height: 200px;
-                gap: 2px;
-                width: 100%;
-                justify-content: center;
-            }
-
-
-            width: 300px;
-            background-color: $sidebar-color;
-            text-align: center;
-            border-radius: $border-rad-medium;
-            padding-top: 12px;
-        }
-    }
-
+  }
 }

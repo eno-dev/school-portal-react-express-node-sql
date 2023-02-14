@@ -4,14 +4,14 @@
   flex-wrap: wrap;
   gap: 20px;
   padding: 30px;
-  background-color: #FBFBFB;
+  background-color: #fbfbfb;
 }
 
 .link {
   text-decoration: none;
 }
 .link:hover .subjectContainer {
-  background-color: #E8C468;
+  background-color: #e8c468;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
@@ -30,4 +30,4 @@
 }
 .subjectContainer .heading {
   color: black;
-}/*# sourceMappingURL=Style.module.css.map */
+} /*# sourceMappingURL=Style.module.css.map */

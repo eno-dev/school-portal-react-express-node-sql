@@ -1,32 +1,33 @@
-.main_body {    
+.main_body {
+  //************************************
+  //           Database Table
+  //************************************
 
-    //************************************
-    //           Database Table
-    //************************************
-    
-    .MuiBox-root {
-        padding: 0;
+  .MuiBox-root {
+    padding: 0;
 
-        // Pagenation
-        .MuiTablePagination-displayedRows {
-            margin-bottom: 0;
-        }
-
-        // Select Row
-        .MuiDataGrid-row.Mui-selected {
-            background-color: #B0AEF3;
-            
-        }
-
-        // Table row - Hover Colour
-        .MuiDataGrid-row.Mui-selected:hover, .MuiDataGrid-row.Mui-selected.Mui-hovered {
-            background-color: #E1E1FA;
-        }
-
-        // Remove the blue outline around each data item
-        .css-imf0nl-MuiDataGrid-root .MuiDataGrid-columnHeader:focus, .css-imf0nl-MuiDataGrid-root .MuiDataGrid-cell:focus, .css-imf0nl-MuiDataGrid-root .MuiDataGrid-columnHeader:focus-within, .css-imf0nl-MuiDataGrid-root .MuiDataGrid-cell:focus-within {
-            outline: 0px;
-        }
-
+    // Pagenation
+    .MuiTablePagination-displayedRows {
+      margin-bottom: 0;
     }
+
+    // Select Row
+    .MuiDataGrid-row.Mui-selected {
+      background-color: #b0aef3;
+    }
+
+    // Table row - Hover Colour
+    .MuiDataGrid-row.Mui-selected:hover,
+    .MuiDataGrid-row.Mui-selected.Mui-hovered {
+      background-color: #e1e1fa;
+    }
+
+    // Remove the blue outline around each data item
+    .css-imf0nl-MuiDataGrid-root .MuiDataGrid-columnHeader:focus,
+    .css-imf0nl-MuiDataGrid-root .MuiDataGrid-cell:focus,
+    .css-imf0nl-MuiDataGrid-root .MuiDataGrid-columnHeader:focus-within,
+    .css-imf0nl-MuiDataGrid-root .MuiDataGrid-cell:focus-within {
+      outline: 0px;
+    }
+  }
 }

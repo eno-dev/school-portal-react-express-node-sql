@@ -1,11 +1,11 @@
-import Database from "./components/database";
+import Database from './components/database';
 
 function Index() {
-    return (
-        <>
-            <Database />
-        </>
-    )
+  return (
+    <>
+      <Database />
+    </>
+  );
 }
 
 export default Index;

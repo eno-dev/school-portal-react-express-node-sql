@@ -1,12 +1,12 @@
-import LoadingScreen from "../../../components/loading/LoadingScreen"
+import LoadingScreen from '../../../components/loading/LoadingScreen';
 
 const Index = () => {
-    return (
-        <div className="grades">
-            <h1>Grades</h1>
-            <LoadingScreen />
-        </div>
-    )
-}
+  return (
+    <div className="grades">
+      <h1>Grades</h1>
+      <LoadingScreen />
+    </div>
+  );
+};
 
-export default Index
+export default Index;

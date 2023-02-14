@@ -1,29 +1,28 @@
 .albumCover {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    // .imageContainer {
-    //     height: 100%;
-    // }
+  // .imageContainer {
+  //     height: 100%;
+  // }
 
-    .image {
-        height: 100%;
+  .image {
+    height: 100%;
 
-        img {
-            max-width: 100%;
-            min-height: 100%;
-            width: 100%;
-            object-fit: cover;
-            border-radius: 6px;
-            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-        }
-
-        img:hover {
-            cursor: pointer;
-            transition: 0.4s;
-            filter: brightness(70%);
-            background-color: rgba(0, 0, 0, 0.5)
-        }
+    img {
+      max-width: 100%;
+      min-height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 6px;
+      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     }
 
+    img:hover {
+      cursor: pointer;
+      transition: 0.4s;
+      filter: brightness(70%);
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
 }

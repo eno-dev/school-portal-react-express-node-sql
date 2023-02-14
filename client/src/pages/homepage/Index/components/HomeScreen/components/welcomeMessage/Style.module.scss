@@ -1,32 +1,32 @@
-@use "../../../../../../../styles/sass/abstracts/mixins"as *;
+@use '../../../../../../../styles/sass/abstracts/mixins' as *;
 
 .welcomeMessage {
+  display: flex;
+  flex-direction: column;
+
+  .messageBody {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
-    .messageBody {
-        display: flex;
-        flex-direction: row;
-
-        @include for-smaller-desktop-down {
-            flex-direction: column;
-        }
-
-        gap: 3em;
-
-        .message {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-        }
+    @include for-smaller-desktop-down {
+      flex-direction: column;
     }
 
-    img {
-        width: 400px;
-        max-width: 100%;
+    gap: 3em;
 
-        @include for-smaller-desktop-down {
-            align-self: center;
-        }
+    .message {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
     }
+  }
+
+  img {
+    width: 400px;
+    max-width: 100%;
+
+    @include for-smaller-desktop-down {
+      align-self: center;
+    }
+  }
 }

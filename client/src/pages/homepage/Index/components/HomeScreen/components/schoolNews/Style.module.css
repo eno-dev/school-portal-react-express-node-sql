@@ -20,7 +20,7 @@
   max-width: 100%;
   height: 266px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 400px;
 }
 .schoolNews .news .newsContainer h5 {
@@ -30,4 +30,4 @@
   .schoolNews .news .newsContainer {
     align-self: center;
   }
-}/*# sourceMappingURL=Style.module.css.map */
+} /*# sourceMappingURL=Style.module.css.map */

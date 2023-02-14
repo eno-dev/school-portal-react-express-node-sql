@@ -1,17 +1,15 @@
-import Style from './Style.module.scss'
-import { Outlet } from "react-router-dom"
+import Style from './Style.module.scss';
+import { Outlet } from 'react-router-dom';
 
 const Index = () => {
-    return (
-        <div className={Style.container}>
-            <div className={Style.heading}>
-                <h1>
-                    Gallery
-                </h1>
-            </div>
-            <Outlet />
-        </div>
-    )
-}
+  return (
+    <div className={Style.container}>
+      <div className={Style.heading}>
+        <h1>Gallery</h1>
+      </div>
+      <Outlet />
+    </div>
+  );
+};
 
-export default Index
+export default Index;

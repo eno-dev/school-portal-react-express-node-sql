@@ -7,7 +7,7 @@
   z-index: 1;
 }
 .navbar .linearProgressRoot :global {
-  background-color: #7AAEC2;
+  background-color: #7aaec2;
 }
 .navbar .linearProgressRoot :global .MuiLinearProgress-bar {
   background-color: #264653;
@@ -113,7 +113,7 @@
 .toolbar .menu .menuLinks .dropdownContainer:hover > .menuHeading,
 .toolbar .menu .menuLinks .dropdownContainer:hover > a {
   display: block;
-  color: #E8C468;
+  color: #e8c468;
 }
 .toolbar .menu .menuLinks .dropdownContainer {
   position: relative;
@@ -136,8 +136,8 @@
   display: block;
 }
 .toolbar .menu .menuLinks .dropdownContainer .dropdownContent a:hover {
-  background-color: #7AAEC2;
-  box-shadow: 10px 0px #EAC671 inset;
+  background-color: #7aaec2;
+  box-shadow: 10px 0px #eac671 inset;
 }
 .toolbar .menu .menuLinks .menuHeading {
   cursor: pointer;
@@ -162,7 +162,7 @@
   background-color: #f1f1f1;
   min-width: 100%;
   -webkit-animation: fadeInAnimation 0.3s;
-          animation: fadeInAnimation 0.3s;
+  animation: fadeInAnimation 0.3s;
 }
 @-webkit-keyframes fadeInAnimation {
   from {
@@ -206,7 +206,7 @@
 }
 .overlay .menuLinks .dropdownContainer :hover,
 .overlay .menuLinks .menuHeading :hover {
-  background-color: #E8C468;
+  background-color: #e8c468;
 }
 .overlay .menuLinks .dropdownContainer .menuHeading,
 .overlay .menuLinks .menuHeading .menuHeading {
@@ -235,4 +235,4 @@
   flex-direction: column;
   justify-content: center;
   margin-bottom: 15px;
-}/*# sourceMappingURL=NavStyle.module.css.map */
+} /*# sourceMappingURL=NavStyle.module.css.map */

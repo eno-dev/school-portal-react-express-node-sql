@@ -22,12 +22,12 @@
   border-radius: 5px;
   background-color: white;
   border: none;
-  background-color: #25D366;
+  background-color: #25d366;
   outline: 2px solid black;
 }
 .cards .cardLink:hover {
   border-radius: 5px;
-  background-color: #25D366;
+  background-color: #25d366;
   color: white;
   outline: 2px solid white;
-}/*# sourceMappingURL=CardsStyle.module.css.map */
+} /*# sourceMappingURL=CardsStyle.module.css.map */

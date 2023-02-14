@@ -1,39 +1,38 @@
 $text-padding: 10px;
 
 .container {
-    margin-left: -$text-padding;
+  margin-left: -$text-padding;
 
-    nav {
-        display: flex;
-        margin-bottom: 10px;
+  nav {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .breadcrumbActive div {
+    color: #e8c468;
+  }
+
+  .breadcrumbNotActive div {
+    :hover {
+      color: #e8c468;
     }
+  }
 
-    .breadcrumbActive div {
-        color: #E8C468;
-    }
+  .breadcrumbActive,
+  .breadcrumbNotActive {
+    color: inherit;
+    text-decoration: none;
+  }
 
-    .breadcrumbNotActive div {
-
-        :hover {
-            color: #E8C468;
-        }
-    }
-
-    .breadcrumbActive,
-    .breadcrumbNotActive {
-        color: inherit;
-        text-decoration: none;
-    }
-
-    .breadcrumbActive div,
-    .breadcrumbNotActive div,
-    .seperator {
-        padding: $text-padding;
-        border-radius: 2px;
-    }
+  .breadcrumbActive div,
+  .breadcrumbNotActive div,
+  .seperator {
+    padding: $text-padding;
+    border-radius: 2px;
+  }
 }
 
 .noBreadExtension,
 .breadExtension {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }

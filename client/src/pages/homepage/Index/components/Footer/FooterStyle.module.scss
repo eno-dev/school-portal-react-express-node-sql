@@ -1,112 +1,109 @@
 .homeFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #f1f1f2;
+
+  .sections {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    background-color: #F1F1F2;
+    width: 85%;
+    justify-content: space-between;
+    padding: 20px 16px;
+    flex-wrap: wrap;
 
+    h5 {
+      margin-bottom: 15px;
+    }
 
-    .sections {
+    .network {
+      display: flex;
+      flex-direction: column;
+
+      .links {
         display: flex;
         flex-direction: row;
-        width: 85%;
         justify-content: space-between;
-        padding: 20px 16px;
-        flex-wrap: wrap;
+        margin-bottom: 20px;
 
-        h5 {
-            margin-bottom: 15px;
+        a {
+          text-decoration: none;
+          color: black;
         }
+      }
 
-        .network {
-            display: flex;
-            flex-direction: column;
-
-            .links {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                margin-bottom: 20px;
-
-                a {
-                    text-decoration: none;
-                    color: black;
-                }
-
-            }
-
-            img {
-                width: 200px;
-                height: auto;
-            }
-        }
-
-        .connected {
-            display: flex;
-            flex-direction: column;
-
-            .links {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                margin-bottom: 20px;
-
-                a {
-                    text-decoration: none;
-                    color: black;
-                }
-            }
-
-            img {
-                width: 200px;
-                height: auto;
-            }
-        }
-
-        // Selecting all elements after connected
-        .connected~* {
-            // margin-right: 200px;
-            justify-content: center;
-
-            // padding: 10px 14px;
-
-            a {
-                display: flex;
-                flex-direction: row;
-                text-decoration: none;
-                color: black;
-                margin-bottom: 10px;
-
-            }
-        }
-
-        .ourSchool {
-            color: black;
-        }
-
-        .explore {
-            color: black;
-        }
-
-        .contact {
-            svg {
-                margin-right: 10px;
-            }
-        }
+      img {
+        width: 200px;
+        height: auto;
+      }
     }
+
+    .connected {
+      display: flex;
+      flex-direction: column;
+
+      .links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+
+      img {
+        width: 200px;
+        height: auto;
+      }
+    }
+
+    // Selecting all elements after connected
+    .connected ~ * {
+      // margin-right: 200px;
+      justify-content: center;
+
+      // padding: 10px 14px;
+
+      a {
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+        color: black;
+        margin-bottom: 10px;
+      }
+    }
+
+    .ourSchool {
+      color: black;
+    }
+
+    .explore {
+      color: black;
+    }
+
+    .contact {
+      svg {
+        margin-right: 10px;
+      }
+    }
+  }
 }
 
 .instaIcon svg:hover {
-    fill: #5851db;
+  fill: #5851db;
 }
 
 .twitterIcon svg:hover {
-    fill: #00acee;
+  fill: #00acee;
 }
 
 .facebookIcon svg:hover {
-    fill: #3b5998;
+  fill: #3b5998;
 }
 
 .youtubeIcon svg:hover {
-    fill: #FF0000;
+  fill: #ff0000;
 }

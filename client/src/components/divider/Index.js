@@ -1,9 +1,7 @@
-import Style from './Style.module.scss'
+import Style from './Style.module.scss';
 
 const Index = () => {
-    return (
-        <hr className={Style.divider} />
-    )
-}
+  return <hr className={Style.divider} />;
+};
 
-export default Index
+export default Index;
