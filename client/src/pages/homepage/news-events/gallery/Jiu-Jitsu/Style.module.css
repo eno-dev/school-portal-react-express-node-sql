@@ -19,4 +19,8 @@
   transition: 0.4s;
   opacity: 0.4;
   background-color: rgba(0, 0, 0, 0.5);
-} /*# sourceMappingURL=Style.module.css.map */
+}
+
+.imgPreview .ant-image-mask-info {
+  color: red;
+}/*# sourceMappingURL=Style.module.css.map */

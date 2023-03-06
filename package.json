@@ -8,8 +8,7 @@
     "client": "cd client && npm start",
     "server": "cd server && nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "cd client && npm install && npm run build",
-    "lint": "eslint src --ext .js,.jsx,.ts,.tsx"
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "engines": {
     "node": "16.14.0"
