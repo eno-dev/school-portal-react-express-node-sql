@@ -36,7 +36,7 @@ const Index = ({ grade, setGrade, gradeById, setGradeById }) => {
             autoWidth
             onChange={handleChange}
           >
-            {!loading &&
+   {!loading && !error &&
               data.data.map(obj => (
                 <MenuItem value={obj.attributes.Name} key={obj.id}>
                   {obj.attributes.Name}

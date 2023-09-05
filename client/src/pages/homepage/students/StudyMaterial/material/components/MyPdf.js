@@ -11,7 +11,7 @@ const MyPdf = ({ grade, subject, link }) => {
 
   return (
     <>
-      {!loading &&
+   {!loading && !error &&
         data.data.map(obj => (
           <div className={Style.container} key={obj.id}>
             <div className={Style.text}>

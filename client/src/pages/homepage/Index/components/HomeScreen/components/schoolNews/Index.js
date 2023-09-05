@@ -2,13 +2,13 @@ import Style from './Style.module.scss';
 import { GetData } from 'hooks/GetData';
 
 const Index = () => {
-  const { data, loading, error } = GetData('news-stories');
+  const { data, loading, error  } = GetData('news-stories');
 
   return (
     <div className={Style.schoolNews}>
       <h2>Latest News & Events</h2>
       <div className={Style.news}>
-        {!loading &&
+        {!loading && !error &&
           data.data.map(obj => (
             <div className={Style.newsContainer} key={obj.id}>
               <div className={Style.image}>

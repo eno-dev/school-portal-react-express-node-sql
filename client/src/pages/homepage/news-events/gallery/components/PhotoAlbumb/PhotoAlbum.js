@@ -14,7 +14,7 @@ const PhotoAlbum = () => {
         <h3>{!loading && data.data.attributes.Heading}</h3>
       </div>
       <div className={Style.images}>
-        {!loading &&
+      {!loading && !error &&
           data.data.attributes.Images.data.map(img => (
             <div className={Style.imageContainer} key={img.id}>
               <Image src={`${process.env.REACT_APP_URL}${img.attributes.url}`} rootClassName={Style.imgPreview} />

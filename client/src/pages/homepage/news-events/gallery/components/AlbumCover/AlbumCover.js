@@ -7,7 +7,7 @@ const AlbumCover = () => {
 
   return (
     <>
-      {!loading &&
+   {!loading && !error &&
         data.data.map(img => (
           <div className={Style.albumCover} key={img.id}>
             <div className={Style.albumHeading}>

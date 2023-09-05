@@ -11,7 +11,7 @@ const Index = () => {
       <div className={Style.pageHeading}>
         <h1>Competitons</h1>
       </div>
-      {!loading &&
+      {!loading && !error &&
         data.data.map(obj => (
           <div className={Style.contentContainer} key={obj.id}>
             <div className={Style.heading}>
