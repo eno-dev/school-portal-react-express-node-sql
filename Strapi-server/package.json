@@ -12,8 +12,9 @@
   "dependencies": {
     "@strapi/plugin-i18n": "4.4.6",
     "@strapi/plugin-users-permissions": "4.4.6",
-    "@strapi/strapi": "4.4.6",
+    "@strapi/strapi": "4.13.2",
     "mysql": "2.18.1",
+    "pg": "^8.11.3",
     "strapi-plugin-entity-relationship-chart": "^4.1.0"
   },
   "author": {

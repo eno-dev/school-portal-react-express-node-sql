@@ -117,7 +117,7 @@ const Navbar = () => {
                       </div>
                     </div>
                   ))}
-                {isLoggedInState ? <Link to={'/portal'}>Portal</Link> : <Link to={'/login'}>Login</Link>}
+                {/* {isLoggedInState ? <Link to={'/portal'}>Portal</Link> : <Link to={'/login'}>Login</Link>} */}
               </div>
             </div>
             <div className={Style.menuIcon}>
